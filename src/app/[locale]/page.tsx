@@ -88,6 +88,21 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </Section>
 
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-4 text-center sm:px-6 lg:px-8">
+          <p className="text-2xl font-semibold text-[color:var(--text)] sm:text-3xl">
+            {dict.home.stayTuned.title}
+          </p>
+          <div className="text-base font-semibold text-[color:var(--text)] sm:text-lg">
+            <p>{dict.home.stayTuned.lines[0]}</p>
+            <p>{dict.home.stayTuned.lines[1]}</p>
+          </div>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--accent)]">
+            {dict.home.stayTuned.cta}
+          </p>
+        </div>
+      </section>
+
     </div>
   );
 }

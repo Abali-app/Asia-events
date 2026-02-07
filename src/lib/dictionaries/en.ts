@@ -44,6 +44,11 @@ export const en = {
         },
       ],
     },
+    stayTuned: {
+      title: "The next show is already in motion.",
+      lines: ["Artist. Venue. Timing.", "We’ll announce it when it’s ready."],
+      cta: "Stay Tuned",
+    },
   },
   about: {
     title: "About Asia Events Group",
