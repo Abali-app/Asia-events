@@ -20,10 +20,9 @@ export const en = {
     hero: {
       brandLine: "ASIA EVENTS GROUP",
       headline: "We don’t follow the market — we move it.",
-      subheadline: "We create, promote, and own ticketed live music events across the Arab world.",
-      supporting:
-        "Live entertainment with full promoter ownership.",
-      primaryCta: "Let’s talk business.",
+      subheadline: "Concert promotion with full ownership of ticketed live music events.",
+      supporting: "Live entertainment built on control, demand, and scale.",
+      primaryCta: "Start the conversation",
     },
     ourModel: {
       eyebrow: "Our Model",
@@ -59,6 +58,13 @@ export const en = {
       title: "The next show is already in motion.",
       lines: ["Artist. Venue. Timing.", "We’ll announce it when it’s ready."],
       cta: "Stay Tuned",
+    },
+    cinematic: {
+      line: "The next show is already in motion.",
+    },
+    atmosphere: {
+      title: "Atmosphere",
+      caption: "Live energy. Real demand.",
     },
     microTeaser: "",
     faq: {

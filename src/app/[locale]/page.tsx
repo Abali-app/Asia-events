@@ -31,17 +31,19 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <div>
-      <section className="relative overflow-hidden py-20 sm:py-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.16),_transparent_55%)]" />
-        <div
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage:
-              "linear-gradient(transparent 0, rgba(11, 27, 43, 0.03) 1px, transparent 2px)",
-            backgroundSize: "100% 6px",
-          }}
-        />
-        <div className="absolute inset-0 flex items-start justify-center pt-10 sm:pt-16">
+      <section className="relative min-h-[90vh] overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/brand/hero/asia-redcarpet.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.35),_transparent_60%)]" />
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center">
           <Image
             src="/brand/logo.png"
             alt=""
@@ -50,23 +52,23 @@ export default async function HomePage({ params }: PageProps) {
             priority
           />
         </div>
-        <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center gap-12 px-4 text-center sm:gap-14 sm:px-6 lg:px-8">
+        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-10 px-4 text-center text-white sm:gap-12 sm:px-6 lg:px-8">
           <Image
             src="/brand/logo.png"
             alt={`${dict.siteName} logo`}
-            width={2600}
-            height={820}
-            className="h-[21rem] w-auto sm:h-[24rem] md:h-[28rem]"
+            width={2400}
+            height={780}
+            className="h-40 w-auto sm:h-48 md:h-56"
             priority
           />
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[color:var(--text)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-white/80">
             {dict.home.hero.brandLine}
           </p>
-          <h1 className="text-balance text-4xl font-semibold leading-[1.15] text-[color:var(--text)] sm:text-5xl md:text-6xl">
+          <h1 className="text-balance text-4xl font-semibold leading-[1.1] text-white sm:text-5xl md:text-6xl">
             {dict.home.hero.headline.includes("—") ? (
               <>
                 <span className="block">{dict.home.hero.headline.split("—")[0]?.trim()} —</span>
-                <span className="block text-[color:var(--text)]/70">
+                <span className="block text-white/70">
                   {dict.home.hero.headline.split("—")[1]?.trim()}
                 </span>
               </>
@@ -74,15 +76,15 @@ export default async function HomePage({ params }: PageProps) {
               <span className="block whitespace-pre-line">{dict.home.hero.headline}</span>
             )}
           </h1>
-          <p className="text-xl font-semibold leading-relaxed text-[color:var(--text)] sm:text-2xl">
+          <p className="text-xl font-semibold leading-relaxed text-white/90 sm:text-2xl">
             <span className="block whitespace-pre-line">{dict.home.hero.subheadline}</span>
           </p>
-          <p className="max-w-3xl text-base leading-relaxed text-[color:var(--text-soft)] sm:text-lg">
+          <p className="max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg">
             {dict.home.hero.supporting}
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="rounded-sm bg-[color:var(--accent)] px-14 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
+            className="rounded-sm bg-[color:var(--accent)] px-12 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
           >
             {dict.home.hero.primaryCta}
           </Link>
@@ -105,6 +107,16 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </Section>
 
+      <section className="relative h-[60vh] overflow-hidden sm:h-[70vh]">
+        <Image src="/brand/hero/stage.jpg" alt="" fill className="object-cover" />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="relative flex h-full items-center justify-center px-4 text-center sm:px-6 lg:px-8">
+          <p className="text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
+            {dict.home.cinematic.line}
+          </p>
+        </div>
+      </section>
+
       <Section
         id="sponsors"
         eyebrow={dict.home.sponsors.eyebrow}
@@ -126,6 +138,31 @@ export default async function HomePage({ params }: PageProps) {
           >
             {dict.home.sponsors.cta}
           </Link>
+        </div>
+      </Section>
+
+      <Section
+        id="atmosphere"
+        eyebrow={dict.home.atmosphere.title}
+        title={dict.home.atmosphere.title}
+      >
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="overflow-hidden rounded-3xl border border-[color:var(--border)]">
+            <div className="relative aspect-[4/3]">
+              <Image src="/brand/hero/crowd.jpg" alt="" fill className="object-cover" />
+            </div>
+            <div className="px-5 py-4 text-sm text-[color:var(--text-soft)]">
+              {dict.home.atmosphere.caption}
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-3xl border border-[color:var(--border)]">
+            <div className="relative aspect-[4/3]">
+              <Image src="/brand/hero/stage.jpg" alt="" fill className="object-cover" />
+            </div>
+            <div className="px-5 py-4 text-sm text-[color:var(--text-soft)]">
+              {dict.home.atmosphere.caption}
+            </div>
+          </div>
         </div>
       </Section>
 
