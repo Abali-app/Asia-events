@@ -8,6 +8,7 @@
     services: "ماذا نفعل",
     contact: "تواصل",
   },
+  announcement: "الحفل القادم قيد التنفيذ. الإعلان قريباً.",
   common: {
     ctaPrimary: "لنتحدث بجدية.",
     ctaSecondary: "استكشف الفعاليات",

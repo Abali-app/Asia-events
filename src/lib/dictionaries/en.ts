@@ -8,6 +8,7 @@ export const en = {
     services: "What We Do",
     contact: "Contact",
   },
+  announcement: "The next show is already in motion. Announcement coming soon.",
   common: {
     ctaPrimary: "Contact Us",
     ctaSecondary: "Explore Events",
