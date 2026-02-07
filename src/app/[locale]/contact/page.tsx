@@ -32,10 +32,10 @@ export default async function ContactPage({ params }: PageProps) {
     <div>
       <Section eyebrow={dict.nav.contact} title={dict.contact.title} subtitle={dict.contact.subtitle}>
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+          <div className="border-t border-[color:var(--border)] pt-6">
             <ContactForm labels={dict.form} />
           </div>
-          <aside className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+          <aside className="border-t border-[color:var(--border)] pt-6">
             <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.contact.detailsTitle}</h3>
             <ul className="mt-4 space-y-4 text-sm text-[color:var(--text-soft)]">
               {dict.contact.details.map((detail) => (

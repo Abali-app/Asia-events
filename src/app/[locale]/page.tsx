@@ -33,20 +33,35 @@ export default async function HomePage({ params }: PageProps) {
     <div>
       <section className="relative overflow-hidden py-20 sm:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.2),_transparent_55%)]" />
-        <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:px-8">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Image
+            src="/brand/logo.png"
+            alt=""
+            fill
+            className="object-contain opacity-[0.05]"
+            priority
+          />
+        </div>
+        <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:px-8">
           <Image
             src="/brand/logo.png"
             alt={`${dict.siteName} logo`}
-            width={720}
-            height={220}
-            className="h-20 w-auto sm:h-24 md:h-28"
+            width={760}
+            height={240}
+            className="h-24 w-auto sm:h-28 md:h-32"
             priority
           />
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[color:var(--text)]">
+            {dict.home.hero.brandLine}
+          </p>
           <h1 className="text-balance text-4xl font-semibold text-[color:var(--text)] sm:text-5xl md:text-6xl">
             {dict.home.hero.headline}
           </h1>
-          <p className="max-w-3xl text-lg text-[color:var(--text-soft)] sm:text-xl">
+          <p className="text-2xl font-semibold text-[color:var(--text)] sm:text-3xl">
             {dict.home.hero.subheadline}
+          </p>
+          <p className="max-w-3xl text-base text-[color:var(--text-soft)] sm:text-lg">
+            {dict.home.hero.supporting}
           </p>
           <Link
             href={`/${locale}/contact`}
@@ -70,14 +85,6 @@ export default async function HomePage({ params }: PageProps) {
               <p className="mt-3 text-sm text-[color:var(--text-soft)]">{item.description}</p>
             </article>
           ))}
-        </div>
-        <div className="pt-6">
-          <Link
-            href={`/${locale}/services`}
-            className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--accent)]"
-          >
-            {dict.common.exploreServices}
-          </Link>
         </div>
       </Section>
 

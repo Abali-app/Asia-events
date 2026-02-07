@@ -18,26 +18,29 @@ export const en = {
   },
   home: {
     hero: {
-      headline: "We don’t produce events. We build moments people line up for.",
-      subheadline: "We are concert promoters behind ticketed live music events across the Arab world.",
+      brandLine: "ASIA EVENTS GROUP",
+      headline: "We don’t organize events.",
+      subheadline: "We create demand.",
+      supporting:
+        "Concert promotion. Artist-led shows. Ticketed live experiences across the Arab world.",
       primaryCta: "Contact Us",
     },
     servicesPreview: {
       eyebrow: "Focus",
-      title: "Promoter-level ownership",
-      subtitle: "We create and promote what we put on stage.",
+      title: "Promoter-first work",
+      subtitle: "Built around artists, venues, and ticketed demand.",
       items: [
         {
           title: "Artist Partnerships",
-          description: "Programming built around artists, audiences, and culture.",
+          description: "Artists we believe in and audiences who show up.",
         },
         {
           title: "Venue Booking",
-          description: "Right rooms, right nights, right scale.",
+          description: "The right room for the right night.",
         },
         {
           title: "Event Promotion",
-          description: "Campaigns that move tickets and build anticipation.",
+          description: "Promotion that turns interest into sold-out rooms.",
         },
       ],
     },
@@ -45,34 +48,34 @@ export const en = {
   about: {
     title: "About Asia Events Group",
     story:
-      "We are an event organizer and concert promoter focused on the Arab world. We create, own, and market ticketed live music events.",
+      "We are a concert promoter in the Arab world. We create, own, and market ticketed live music events.",
     missionTitle: "Mission",
     mission:
-      "Create live music moments that feel essential and unforgettable.",
+      "Create live music moments people talk about the next day.",
     valuesTitle: "Values",
     values: [
-      { title: "Artist First", description: "Performance quality and creative intent." },
-      { title: "Audience Trust", description: "Clear ticketing and smooth entry." },
-      { title: "Partner Ready", description: "Aligned sponsors and venue partners." },
+      { title: "Artist First", description: "Creative intent comes first." },
+      { title: "Audience Trust", description: "Clear tickets. Smooth entry." },
+      { title: "Partner Ready", description: "Venue and sponsor alignment." },
     ],
     approachTitle: "Approach",
     approach: [
-      { title: "Curate", description: "Lineups that match the market." },
+      { title: "Curate", description: "Artists that fit the market." },
       { title: "Promote", description: "Momentum before doors open." },
-      { title: "Deliver", description: "Night-of execution that feels effortless." },
+      { title: "Deliver", description: "Night-of execution, no noise." },
     ],
   },
   servicesPage: {
     title: "What We Do",
-    subtitle: "Our core activities as a concert promoter.",
+    subtitle: "The promoter’s core work.",
     categories: [
       {
         title: "Artist Partnerships",
-        description: "Tour routing, collaboration, and relationships.",
+        description: "Tour routing, collaboration, and long-term relationships.",
       },
       {
         title: "Venue Booking",
-        description: "Sourcing, negotiation, and date strategy.",
+        description: "Venue sourcing, negotiation, and date strategy.",
       },
       {
         title: "Event Promotion",
@@ -94,7 +97,7 @@ export const en = {
   },
   contact: {
     title: "Contact",
-    subtitle: "Artist, venue, and sponsorship partnerships.",
+    subtitle: "For artist, venue, and sponsorship partnerships.",
     detailsTitle: "Contact Details",
     details: [
       { label: "Email", value: "hello@asiaeventsgroup.com" },
@@ -113,7 +116,7 @@ export const en = {
   },
   footer: {
     summary:
-      "Event organizer and concert promoter behind ticketed live music events across the Arab world.",
+      "Concert promoter behind ticketed live music events across the Arab world.",
     socialTitle: "Social",
     socials: [
       { label: "Instagram", href: "#" },

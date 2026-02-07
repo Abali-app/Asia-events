@@ -30,12 +30,12 @@ export default async function AboutPage({ params }: PageProps) {
   return (
     <div>
       <Section eyebrow={dict.nav.about} title={dict.about.title} subtitle={dict.about.story}>
-        <div className="grid gap-6 lg:grid-cols-3">
-          <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+        <div className="grid gap-8 lg:grid-cols-3">
+          <div className="border-t border-[color:var(--border)] pt-6">
             <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.about.missionTitle}</h3>
             <p className="mt-3 text-sm text-[color:var(--text-soft)]">{dict.about.mission}</p>
-          </article>
-          <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+          </div>
+          <div className="border-t border-[color:var(--border)] pt-6">
             <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.about.valuesTitle}</h3>
             <ul className="mt-4 space-y-3 text-sm text-[color:var(--text-soft)]">
               {dict.about.values.map((value) => (
@@ -44,8 +44,8 @@ export default async function AboutPage({ params }: PageProps) {
                 </li>
               ))}
             </ul>
-          </article>
-          <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+          </div>
+          <div className="border-t border-[color:var(--border)] pt-6">
             <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.about.approachTitle}</h3>
             <ul className="mt-4 space-y-3 text-sm text-[color:var(--text-soft)]">
               {dict.about.approach.map((item) => (
@@ -54,7 +54,7 @@ export default async function AboutPage({ params }: PageProps) {
                 </li>
               ))}
             </ul>
-          </article>
+          </div>
         </div>
       </Section>
     </div>
