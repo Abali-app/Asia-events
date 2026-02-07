@@ -5,121 +5,113 @@ export const en = {
   nav: {
     home: "Home",
     about: "About",
-    services: "Services",
+    services: "What We Do",
     contact: "Contact",
   },
   common: {
-    ctaPrimary: "Start a Brief",
-    ctaSecondary: "View Services",
+    ctaPrimary: "Get Tickets",
+    ctaSecondary: "Explore Events",
     learnMore: "Learn More",
-    exploreServices: "Explore Services",
+    exploreServices: "See Everything We Do",
     viewAll: "View All",
     languageSwitchLabel: "Switch language",
   },
   home: {
     hero: {
-      headline: "Corporate production with a calm, exacting standard.",
+      headline: "We create and promote major live music events across the Arab world.",
       subheadline:
-        "We support corporate teams with clear planning, reliable coordination, and a refined finish across every touchpoint.",
-      primaryCta: "Start a Brief",
-      secondaryCta: "View Services",
-      card: {
-        eyebrow: "Overview",
-        title: "A focused production partner",
-        items: [
-          "Strategic planning aligned with brand priorities.",
-          "Steady on-site coordination from setup to wrap.",
-          "Post-production support with clean handoff.",
-        ],
-      },
+        "Asia Events Group is an event organizer and concert promoter. We create, own, and market ticketed music experiences with trusted artist, venue, and brand partners.",
+      primaryCta: "Get Tickets",
+      secondaryCta: "Explore Events",
     },
     servicesPreview: {
-      eyebrow: "Services",
-      title: "Focused capabilities",
-      subtitle: "Flexible support across planning, production, and delivery.",
+      eyebrow: "Focus",
+      title: "How we build live music moments",
+      subtitle: "End-to-end ownership of the live music experience.",
       items: [
         {
-          title: "Production Strategy",
-          description: "Scoping, timelines, and resourcing built around your objectives.",
+          title: "Artist Partnerships",
+          description: "Collaborations that align creative vision, audience, and tour planning.",
         },
         {
-          title: "Creative Direction",
-          description: "Unified visuals, tone, and messaging across the experience.",
+          title: "Venue Booking",
+          description: "Strategic venue selection, holds, and production-ready scheduling.",
         },
         {
-          title: "Delivery & Handoff",
-          description: "Reliable execution with clear documentation and final assets.",
+          title: "Event Promotion",
+          description: "Campaigns across digital, social, and out-of-home to drive demand.",
         },
       ],
     },
     process: {
       eyebrow: "Process",
-      title: "A clear working rhythm",
+      title: "From concept to show night",
       steps: [
-        { title: "Discover", description: "Align on goals, audience, and constraints." },
-        { title: "Plan", description: "Define scope, schedule, and ownership." },
-        { title: "Deliver", description: "Execute with oversight and measured feedback." },
+        { title: "Curate", description: "Select artists, cities, and moments worth traveling for." },
+        { title: "Launch", description: "Plan announcements, partners, and promotional cadence." },
+        { title: "Deliver", description: "Operate show day, guest experience, and ticketing." },
       ],
     },
     cta: {
-      title: "Ready to align on your next production?",
-      subtitle: "Share a brief and we will respond with a clear plan.",
-      primaryCta: "Contact Us",
-      secondaryCta: "Start a Brief",
+      title: "Looking for the next live music experience?",
+      subtitle: "Follow upcoming announcements and ticket drops.",
+      primaryCta: "Get Updates",
+      secondaryCta: "Contact Us",
     },
   },
   about: {
     title: "About Asia Events Group",
     story:
-      "We are a production company supporting corporate teams with structured planning, thoughtful coordination, and dependable delivery.",
+      "We are an event organizer and concert promoter focused on the Arab world. We create, produce, and own ticketed live music events that bring artists and audiences together.",
     missionTitle: "Mission",
-    mission: "Provide reliable production support that protects brand consistency and stakeholder trust.",
+    mission:
+      "Create live music experiences that are culturally relevant, commercially strong, and memorable for fans.",
     valuesTitle: "Values",
     values: [
-      { title: "Clarity", description: "Clear expectations, clear handoffs, and clean documentation." },
-      { title: "Care", description: "Every detail is reviewed with intention and respect." },
-      { title: "Accountability", description: "Ownership at every step and transparent communication." },
+      { title: "Artist First", description: "Respecting creative intent and performance quality." },
+      { title: "Audience Trust", description: "Transparent ticketing and a smooth guest journey." },
+      { title: "Partner Ready", description: "Clear collaboration for venues and sponsors." },
     ],
     approachTitle: "Approach",
     approach: [
-      { title: "Listen", description: "Understand context, priorities, and constraints." },
-      { title: "Structure", description: "Build a plan that keeps teams aligned." },
-      { title: "Deliver", description: "Execute steadily with a refined finish." },
+      { title: "Curate", description: "Programming that fits the market and audience energy." },
+      { title: "Promote", description: "Campaigns that build momentum and demand." },
+      { title: "Operate", description: "Show execution with safe, reliable operations." },
     ],
   },
   servicesPage: {
-    title: "Services",
-    subtitle: "Service areas tailored to corporate teams and premium brands.",
+    title: "What We Do",
+    subtitle: "Our activities reflect how we create and promote ticketed live music events.",
     categories: [
       {
-        title: "Production Strategy",
-        description: "Scoping, planning, and ownership models that keep delivery aligned.",
+        title: "Artist Partnerships",
+        description: "Tour routing, collaboration, and long-term artist relationships.",
       },
       {
-        title: "Creative Direction",
-        description: "Visual systems, messaging, and experience design across channels.",
+        title: "Venue Booking",
+        description: "Venue sourcing, negotiation, and date optimization.",
       },
       {
-        title: "Pre-Production",
-        description: "Schedules, vendor coordination, and logistical readiness.",
+        title: "Event Promotion",
+        description: "Branding, media planning, and multi-channel campaigns.",
       },
       {
-        title: "On-Site Production",
-        description: "Run-of-show management, crew oversight, and live coordination.",
+        title: "Ticket Sales",
+        description: "Pricing strategy, sales channels, and audience access.",
       },
       {
-        title: "Post-Production",
-        description: "Editing, revisions, and final asset delivery.",
+        title: "Sponsorship Partnerships",
+        description: "Aligned brand partnerships that elevate the fan experience.",
       },
       {
-        title: "Content Management",
-        description: "Archiving, version control, and distribution support.",
+        title: "Show Operations",
+        description: "Event management, on-site coordination, and guest flow.",
       },
     ],
   },
   contact: {
     title: "Contact",
-    subtitle: "Share your brief and we will follow up with next steps.",
+    subtitle: "For artist, venue, and sponsorship partnerships, reach out here.",
     detailsTitle: "Contact Details",
     details: [
       { label: "Email", value: "hello@asiaeventsgroup.com" },
@@ -130,7 +122,7 @@ export const en = {
     name: "Full Name",
     email: "Email Address",
     phone: "Phone (optional)",
-    message: "Tell us about your project",
+    message: "Tell us how you want to partner",
     submit: "Send Request",
     sending: "Sending...",
     success: "Thank you. We will be in touch shortly.",
@@ -138,34 +130,34 @@ export const en = {
   },
   footer: {
     summary:
-      "A corporate production partner focused on clarity, quality, and composed execution.",
+      "Event organizer and concert promoter creating ticketed live music experiences across the Arab world.",
     socialTitle: "Social",
     socials: [
-      { label: "LinkedIn", href: "#" },
-      { label: "Vimeo", href: "#" },
+      { label: "Instagram", href: "#" },
       { label: "YouTube", href: "#" },
+      { label: "TikTok", href: "#" },
     ],
     copyright: "© Asia Events Group. All rights reserved.",
   },
   metadata: {
     home: {
-      title: "Asia Events Group | Corporate Production Partner",
+      title: "Asia Events Group | Live Music Events",
       description:
-        "Corporate production partner providing structured planning, coordinated execution, and refined delivery.",
+        "We create and promote major live music events across the Arab world.",
     },
     about: {
       title: "About | Asia Events Group",
       description:
-        "Learn about Asia Events Group, a corporate production company focused on clarity and dependable delivery.",
+        "Learn about Asia Events Group, an event organizer and concert promoter.",
     },
     services: {
-      title: "Services | Asia Events Group",
+      title: "What We Do | Asia Events Group",
       description:
-        "Corporate production services spanning strategy, creative direction, on-site production, and post-production.",
+        "Artist partnerships, venue booking, promotion, ticket sales, and sponsorships.",
     },
     contact: {
       title: "Contact | Asia Events Group",
-      description: "Get in touch with Asia Events Group to discuss your next production.",
+      description: "Get in touch for artist, venue, and sponsorship partnerships.",
     },
   },
 } as const;
