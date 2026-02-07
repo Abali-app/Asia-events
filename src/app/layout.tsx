@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { fontArabic, fontLatin } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata = {
@@ -8,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased">{children}</body>
+      <body className={`antialiased ${fontArabic.variable} ${fontLatin.variable}`}>{children}</body>
     </html>
   );
 }

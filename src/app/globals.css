@@ -26,14 +26,6 @@ body::before {
   z-index: -1;
 }
 
-.font-en {
-  font-family: "Cormorant Garamond", "Palatino Linotype", "Times New Roman", serif;
-}
-
-.font-ar {
-  font-family: "Amiri", "Noto Naskh Arabic", "Times New Roman", serif;
-}
-
 .text-balance {
   text-wrap: balance;
 }

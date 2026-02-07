@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
+import { fontArabic, fontLatin } from "@/lib/fonts";
+import LocaleBodyAttributes from "@/components/LocaleBodyAttributes";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -27,10 +29,13 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <div
-      lang={locale}
-      dir={dict.direction}
-      className={`${isArabic ? "font-ar" : "font-en"} flex min-h-screen flex-col`}
+      lang={isArabic ? "ar" : "en"}
+      dir={isArabic ? "rtl" : "ltr"}
+      className={`${isArabic ? "font-ar" : "font-en"} ${
+        isArabic ? fontArabic.className : fontLatin.className
+      } flex min-h-screen flex-col`}
     >
+      <LocaleBodyAttributes locale={locale} />
       <Navbar locale={locale} dict={dict} />
       <main className="flex-1">{children}</main>
       <Footer dict={dict} />
