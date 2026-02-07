@@ -5,7 +5,7 @@ export const runtime = "nodejs";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, phone, message } = await req.json();
+    const { name, email, phone, message, subject, company, role } = await req.json();
 
     if (!name || !email || !message) {
       return NextResponse.json({ ok: false, error: "Missing fields" }, { status: 400 });
@@ -25,11 +25,13 @@ export async function POST(req: Request) {
       from,
       to,
       replyTo: email,
-      subject: `New Lead - ${name}`,
+      subject: subject || `New Lead - ${name}`,
       text: [
         `Name: ${name}`,
         `Email: ${email}`,
         phone ? `Phone: ${phone}` : "",
+        company ? `Company: ${company}` : "",
+        role ? `Role: ${role}` : "",
         "",
         "Message:",
         message,

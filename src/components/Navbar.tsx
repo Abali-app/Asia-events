@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Dictionary, Locale } from "@/lib/i18n";
@@ -18,15 +19,22 @@ export default function Navbar({ locale, dict }: NavbarProps) {
     { href: `${base}`, label: dict.nav.home },
     { href: `${base}/about`, label: dict.nav.about },
     { href: `${base}/services`, label: dict.nav.services },
-    { href: `${base}/portfolio`, label: dict.nav.portfolio },
     { href: `${base}/contact`, label: dict.nav.contact },
   ];
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-[color:var(--ink)]/80 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href={base} className="text-lg font-semibold tracking-[0.2em] text-white">
-          {dict.siteName}
+        <Link href={base} className="flex items-center gap-3">
+          <Image
+            src="/brand/logo.png"
+            alt={`${dict.siteName} logo`}
+            width={160}
+            height={48}
+            className="h-8 w-auto sm:h-9"
+            priority
+          />
+          <span className="sr-only">{dict.siteName}</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-[color:var(--muted)] lg:flex" aria-label="Primary">
           {items.map((item) => {

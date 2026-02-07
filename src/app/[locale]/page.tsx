@@ -49,7 +49,7 @@ export default async function HomePage({ params }: PageProps) {
                 {dict.home.hero.primaryCta}
               </Link>
               <Link
-                href={`/${locale}/portfolio`}
+                href={`/${locale}/services`}
                 className="rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:border-[color:var(--gold)] hover:text-[color:var(--gold)]"
               >
                 {dict.home.hero.secondaryCta}
@@ -61,7 +61,7 @@ export default async function HomePage({ params }: PageProps) {
             <div className="relative h-72 overflow-hidden rounded-3xl border border-white/10 bg-[color:var(--accent)] shadow-2xl sm:h-96">
               <Image
                 src="/portfolio/portfolio-1.svg"
-                alt="Signature event production"
+                alt="Event production detail"
                 fill
                 className="object-cover opacity-90"
                 priority
@@ -71,32 +71,14 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/5 py-8">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 sm:px-6 lg:px-8">
-          <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--gold)]">
-            {dict.home.trust.title}
-          </p>
-          <div className="grid gap-4 text-sm text-[color:var(--muted)] sm:grid-cols-2 lg:grid-cols-5">
-            {dict.home.trust.logos.map((logo) => (
-              <div
-                key={logo}
-                className="flex h-12 items-center justify-center rounded-full border border-white/10 bg-black/30 px-4 text-center"
-              >
-                {logo}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <Section
-        id="services"
-        eyebrow={dict.nav.services}
-        title={dict.home.services.title}
-        subtitle={dict.home.services.subtitle}
+        id="capabilities"
+        eyebrow={dict.home.capabilities.eyebrow}
+        title={dict.home.capabilities.title}
+        subtitle={dict.home.capabilities.subtitle}
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {dict.home.services.items.map((item) => (
+          {dict.home.capabilities.items.map((item) => (
             <article key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <h3 className="text-lg font-semibold text-white">{item.title}</h3>
               <p className="mt-3 text-sm text-[color:var(--muted)]">{item.description}</p>
@@ -106,48 +88,17 @@ export default async function HomePage({ params }: PageProps) {
       </Section>
 
       <Section
-        id="portfolio"
-        eyebrow={dict.nav.portfolio}
-        title={dict.home.portfolio.title}
-        subtitle={dict.home.portfolio.subtitle}
+        id="standards"
+        eyebrow={dict.home.standards.eyebrow}
+        title={dict.home.standards.title}
+        subtitle={dict.home.standards.subtitle}
       >
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {dict.home.portfolio.items.map((item, index) => (
-            <article key={item.title} className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-              <div className="relative h-40">
-                <Image
-                  src={`/portfolio/portfolio-${(index % 6) + 1}.svg`}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="space-y-2 p-5">
-                <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--gold)]">{item.type}</p>
-                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="mt-8">
-          <Link
-            href={`/${locale}/portfolio`}
-            className="inline-flex rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:border-[color:var(--gold)] hover:text-[color:var(--gold)]"
-          >
-            {dict.common.viewAll}
-          </Link>
-        </div>
-      </Section>
-
-      <Section id="testimonials" eyebrow={dict.home.testimonials.eyebrow} title={dict.home.testimonials.title}>
         <div className="grid gap-6 lg:grid-cols-2">
-          {dict.home.testimonials.items.map((item) => (
-            <figure key={item.name} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <blockquote className="text-base text-white">{item.quote}</blockquote>
-              <figcaption className="mt-4 text-sm text-[color:var(--muted)]">
-                {item.name} · {item.company}
-              </figcaption>
-            </figure>
+          {dict.home.standards.items.map((item) => (
+            <article key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <h3 className="text-base font-semibold text-white">{item.title}</h3>
+              <p className="mt-3 text-sm text-[color:var(--muted)]">{item.description}</p>
+            </article>
           ))}
         </div>
       </Section>
@@ -164,6 +115,27 @@ export default async function HomePage({ params }: PageProps) {
             </li>
           ))}
         </ol>
+      </Section>
+
+      <Section
+        id="packages"
+        eyebrow={dict.home.packages.eyebrow}
+        title={dict.home.packages.title}
+        subtitle={dict.home.packages.subtitle}
+      >
+        <div className="grid gap-6 lg:grid-cols-3">
+          {dict.home.packages.items.map((item) => (
+            <article key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+              <p className="mt-3 text-sm text-[color:var(--muted)]">{item.description}</p>
+              <ul className="mt-4 list-disc space-y-2 ps-5 text-sm text-white/80 marker:text-[color:var(--gold)]">
+                {item.includes.map((detail) => (
+                  <li key={detail}>{detail}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
       </Section>
 
       <Section id="cta" align="center" title={dict.home.cta.title} subtitle={dict.home.cta.subtitle}>

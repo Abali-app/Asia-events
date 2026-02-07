@@ -6,12 +6,11 @@ export const en = {
     home: "Home",
     about: "About",
     services: "Services",
-    portfolio: "Portfolio",
     contact: "Contact",
   },
   common: {
     ctaPrimary: "Plan Your Event",
-    ctaSecondary: "View Portfolio",
+    ctaSecondary: "View Services",
     learnMore: "Learn More",
     exploreServices: "Explore Services",
     viewAll: "View All Work",
@@ -19,89 +18,101 @@ export const en = {
   },
   home: {
     hero: {
-      headline: "Crafting Signature Experiences Across the Arab World",
+      headline: "Premium event production for Gulf-facing brands",
       subheadline:
-        "Asia Events Group delivers world-class corporate events, concerts, and celebrations with meticulous planning, premium production, and a luxury guest experience.",
+        "We plan and deliver high-touch corporate events, conferences, and live experiences with rigorous standards, expert crews, and disciplined execution.",
       primaryCta: "Start a Brief",
-      secondaryCta: "See Our Work",
+      secondaryCta: "Explore Services",
     },
-    trust: {
-      title: "Trusted by leading brands and institutions",
-      logos: ["Global Airline", "MENA Bank", "Future Forum", "Capital Group", "Royal Hospitality"],
-    },
-    services: {
-      title: "Full-Scope Event Production",
-      subtitle: "From concept to flawless execution, we manage every detail.",
+    capabilities: {
+      eyebrow: "Capabilities",
+      title: "What we do",
+      subtitle: "End-to-end production built for complex programs and premium audiences.",
       items: [
         {
-          title: "Corporate Events",
-          description: "Executive summits, gala dinners, product launches, and brand showcases.",
+          title: "Corporate & Government Events",
+          description: "Summits, launches, and leadership forums with refined guest flow and protocol.",
         },
         {
-          title: "Concerts & Festivals",
-          description: "Large-scale live experiences with stage design, artist management, and crowd flow.",
+          title: "Conferences & Forums",
+          description: "Multi-track agendas, speaker management, and broadcast-ready production.",
         },
         {
-          title: "Conferences",
-          description: "Multi-day programs with registration, speaker support, and broadcast-ready production.",
+          title: "Live Entertainment",
+          description: "Stage management, artist logistics, and audience operations at scale.",
         },
         {
-          title: "Weddings",
-          description: "Luxury celebrations with bespoke decor, lighting, and guest journey design.",
+          title: "Brand Experiences",
+          description: "Purpose-built environments that translate brand priorities into real moments.",
         },
         {
-          title: "Brand Activations",
-          description: "Immersive activations that translate brand identity into unforgettable moments.",
+          title: "VIP & Protocol",
+          description: "Executive hospitality, security coordination, and discreet service.",
         },
         {
-          title: "Staging, Lighting & Sound",
-          description: "Premium technical production with precision engineering and crew supervision.",
+          title: "Technical Production",
+          description: "Lighting, sound, staging, and scenic build with proven vendor partners.",
         },
       ],
     },
-    portfolio: {
-      title: "Portfolio Highlights",
-      subtitle: "A curated view of signature productions delivered across the region.",
-      items: [
-        { title: "Executive Summit Riyadh", type: "Corporate" },
-        { title: "Desert Nights Concert", type: "Concert" },
-        { title: "Tech Leaders Forum", type: "Conference" },
-        { title: "Royal Garden Wedding", type: "Wedding" },
-        { title: "Brand Immersion Pavilion", type: "Corporate" },
-        { title: "Innovation Week Live", type: "Conference" },
-      ],
-    },
-    testimonials: {
-      eyebrow: "Testimonials",
-      title: "Client Experiences",
+    standards: {
+      eyebrow: "Production Standards",
+      title: "How we protect quality",
+      subtitle: "A disciplined approach that prioritizes safety, consistency, and accountability.",
       items: [
         {
-          quote:
-            "Asia Events Group delivered an extraordinary guest experience with flawless logistics and premium production.",
-          name: "Head of Communications",
-          company: "Regional Investment Authority",
+          title: "Safety-first operations",
+          description: "Risk assessment, compliance checks, and detailed show flow rehearsals.",
         },
         {
-          quote:
-            "Their attention to detail and ability to manage complex stakeholders made our summit a standout.",
-          name: "Events Director",
-          company: "Global Technology Firm",
+          title: "Vendor network control",
+          description: "Curated partners, clear scopes, and on-site supervision for every discipline.",
+        },
+        {
+          title: "Guest experience design",
+          description: "Clear wayfinding, premium hospitality, and refined brand touchpoints.",
+        },
+        {
+          title: "On-ground command",
+          description: "Centralized production control with live reporting and decision cadence.",
         },
       ],
     },
     process: {
       eyebrow: "Process",
-      title: "A Proven Production Method",
+      title: "A disciplined production method",
       steps: [
-        { title: "Concept", description: "Strategic vision, creative direction, and experience design." },
-        { title: "Planning", description: "Budgets, suppliers, schedules, and risk management." },
-        { title: "Production", description: "Technical build, staging, lighting, and rehearsals." },
-        { title: "Execution", description: "On-ground delivery, guest flow, and live control room." },
+        { title: "Discovery", description: "Objectives, audience, and operational requirements." },
+        { title: "Design", description: "Experience planning, layouts, and production architecture." },
+        { title: "Build", description: "Procurement, technical setup, rehearsals, and QA checks." },
+        { title: "Showtime", description: "On-site execution with real-time coordination." },
+      ],
+    },
+    packages: {
+      eyebrow: "Service Packages",
+      title: "Scalable engagement models",
+      subtitle: "Choose the level of support that matches your program complexity.",
+      items: [
+        {
+          title: "Executive Program",
+          description: "For leadership gatherings and VIP protocol-focused events.",
+          includes: ["Program design", "VIP hospitality", "Speaker management", "On-site operations"],
+        },
+        {
+          title: "Signature Production",
+          description: "For high-visibility brand moments with multiple stakeholders.",
+          includes: ["Creative direction", "Technical production", "Vendor management", "Show calling"],
+        },
+        {
+          title: "Live Experience",
+          description: "For large-scale audiences and live entertainment programs.",
+          includes: ["Stage operations", "Crowd flow planning", "Rehearsal management", "Safety control"],
+        },
       ],
     },
     cta: {
-      title: "Ready to produce your next signature event?",
-      subtitle: "Tell us about your vision and we will craft a tailored proposal.",
+      title: "Ready to plan a premium event program?",
+      subtitle: "Share your objectives and we will design a production plan that fits the brief.",
       primaryCta: "Request a Proposal",
       secondaryCta: "Contact Our Team",
     },
@@ -109,16 +120,16 @@ export const en = {
   about: {
     title: "About Asia Events Group",
     story:
-      "Asia Events Group is a premium production company specializing in high-profile corporate events, conferences, concerts, and luxury celebrations across the Arab world.",
+      "Asia Events Group is a premium event production company serving Gulf-facing organizations with careful planning and disciplined execution.",
     missionTitle: "Our Mission",
     mission:
-      "To elevate every event with exceptional creative direction, world-class production, and a guest experience that reflects the ambition of our clients.",
+      "To deliver consistent, safe, and refined event experiences that protect brand reputation and stakeholder trust.",
     valuesTitle: "Values",
     values: [
-      { title: "Craft", description: "Every detail is thoughtfully designed and executed." },
-      { title: "Trust", description: "We lead with transparency and accountability." },
-      { title: "Innovation", description: "We blend new technology with timeless hospitality." },
-      { title: "Excellence", description: "We deliver premium experiences on every scale." },
+      { title: "Craft", description: "Every detail is planned, documented, and executed with care." },
+      { title: "Trust", description: "Clear communication and accountability at every stage." },
+      { title: "Safety", description: "Operational discipline and compliance across all venues." },
+      { title: "Excellence", description: "Premium guest experience without unnecessary complexity." },
     ],
     teamTitle: "Leadership",
     teamEyebrow: "Team",
@@ -131,53 +142,32 @@ export const en = {
   },
   servicesPage: {
     title: "Services",
-    subtitle: "Comprehensive capabilities to deliver end-to-end event production.",
+    subtitle: "Comprehensive capabilities to deliver end-to-end event production with control and clarity.",
     categories: [
       {
         title: "Corporate Events",
-        description: "Executive summits, award ceremonies, product launches, and VIP experiences.",
+        description: "Executive summits, leadership forums, launches, and high-level gatherings.",
       },
       {
         title: "Concerts & Entertainment",
-        description: "Festival programming, artist logistics, stage design, and crowd management.",
+        description: "Stage operations, artist logistics, audience flow, and show control.",
       },
       {
         title: "Conferences",
-        description: "Multi-track agendas, digital streaming, translation, and VIP speaker support.",
+        description: "Multi-track agendas, registration, translation, and production direction.",
       },
       {
         title: "Weddings",
-        description: "Luxury celebrations with bespoke decor, floral, and guest journey design.",
+        description: "Premium celebrations with detailed planning, styling, and guest flow.",
       },
       {
         title: "Brand Activations",
-        description: "Immersive environments, experiential marketing, and premium hospitality.",
+        description: "Immersive environments, experiential marketing, and hospitality design.",
       },
       {
         title: "Staging, Lighting & Sound",
         description: "End-to-end technical production with experienced crews and engineering.",
       },
-    ],
-  },
-  portfolioPage: {
-    title: "Portfolio",
-    subtitle: "Signature events delivered with precision and luxury service.",
-    filters: [
-      { label: "All", value: "All" },
-      { label: "Corporate", value: "Corporate" },
-      { label: "Concert", value: "Concert" },
-      { label: "Conference", value: "Conference" },
-      { label: "Wedding", value: "Wedding" },
-    ],
-    items: [
-      { title: "Executive Summit Riyadh", type: "Corporate" },
-      { title: "Desert Nights Concert", type: "Concert" },
-      { title: "Tech Leaders Forum", type: "Conference" },
-      { title: "Royal Garden Wedding", type: "Wedding" },
-      { title: "Brand Immersion Pavilion", type: "Corporate" },
-      { title: "Innovation Week Live", type: "Conference" },
-      { title: "Nights of Harmony", type: "Concert" },
-      { title: "Heritage Celebration Wedding", type: "Wedding" },
     ],
   },
   contact: {
@@ -202,7 +192,7 @@ export const en = {
   },
   footer: {
     summary:
-      "Premium event production across the Arab world. We craft experiences that define brands and captivate audiences.",
+      "Premium event production with disciplined planning, safe execution, and refined guest experience.",
     socialTitle: "Social",
     socials: [
       { label: "Instagram", href: "#" },
@@ -215,22 +205,17 @@ export const en = {
     home: {
       title: "Asia Events Group | Premium Event Production",
       description:
-        "Luxury corporate events, concerts, conferences, and weddings across the Arab world. Concept-to-execution production by Asia Events Group.",
+        "Premium event production for corporate, conference, and live experience programs with disciplined execution.",
     },
     about: {
       title: "About | Asia Events Group",
       description:
-        "Learn about Asia Events Group, a premium event production company delivering signature experiences across the Arab world.",
+        "Learn about Asia Events Group, a premium event production company focused on quality and operational discipline.",
     },
     services: {
       title: "Services | Asia Events Group",
       description:
-        "Full-scope event production services including corporate events, concerts, conferences, weddings, and brand activations.",
-    },
-    portfolio: {
-      title: "Portfolio | Asia Events Group",
-      description:
-        "Explore signature event productions delivered across the region by Asia Events Group.",
+        "Full-scope event production services including corporate events, conferences, and live entertainment.",
     },
     contact: {
       title: "Contact | Asia Events Group",

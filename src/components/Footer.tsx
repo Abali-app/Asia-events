@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import type { Dictionary } from "@/lib/i18n";
 
 type FooterProps = {
@@ -5,11 +7,22 @@ type FooterProps = {
 };
 
 export default function Footer({ dict }: FooterProps) {
+  const base = `/${dict.locale}`;
+
   return (
     <footer className="border-t border-white/10 bg-[color:var(--ink)]">
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-3 lg:px-8">
         <div className="space-y-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--gold)]">{dict.siteName}</p>
+          <Link href={base} className="inline-flex items-center">
+            <Image
+              src="/brand/logo.png"
+              alt={`${dict.siteName} logo`}
+              width={150}
+              height={44}
+              className="h-9 w-auto"
+            />
+            <span className="sr-only">{dict.siteName}</span>
+          </Link>
           <p className="text-sm text-[color:var(--muted)]">{dict.footer.summary}</p>
         </div>
         <div className="space-y-3 text-sm text-[color:var(--muted)]">
