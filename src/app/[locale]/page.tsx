@@ -43,12 +43,12 @@ export default async function HomePage({ params }: PageProps) {
           <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
         </div>
-        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-10 px-4 pb-12 pt-8 text-center text-white sm:gap-12 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
+        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-10 px-4 pb-12 pt-6 text-center text-white sm:gap-12 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
           <div className="absolute inset-0 mx-auto h-[70%] w-[88%] max-w-3xl rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.6)_0%,_rgba(0,0,0,0.35)_45%,_transparent_70%)] sm:h-[65%]" />
           <p className="relative text-xs font-semibold uppercase tracking-[0.4em] text-white/80">
             {dict.home.hero.brandLine}
           </p>
-          <h1 className="relative max-w-[16ch] text-balance text-4xl font-semibold leading-[1.2] text-white sm:text-5xl md:text-6xl">
+          <h1 className="relative max-w-[16ch] text-balance text-4xl font-semibold leading-[1.25] text-white sm:text-5xl md:text-6xl">
             {dict.home.hero.headline.includes("—") ? (
               <>
                 <span className="block">{dict.home.hero.headline.split("—")[0]?.trim()} —</span>
@@ -60,7 +60,7 @@ export default async function HomePage({ params }: PageProps) {
               <span className="block whitespace-pre-line">{dict.home.hero.headline}</span>
             )}
           </h1>
-          <p className="relative max-w-[36ch] text-xl font-semibold leading-relaxed text-white/90 sm:text-2xl">
+          <p className="relative max-w-[44ch] text-xl font-semibold leading-relaxed text-white/90 sm:text-2xl">
             <span className="block whitespace-pre-line">{dict.home.hero.subheadline}</span>
           </p>
           <p className="relative max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg">
@@ -68,7 +68,7 @@ export default async function HomePage({ params }: PageProps) {
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="rounded-sm bg-[color:var(--accent)] px-12 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
+            className="relative rounded-sm bg-[color:var(--accent)] px-16 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
           >
             {dict.home.hero.primaryCta}
           </Link>
