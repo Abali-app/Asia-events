@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0b0a0a;
+  --ink-soft: #111111;
+  --gold: #d3b56f;
+  --gold-strong: #f0d291;
+  --muted: #b7b1a5;
+  --accent: #1f1c17;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--ink);
+  color: #f3f1ec;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(211, 181, 111, 0.12), transparent 45%),
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.06), transparent 40%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.font-en {
+  font-family: "Cormorant Garamond", "Palatino Linotype", "Times New Roman", serif;
+}
+
+.font-ar {
+  font-family: "Amiri", "Noto Naskh Arabic", "Times New Roman", serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background: rgba(211, 181, 111, 0.35);
+}

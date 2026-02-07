@@ -1,0 +1,14 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0B0A0A" />
+  <rect x="60" y="60" width="1080" height="510" rx="48" fill="url(#paint0_radial)" />
+  <rect x="120" y="140" width="960" height="350" rx="40" fill="#111111" stroke="#D3B56F" stroke-opacity="0.4" />
+  <text x="180" y="270" fill="#D3B56F" font-family="Georgia, serif" font-size="48" letter-spacing="8">ASIA EVENTS GROUP</text>
+  <text x="180" y="340" fill="#F3F1EC" font-family="Georgia, serif" font-size="30">Premium Event Production</text>
+  <text x="180" y="400" fill="#B7B1A5" font-family="Georgia, serif" font-size="22">Corporate • Concerts • Conferences • Weddings</text>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(800 140) rotate(120) scale(520 520)">
+      <stop stop-color="#D3B56F" stop-opacity="0.24" />
+      <stop offset="1" stop-color="#0B0A0A" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+</svg>

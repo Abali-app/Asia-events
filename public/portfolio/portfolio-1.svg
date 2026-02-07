@@ -1,0 +1,12 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#0F0E0C" />
+  <rect x="40" y="40" width="720" height="520" rx="36" fill="url(#gradient1)" stroke="#D3B56F" stroke-opacity="0.3" />
+  <text x="80" y="120" fill="#D3B56F" font-family="Georgia, serif" font-size="28" letter-spacing="6">SIGNATURE EVENT</text>
+  <text x="80" y="180" fill="#F3F1EC" font-family="Georgia, serif" font-size="40">Portfolio 01</text>
+  <defs>
+    <linearGradient id="gradient1" x1="40" y1="40" x2="760" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1712" />
+      <stop offset="1" stop-color="#0B0A0A" />
+    </linearGradient>
+  </defs>
+</svg>

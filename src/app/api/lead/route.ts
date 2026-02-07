@@ -25,7 +25,7 @@ export async function POST(req: Request) {
       from,
       to,
       replyTo: email,
-      subject: `New Lead — ${name}`,
+      subject: `New Lead - ${name}`,
       text: [
         `Name: ${name}`,
         `Email: ${email}`,
@@ -33,7 +33,9 @@ export async function POST(req: Request) {
         "",
         "Message:",
         message,
-      ].filter(Boolean).join("\n"),
+      ]
+        .filter(Boolean)
+        .join("\n"),
     });
 
     return NextResponse.json({ ok: true });

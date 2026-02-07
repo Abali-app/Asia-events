@@ -1,40 +1,57 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Asia Events Group Website
 
-## Getting Started
+Premium bilingual corporate website for Asia Events Group (English + Arabic) built with Next.js App Router, TypeScript, and Tailwind.
 
-First, run the development server:
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000/en` or `http://localhost:3000/ar`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` into `.env.local` and fill in values:
 
-## Learn More
+- `RESEND_API_KEY`
+- `LEADS_TO_EMAIL` (currently `aisar.daghash@gmail.com`)
+- `LEADS_FROM_EMAIL`
+- `NEXT_PUBLIC_SITE_URL` (set to `https://asiaeventsgroup.live`)
 
-To learn more about Next.js, take a look at the following resources:
+## Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Routes
 
-## Deploy on Vercel
+- `/en`, `/en/about`, `/en/services`, `/en/portfolio`, `/en/contact`
+- `/ar`, `/ar/about`, `/ar/services`, `/ar/portfolio`, `/ar/contact`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# Asia-events
->>>>>>> cff0e017308cb1a645e993fed44aa688cc67c650
+- No database is used.
+- Leads are sent via `/api/lead` using Resend.
+- Canonical domain is `https://asiaeventsgroup.live`.
+
+## Cloudflare + Vercel Checklist
+
+- DNS: point apex `asiaeventsgroup.live` and `www` to Vercel (CNAME or A/ALIAS per Vercel instructions).
+- SSL/TLS: use Full (strict) in Cloudflare, keep Vercel certificates active.
+- Security: enable WAF + Bot Fight Mode as needed.
+- Force HTTPS: handled by Vercel + redirect in `next.config.ts`.
+
+## Email DNS (Production Setup)
+
+If using a professional mail provider, add their records plus the following baseline protections:
+
+- MX: provider-specific.
+- SPF: `v=spf1 include:PROVIDER-SEND -all`
+- DKIM: provider-specific (usually `selector._domainkey` TXT).
+- DMARC: `v=DMARC1; p=quarantine; rua=mailto:postmaster@asiaeventsgroup.live; ruf=mailto:postmaster@asiaeventsgroup.live; fo=1`
+
+Replace `PROVIDER-SEND` and add provider-specific values from your email service dashboard.
