@@ -56,12 +56,6 @@ export default function Navbar({ locale, dict }: NavbarProps) {
           })}
         </nav>
         <div className="flex items-center gap-3">
-          <Link
-            href={`${base}/contact`}
-            className="hidden rounded-full bg-[color:var(--accent)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:bg-[color:var(--accent-strong)] md:inline-flex"
-          >
-            {dict.common.ctaPrimary}
-          </Link>
           <LanguageSwitcher locale={locale} label={dict.common.languageSwitchLabel} />
         </div>
       </div>

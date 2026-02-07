@@ -32,41 +32,28 @@ export default async function HomePage({ params }: PageProps) {
   return (
     <div>
       <section className="relative overflow-hidden py-20 sm:py-28">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.2),_transparent_55%)]" />
         <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:px-8">
-          <div className="relative w-full max-w-2xl">
-            <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_center,_rgba(200,167,106,0.25),_transparent_65%)]" />
-            <div className="relative flex items-center justify-center rounded-3xl border border-[color:var(--border)] bg-[color:var(--surface)] px-10 py-12 shadow-[0_20px_60px_rgba(11,27,43,0.12)] sm:px-14 sm:py-16">
-              <Image
-                src="/brand/logo.png"
-                alt={`${dict.siteName} logo`}
-                width={520}
-                height={160}
-                className="h-16 w-auto sm:h-20 md:h-24"
-                priority
-              />
-            </div>
-          </div>
-          <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--accent)]">
-            {dict.siteName}
-          </p>
-          <h1 className="text-balance text-4xl font-semibold text-[color:var(--text)] sm:text-5xl">
+          <Image
+            src="/brand/logo.png"
+            alt={`${dict.siteName} logo`}
+            width={720}
+            height={220}
+            className="h-20 w-auto sm:h-24 md:h-28"
+            priority
+          />
+          <h1 className="text-balance text-4xl font-semibold text-[color:var(--text)] sm:text-5xl md:text-6xl">
             {dict.home.hero.headline}
           </h1>
-          <p className="text-lg text-[color:var(--text-soft)]">{dict.home.hero.subheadline}</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href={`/${locale}/contact`}
-              className="rounded-full bg-[color:var(--accent)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:bg-[color:var(--accent-strong)]"
-            >
-              {dict.home.hero.primaryCta}
-            </Link>
-            <Link
-              href={`/${locale}/services`}
-              className="rounded-full border border-[color:var(--border)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
-            >
-              {dict.home.hero.secondaryCta}
-            </Link>
-          </div>
+          <p className="max-w-3xl text-lg text-[color:var(--text-soft)] sm:text-xl">
+            {dict.home.hero.subheadline}
+          </p>
+          <Link
+            href={`/${locale}/contact`}
+            className="rounded-full bg-[color:var(--accent)] px-7 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)] transition hover:bg-[color:var(--accent-strong)]"
+          >
+            {dict.home.hero.primaryCta}
+          </Link>
         </div>
       </section>
 
@@ -76,12 +63,9 @@ export default async function HomePage({ params }: PageProps) {
         title={dict.home.servicesPreview.title}
         subtitle={dict.home.servicesPreview.subtitle}
       >
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 lg:grid-cols-3">
           {dict.home.servicesPreview.items.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6"
-            >
+            <article key={item.title} className="border-t border-[color:var(--border)] pt-6">
               <h3 className="text-lg font-semibold text-[color:var(--text)]">{item.title}</h3>
               <p className="mt-3 text-sm text-[color:var(--text-soft)]">{item.description}</p>
             </article>
@@ -97,36 +81,6 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </Section>
 
-      <Section id="process" eyebrow={dict.home.process.eyebrow} title={dict.home.process.title}>
-        <div className="grid gap-6 lg:grid-cols-3">
-          {dict.home.process.steps.map((step) => (
-            <article
-              key={step.title}
-              className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6"
-            >
-              <h3 className="text-lg font-semibold text-[color:var(--text)]">{step.title}</h3>
-              <p className="mt-2 text-sm text-[color:var(--text-soft)]">{step.description}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="cta" align="center" title={dict.home.cta.title} subtitle={dict.home.cta.subtitle}>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link
-            href={`/${locale}/contact`}
-            className="rounded-full bg-[color:var(--accent)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:bg-[color:var(--accent-strong)]"
-          >
-            {dict.home.cta.primaryCta}
-          </Link>
-          <Link
-            href={`/${locale}/contact`}
-            className="rounded-full border border-[color:var(--border)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
-          >
-            {dict.home.cta.secondaryCta}
-          </Link>
-        </div>
-      </Section>
     </div>
   );
 }

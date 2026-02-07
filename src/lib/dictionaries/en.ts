@@ -9,7 +9,7 @@ export const en = {
     contact: "Contact",
   },
   common: {
-    ctaPrimary: "Get Tickets",
+    ctaPrimary: "Contact Us",
     ctaSecondary: "Explore Events",
     learnMore: "Learn More",
     exploreServices: "See Everything We Do",
@@ -18,100 +18,83 @@ export const en = {
   },
   home: {
     hero: {
-      headline: "We create and promote major live music events across the Arab world.",
-      subheadline:
-        "Asia Events Group is an event organizer and concert promoter. We create, own, and market ticketed music experiences with trusted artist, venue, and brand partners.",
-      primaryCta: "Get Tickets",
-      secondaryCta: "Explore Events",
+      headline: "We don’t produce events. We build moments people line up for.",
+      subheadline: "We are concert promoters behind ticketed live music events across the Arab world.",
+      primaryCta: "Contact Us",
     },
     servicesPreview: {
       eyebrow: "Focus",
-      title: "How we build live music moments",
-      subtitle: "End-to-end ownership of the live music experience.",
+      title: "Promoter-level ownership",
+      subtitle: "We create and promote what we put on stage.",
       items: [
         {
           title: "Artist Partnerships",
-          description: "Collaborations that align creative vision, audience, and tour planning.",
+          description: "Programming built around artists, audiences, and culture.",
         },
         {
           title: "Venue Booking",
-          description: "Strategic venue selection, holds, and production-ready scheduling.",
+          description: "Right rooms, right nights, right scale.",
         },
         {
           title: "Event Promotion",
-          description: "Campaigns across digital, social, and out-of-home to drive demand.",
+          description: "Campaigns that move tickets and build anticipation.",
         },
       ],
-    },
-    process: {
-      eyebrow: "Process",
-      title: "From concept to show night",
-      steps: [
-        { title: "Curate", description: "Select artists, cities, and moments worth traveling for." },
-        { title: "Launch", description: "Plan announcements, partners, and promotional cadence." },
-        { title: "Deliver", description: "Operate show day, guest experience, and ticketing." },
-      ],
-    },
-    cta: {
-      title: "Looking for the next live music experience?",
-      subtitle: "Follow upcoming announcements and ticket drops.",
-      primaryCta: "Get Updates",
-      secondaryCta: "Contact Us",
     },
   },
   about: {
     title: "About Asia Events Group",
     story:
-      "We are an event organizer and concert promoter focused on the Arab world. We create, produce, and own ticketed live music events that bring artists and audiences together.",
+      "We are an event organizer and concert promoter focused on the Arab world. We create, own, and market ticketed live music events.",
     missionTitle: "Mission",
     mission:
-      "Create live music experiences that are culturally relevant, commercially strong, and memorable for fans.",
+      "Create live music moments that feel essential and unforgettable.",
     valuesTitle: "Values",
     values: [
-      { title: "Artist First", description: "Respecting creative intent and performance quality." },
-      { title: "Audience Trust", description: "Transparent ticketing and a smooth guest journey." },
-      { title: "Partner Ready", description: "Clear collaboration for venues and sponsors." },
+      { title: "Artist First", description: "Performance quality and creative intent." },
+      { title: "Audience Trust", description: "Clear ticketing and smooth entry." },
+      { title: "Partner Ready", description: "Aligned sponsors and venue partners." },
     ],
     approachTitle: "Approach",
     approach: [
-      { title: "Curate", description: "Programming that fits the market and audience energy." },
-      { title: "Promote", description: "Campaigns that build momentum and demand." },
-      { title: "Operate", description: "Show execution with safe, reliable operations." },
+      { title: "Curate", description: "Lineups that match the market." },
+      { title: "Promote", description: "Momentum before doors open." },
+      { title: "Deliver", description: "Night-of execution that feels effortless." },
     ],
   },
   servicesPage: {
     title: "What We Do",
-    subtitle: "Our activities reflect how we create and promote ticketed live music events.",
+    subtitle: "Our core activities as a concert promoter.",
     categories: [
       {
         title: "Artist Partnerships",
-        description: "Tour routing, collaboration, and long-term artist relationships.",
+        description: "Tour routing, collaboration, and relationships.",
       },
       {
         title: "Venue Booking",
-        description: "Venue sourcing, negotiation, and date optimization.",
+        description: "Sourcing, negotiation, and date strategy.",
       },
       {
         title: "Event Promotion",
-        description: "Branding, media planning, and multi-channel campaigns.",
+        description: "Branding, media planning, and campaigns.",
       },
       {
         title: "Ticket Sales",
-        description: "Pricing strategy, sales channels, and audience access.",
+        description: "Pricing strategy and sales channels.",
       },
       {
         title: "Sponsorship Partnerships",
-        description: "Aligned brand partnerships that elevate the fan experience.",
+        description: "Aligned sponsors that elevate the night.",
       },
       {
         title: "Show Operations",
-        description: "Event management, on-site coordination, and guest flow.",
+        description: "Show-day operations and guest flow.",
       },
     ],
   },
   contact: {
     title: "Contact",
-    subtitle: "For artist, venue, and sponsorship partnerships, reach out here.",
+    subtitle: "Artist, venue, and sponsorship partnerships.",
     detailsTitle: "Contact Details",
     details: [
       { label: "Email", value: "hello@asiaeventsgroup.com" },
@@ -130,7 +113,7 @@ export const en = {
   },
   footer: {
     summary:
-      "Event organizer and concert promoter creating ticketed live music experiences across the Arab world.",
+      "Event organizer and concert promoter behind ticketed live music events across the Arab world.",
     socialTitle: "Social",
     socials: [
       { label: "Instagram", href: "#" },
