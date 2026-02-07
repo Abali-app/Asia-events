@@ -19,35 +19,69 @@ export const en = {
   home: {
     hero: {
       brandLine: "ASIA EVENTS GROUP",
-      headline: "We don’t follow the market.",
-      subheadline: "We move it.",
+      headline: "We don’t follow the market — we move it.",
+      subheadline: "We create, promote, and own ticketed live music events across the Arab world.",
       supporting:
-        "A live entertainment company focused on creating, promoting, and owning major ticketed music events across the Arab world.",
+        "Live entertainment with full promoter ownership.",
       primaryCta: "Let’s talk business.",
     },
-    servicesPreview: {
-      eyebrow: "What We Do",
-      title: "Promoter-level control",
-      subtitle: "We build demand and own the full live cycle.",
+    ourModel: {
+      eyebrow: "Our Model",
+      title: "Promoter-led by design",
+      subtitle: "We control the stack and move demand.",
       items: [
         {
-          title: "Artist partnerships",
-          description: "Direct alignment with the artists that move the market.",
+          title: "Artist-led partnerships",
+          description: "Direct alignment with the artists that lead the market.",
         },
         {
-          title: "Venue booking & scheduling",
-          description: "The right room, the right date, the right scale.",
+          title: "Venue-first strategy",
+          description: "Right room, right night, right capacity.",
         },
         {
-          title: "Event promotion & audience demand",
-          description: "Campaigns that convert attention into sold-out nights.",
+          title: "Ticketed demand + sponsor integration",
+          description: "Demand conversion with sponsor-ready formats.",
         },
       ],
+    },
+    sponsors: {
+      eyebrow: "Built for Sponsors",
+      title: "Sponsor-ready by default",
+      subtitle: "Clear integration, clean delivery.",
+      items: [
+        { title: "Integration options", description: "On-site, digital, and content layers." },
+        { title: "Clear deliverables", description: "Defined assets and approvals." },
+        { title: "Reporting framework", description: "Post-event reporting with clean structure." },
+      ],
+      cta: "Request Sponsorship Brief",
     },
     stayTuned: {
       title: "The next show is already in motion.",
       lines: ["Artist. Venue. Timing.", "We’ll announce it when it’s ready."],
       cta: "Stay Tuned",
+    },
+    faq: {
+      eyebrow: "FAQ",
+      title: "Promoter model, clarified",
+      subtitle: "Straight answers for partners and sponsors.",
+      items: [
+        {
+          q: "Do you work as a service provider?",
+          a: "No. We own the shows and control the full lifecycle.",
+        },
+        {
+          q: "Who do you partner with?",
+          a: "Artists, venues, and sponsors aligned with demand.",
+        },
+        {
+          q: "How do sponsors engage?",
+          a: "Through structured integrations and clear deliverables.",
+        },
+        {
+          q: "Can we access a brief?",
+          a: "Yes. Request a sponsorship brief via contact.",
+        },
+      ],
     },
   },
   about: {
@@ -105,7 +139,7 @@ export const en = {
     subtitle: "Let’s talk business.",
     detailsTitle: "Contact Details",
     details: [
-      { label: "Email", value: "hello@asiaeventsgroup.com" },
+      { label: "Email", value: "info@asiaeventsgroup.live" },
       { label: "Office", value: "By appointment" },
     ],
   },

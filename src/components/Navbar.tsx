@@ -29,15 +29,15 @@ export default function Navbar({ locale, dict }: NavbarProps) {
           <Image
             src="/brand/logo.png"
             alt={`${dict.siteName} logo`}
-            width={160}
-            height={48}
-            className="h-8 w-auto sm:h-9"
+            width={320}
+            height={96}
+            className="h-16 w-auto sm:h-20"
             priority
           />
           <span className="sr-only">{dict.siteName}</span>
         </Link>
         <nav
-          className="hidden items-center gap-6 text-sm text-[color:var(--text-soft)] lg:flex"
+          className="hidden items-center gap-8 text-base text-[color:var(--text-soft)] lg:flex"
           aria-label="Primary"
         >
           {items.map((item) => {
@@ -47,7 +47,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
                 key={item.href}
                 href={item.href}
                 className={`transition hover:text-[color:var(--text)] ${
-                  active ? "text-[color:var(--text)]" : ""
+                  active ? "text-[color:var(--text)] underline underline-offset-8" : ""
                 }`}
               >
                 {item.label}

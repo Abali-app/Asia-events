@@ -30,7 +30,12 @@ export default async function ContactPage({ params }: PageProps) {
 
   return (
     <div>
-      <Section eyebrow={dict.nav.contact} title={dict.contact.title} subtitle={dict.contact.subtitle}>
+      <Section
+        id="contact-form"
+        eyebrow={dict.nav.contact}
+        title={dict.contact.title}
+        subtitle={dict.contact.subtitle}
+      >
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="border-t border-[color:var(--border)] pt-6">
             <ContactForm labels={dict.form} />

@@ -17,9 +17,9 @@ export default function Footer({ dict }: FooterProps) {
             <Image
               src="/brand/logo.png"
               alt={`${dict.siteName} logo`}
-              width={150}
-              height={44}
-              className="h-9 w-auto"
+              width={300}
+              height={88}
+              className="h-16 w-auto"
             />
             <span className="sr-only">{dict.siteName}</span>
           </Link>
