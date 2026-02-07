@@ -24,7 +24,8 @@ export default function ContactForm({ labels }: ContactFormProps) {
     setStatus("sending");
     setError("");
 
-    const form = new FormData(e.currentTarget);
+    const formEl = e.currentTarget;
+    const form = new FormData(formEl);
     const payload = Object.fromEntries(form.entries());
 
     const res = await fetch("/api/lead", {
@@ -35,13 +36,16 @@ export default function ContactForm({ labels }: ContactFormProps) {
 
     if (res.ok) {
       setStatus("sent");
-      e.currentTarget.reset();
+      formEl.reset();
       return;
     }
 
     const data = await res.json().catch(() => null);
+    if (data?.error) {
+      console.log("lead_error", data.error);
+    }
     setStatus("error");
-    setError(data?.error ?? labels.error);
+    setError(labels.error);
   }
 
   return (

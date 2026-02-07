@@ -15,33 +15,44 @@ export async function POST(req: Request) {
     const to = process.env.LEADS_TO_EMAIL;
     const from = process.env.LEADS_FROM_EMAIL;
 
-    if (!resendKey || !to || !from) {
-      return NextResponse.json({ ok: false, error: "Server env not set" }, { status: 500 });
+    const hasKey = Boolean(resendKey);
+    const hasTo = Boolean(to);
+    const hasFrom = Boolean(from);
+
+    if (!hasKey || !hasTo || !hasFrom) {
+      console.error("lead_env_missing", { hasKey, hasTo, hasFrom });
+      return NextResponse.json({ ok: false, error: "env_missing" }, { status: 500 });
     }
 
     const resend = new Resend(resendKey);
+    const toAddress = to as string;
+    const fromAddress = from as string;
 
-    await resend.emails.send({
-      from,
-      to,
-      replyTo: email,
-      subject: "New Website Lead – Asia Events Group",
-      text: [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        phone ? `Phone: ${phone}` : "",
-        "",
-        "Message:",
-        message,
-        "",
-        "Source: Website contact form",
-      ]
-        .filter(Boolean)
-        .join("\n"),
-    });
+    try {
+      await resend.emails.send({
+        from: fromAddress,
+        to: toAddress,
+        replyTo: email,
+        subject: "New Website Lead – Asia Events Group",
+        text: [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          phone ? `Phone: ${phone}` : "",
+          "",
+          "Message:",
+          message,
+          "",
+          "Source: Website contact form",
+        ]
+          .filter(Boolean)
+          .join("\n"),
+      });
+    } catch {
+      return NextResponse.json({ ok: false, error: "resend_failed" }, { status: 502 });
+    }
 
     return NextResponse.json({ ok: true });
   } catch {
-    return NextResponse.json({ ok: false, error: "Failed" }, { status: 500 });
+    return NextResponse.json({ ok: false, error: "resend_failed" }, { status: 502 });
   }
 }
