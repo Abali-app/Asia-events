@@ -1,18 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #0b0a0a;
-  --ink-soft: #111111;
-  --gold: #d3b56f;
-  --gold-strong: #f0d291;
-  --muted: #b7b1a5;
-  --accent: #1f1c17;
+  --bg: #fdfbf7;
+  --surface: #ffffff;
+  --text: #0b1b2b;
+  --text-soft: #596474;
+  --border: #e7dcc8;
+  --accent: #c8a76a;
+  --accent-strong: #d8bb7d;
+  --ink: var(--text);
+  --ink-soft: var(--text);
+  --muted: var(--text-soft);
+  --gold: var(--accent);
+  --gold-strong: var(--accent-strong);
 }
 
 body {
   min-height: 100vh;
-  background-color: var(--ink);
-  color: #f3f1ec;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 body::before {
@@ -20,8 +26,8 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at top, rgba(211, 181, 111, 0.12), transparent 45%),
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.06), transparent 40%);
+    radial-gradient(circle at top, rgba(200, 167, 106, 0.16), transparent 45%),
+    radial-gradient(circle at 10% 25%, rgba(11, 27, 43, 0.05), transparent 45%);
   pointer-events: none;
   z-index: -1;
 }
@@ -31,5 +37,5 @@ body::before {
 }
 
 ::selection {
-  background: rgba(211, 181, 111, 0.35);
+  background: rgba(200, 167, 106, 0.3);
 }

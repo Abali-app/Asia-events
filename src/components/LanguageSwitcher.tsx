@@ -17,7 +17,7 @@ export default function LanguageSwitcher({ locale, label }: LanguageSwitcherProp
   return (
     <Link
       href={targetPath}
-      className="rounded-full border border-[color:var(--gold)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--gold)] transition hover:bg-[color:var(--gold)] hover:text-black"
+      className="rounded-full border border-[color:var(--accent)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--accent)] transition hover:bg-[color:var(--accent)] hover:text-[color:var(--text)]"
       aria-label={label}
     >
       {targetLocale === "ar" ? "العربية" : "English"}

@@ -9,182 +9,128 @@ export const en = {
     contact: "Contact",
   },
   common: {
-    ctaPrimary: "Plan Your Event",
+    ctaPrimary: "Start a Brief",
     ctaSecondary: "View Services",
     learnMore: "Learn More",
     exploreServices: "Explore Services",
-    viewAll: "View All Work",
+    viewAll: "View All",
     languageSwitchLabel: "Switch language",
   },
   home: {
     hero: {
-      headline: "Premium event production for Gulf-facing brands",
+      headline: "Corporate production with a calm, exacting standard.",
       subheadline:
-        "We plan and deliver high-touch corporate events, conferences, and live experiences with rigorous standards, expert crews, and disciplined execution.",
+        "We support corporate teams with clear planning, reliable coordination, and a refined finish across every touchpoint.",
       primaryCta: "Start a Brief",
-      secondaryCta: "Explore Services",
+      secondaryCta: "View Services",
+      card: {
+        eyebrow: "Overview",
+        title: "A focused production partner",
+        items: [
+          "Strategic planning aligned with brand priorities.",
+          "Steady on-site coordination from setup to wrap.",
+          "Post-production support with clean handoff.",
+        ],
+      },
     },
-    capabilities: {
-      eyebrow: "Capabilities",
-      title: "What we do",
-      subtitle: "End-to-end production built for complex programs and premium audiences.",
+    servicesPreview: {
+      eyebrow: "Services",
+      title: "Focused capabilities",
+      subtitle: "Flexible support across planning, production, and delivery.",
       items: [
         {
-          title: "Corporate & Government Events",
-          description: "Summits, launches, and leadership forums with refined guest flow and protocol.",
+          title: "Production Strategy",
+          description: "Scoping, timelines, and resourcing built around your objectives.",
         },
         {
-          title: "Conferences & Forums",
-          description: "Multi-track agendas, speaker management, and broadcast-ready production.",
+          title: "Creative Direction",
+          description: "Unified visuals, tone, and messaging across the experience.",
         },
         {
-          title: "Live Entertainment",
-          description: "Stage management, artist logistics, and audience operations at scale.",
-        },
-        {
-          title: "Brand Experiences",
-          description: "Purpose-built environments that translate brand priorities into real moments.",
-        },
-        {
-          title: "VIP & Protocol",
-          description: "Executive hospitality, security coordination, and discreet service.",
-        },
-        {
-          title: "Technical Production",
-          description: "Lighting, sound, staging, and scenic build with proven vendor partners.",
-        },
-      ],
-    },
-    standards: {
-      eyebrow: "Production Standards",
-      title: "How we protect quality",
-      subtitle: "A disciplined approach that prioritizes safety, consistency, and accountability.",
-      items: [
-        {
-          title: "Safety-first operations",
-          description: "Risk assessment, compliance checks, and detailed show flow rehearsals.",
-        },
-        {
-          title: "Vendor network control",
-          description: "Curated partners, clear scopes, and on-site supervision for every discipline.",
-        },
-        {
-          title: "Guest experience design",
-          description: "Clear wayfinding, premium hospitality, and refined brand touchpoints.",
-        },
-        {
-          title: "On-ground command",
-          description: "Centralized production control with live reporting and decision cadence.",
+          title: "Delivery & Handoff",
+          description: "Reliable execution with clear documentation and final assets.",
         },
       ],
     },
     process: {
       eyebrow: "Process",
-      title: "A disciplined production method",
+      title: "A clear working rhythm",
       steps: [
-        { title: "Discovery", description: "Objectives, audience, and operational requirements." },
-        { title: "Design", description: "Experience planning, layouts, and production architecture." },
-        { title: "Build", description: "Procurement, technical setup, rehearsals, and QA checks." },
-        { title: "Showtime", description: "On-site execution with real-time coordination." },
-      ],
-    },
-    packages: {
-      eyebrow: "Service Packages",
-      title: "Scalable engagement models",
-      subtitle: "Choose the level of support that matches your program complexity.",
-      items: [
-        {
-          title: "Executive Program",
-          description: "For leadership gatherings and VIP protocol-focused events.",
-          includes: ["Program design", "VIP hospitality", "Speaker management", "On-site operations"],
-        },
-        {
-          title: "Signature Production",
-          description: "For high-visibility brand moments with multiple stakeholders.",
-          includes: ["Creative direction", "Technical production", "Vendor management", "Show calling"],
-        },
-        {
-          title: "Live Experience",
-          description: "For large-scale audiences and live entertainment programs.",
-          includes: ["Stage operations", "Crowd flow planning", "Rehearsal management", "Safety control"],
-        },
+        { title: "Discover", description: "Align on goals, audience, and constraints." },
+        { title: "Plan", description: "Define scope, schedule, and ownership." },
+        { title: "Deliver", description: "Execute with oversight and measured feedback." },
       ],
     },
     cta: {
-      title: "Ready to plan a premium event program?",
-      subtitle: "Share your objectives and we will design a production plan that fits the brief.",
-      primaryCta: "Request a Proposal",
-      secondaryCta: "Contact Our Team",
+      title: "Ready to align on your next production?",
+      subtitle: "Share a brief and we will respond with a clear plan.",
+      primaryCta: "Contact Us",
+      secondaryCta: "Start a Brief",
     },
   },
   about: {
     title: "About Asia Events Group",
     story:
-      "Asia Events Group is a premium event production company serving Gulf-facing organizations with careful planning and disciplined execution.",
-    missionTitle: "Our Mission",
-    mission:
-      "To deliver consistent, safe, and refined event experiences that protect brand reputation and stakeholder trust.",
+      "We are a production company supporting corporate teams with structured planning, thoughtful coordination, and dependable delivery.",
+    missionTitle: "Mission",
+    mission: "Provide reliable production support that protects brand consistency and stakeholder trust.",
     valuesTitle: "Values",
     values: [
-      { title: "Craft", description: "Every detail is planned, documented, and executed with care." },
-      { title: "Trust", description: "Clear communication and accountability at every stage." },
-      { title: "Safety", description: "Operational discipline and compliance across all venues." },
-      { title: "Excellence", description: "Premium guest experience without unnecessary complexity." },
+      { title: "Clarity", description: "Clear expectations, clear handoffs, and clean documentation." },
+      { title: "Care", description: "Every detail is reviewed with intention and respect." },
+      { title: "Accountability", description: "Ownership at every step and transparent communication." },
     ],
-    teamTitle: "Leadership",
-    teamEyebrow: "Team",
-    team: [
-      { name: "Executive Producer", role: "Strategy & Client Experience" },
-      { name: "Creative Director", role: "Design & Brand Storytelling" },
-      { name: "Technical Director", role: "Staging, Lighting & Sound" },
-      { name: "Operations Lead", role: "Logistics & Venue Management" },
+    approachTitle: "Approach",
+    approach: [
+      { title: "Listen", description: "Understand context, priorities, and constraints." },
+      { title: "Structure", description: "Build a plan that keeps teams aligned." },
+      { title: "Deliver", description: "Execute steadily with a refined finish." },
     ],
   },
   servicesPage: {
     title: "Services",
-    subtitle: "Comprehensive capabilities to deliver end-to-end event production with control and clarity.",
+    subtitle: "Service areas tailored to corporate teams and premium brands.",
     categories: [
       {
-        title: "Corporate Events",
-        description: "Executive summits, leadership forums, launches, and high-level gatherings.",
+        title: "Production Strategy",
+        description: "Scoping, planning, and ownership models that keep delivery aligned.",
       },
       {
-        title: "Concerts & Entertainment",
-        description: "Stage operations, artist logistics, audience flow, and show control.",
+        title: "Creative Direction",
+        description: "Visual systems, messaging, and experience design across channels.",
       },
       {
-        title: "Conferences",
-        description: "Multi-track agendas, registration, translation, and production direction.",
+        title: "Pre-Production",
+        description: "Schedules, vendor coordination, and logistical readiness.",
       },
       {
-        title: "Weddings",
-        description: "Premium celebrations with detailed planning, styling, and guest flow.",
+        title: "On-Site Production",
+        description: "Run-of-show management, crew oversight, and live coordination.",
       },
       {
-        title: "Brand Activations",
-        description: "Immersive environments, experiential marketing, and hospitality design.",
+        title: "Post-Production",
+        description: "Editing, revisions, and final asset delivery.",
       },
       {
-        title: "Staging, Lighting & Sound",
-        description: "End-to-end technical production with experienced crews and engineering.",
+        title: "Content Management",
+        description: "Archiving, version control, and distribution support.",
       },
     ],
   },
   contact: {
     title: "Contact",
-    subtitle: "Share the details and our team will respond within 24 hours.",
+    subtitle: "Share your brief and we will follow up with next steps.",
     detailsTitle: "Contact Details",
     details: [
       { label: "Email", value: "hello@asiaeventsgroup.com" },
-      { label: "Phone", value: "+971 000 000 000" },
-      { label: "Locations", value: "Riyadh, Dubai, Doha, Amman" },
+      { label: "Office", value: "By appointment" },
     ],
   },
   form: {
     name: "Full Name",
     email: "Email Address",
-    phone: "Phone Number",
-    message: "Tell us about your event",
+    phone: "Phone (optional)",
+    message: "Tell us about your project",
     submit: "Send Request",
     sending: "Sending...",
     success: "Thank you. We will be in touch shortly.",
@@ -192,35 +138,34 @@ export const en = {
   },
   footer: {
     summary:
-      "Premium event production with disciplined planning, safe execution, and refined guest experience.",
+      "A corporate production partner focused on clarity, quality, and composed execution.",
     socialTitle: "Social",
     socials: [
-      { label: "Instagram", href: "#" },
       { label: "LinkedIn", href: "#" },
+      { label: "Vimeo", href: "#" },
       { label: "YouTube", href: "#" },
     ],
-    copyright: "© 2026 Asia Events Group. All rights reserved.",
+    copyright: "© Asia Events Group. All rights reserved.",
   },
   metadata: {
     home: {
-      title: "Asia Events Group | Premium Event Production",
+      title: "Asia Events Group | Corporate Production Partner",
       description:
-        "Premium event production for corporate, conference, and live experience programs with disciplined execution.",
+        "Corporate production partner providing structured planning, coordinated execution, and refined delivery.",
     },
     about: {
       title: "About | Asia Events Group",
       description:
-        "Learn about Asia Events Group, a premium event production company focused on quality and operational discipline.",
+        "Learn about Asia Events Group, a corporate production company focused on clarity and dependable delivery.",
     },
     services: {
       title: "Services | Asia Events Group",
       description:
-        "Full-scope event production services including corporate events, conferences, and live entertainment.",
+        "Corporate production services spanning strategy, creative direction, on-site production, and post-production.",
     },
     contact: {
       title: "Contact | Asia Events Group",
-      description:
-        "Get in touch with Asia Events Group to discuss your next corporate event or luxury celebration.",
+      description: "Get in touch with Asia Events Group to discuss your next production.",
     },
   },
 } as const;

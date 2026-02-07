@@ -36,9 +36,12 @@ export default async function ServicesPage({ params }: PageProps) {
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {dict.servicesPage.categories.map((service) => (
-            <article key={service.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-lg font-semibold text-white">{service.title}</h3>
-              <p className="mt-3 text-sm text-[color:var(--muted)]">{service.description}</p>
+            <article
+              key={service.title}
+              className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6"
+            >
+              <h3 className="text-lg font-semibold text-[color:var(--text)]">{service.title}</h3>
+              <p className="mt-3 text-sm text-[color:var(--text-soft)]">{service.description}</p>
             </article>
           ))}
         </div>

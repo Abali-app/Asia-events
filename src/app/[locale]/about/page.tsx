@@ -30,32 +30,31 @@ export default async function AboutPage({ params }: PageProps) {
   return (
     <div>
       <Section eyebrow={dict.nav.about} title={dict.about.title} subtitle={dict.about.story}>
-        <div className="grid gap-6 lg:grid-cols-2">
-          <article className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <h3 className="text-lg font-semibold text-white">{dict.about.missionTitle}</h3>
-            <p className="mt-3 text-sm text-[color:var(--muted)]">{dict.about.mission}</p>
+        <div className="grid gap-6 lg:grid-cols-3">
+          <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+            <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.about.missionTitle}</h3>
+            <p className="mt-3 text-sm text-[color:var(--text-soft)]">{dict.about.mission}</p>
           </article>
-          <article className="rounded-2xl border border-white/10 bg-white/5 p-6">
-            <h3 className="text-lg font-semibold text-white">{dict.about.valuesTitle}</h3>
-            <ul className="mt-4 space-y-3 text-sm text-[color:var(--muted)]">
+          <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+            <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.about.valuesTitle}</h3>
+            <ul className="mt-4 space-y-3 text-sm text-[color:var(--text-soft)]">
               {dict.about.values.map((value) => (
                 <li key={value.title}>
-                  <span className="text-white">{value.title}:</span> {value.description}
+                  <span className="text-[color:var(--text)]">{value.title}:</span> {value.description}
                 </li>
               ))}
             </ul>
           </article>
-        </div>
-      </Section>
-
-      <Section eyebrow={dict.about.teamEyebrow} title={dict.about.teamTitle}>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {dict.about.team.map((member) => (
-            <div key={member.name} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-base font-semibold text-white">{member.name}</h3>
-              <p className="mt-2 text-sm text-[color:var(--muted)]">{member.role}</p>
-            </div>
-          ))}
+          <article className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
+            <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.about.approachTitle}</h3>
+            <ul className="mt-4 space-y-3 text-sm text-[color:var(--text-soft)]">
+              {dict.about.approach.map((item) => (
+                <li key={item.title}>
+                  <span className="text-[color:var(--text)]">{item.title}:</span> {item.description}
+                </li>
+              ))}
+            </ul>
+          </article>
         </div>
       </Section>
     </div>
