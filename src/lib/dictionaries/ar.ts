@@ -21,7 +21,7 @@ export const ar = {
       brandLine: "ASIA EVENTS GROUP",
       headline: "نحن لا ننظم حفلات.",
       subheadline: "نحن نصنع الطلب.",
-      supporting: "مروّجو حفلات موسيقية بتذاكر في العالم العربي.",
+      supporting: "نحن نخطط وننتج لكم اجمل لحظات العمر ",
       primaryCta: "تواصل معنا",
     },
     servicesPreview: {
@@ -52,7 +52,7 @@ export const ar = {
   about: {
     title: "عن مجموعة آسيا للفعاليات",
     story:
-      "نحن مروّجو حفلات في العالم العربي. نمتلك ونروّج لفعاليات موسيقية بتذاكر.",
+      "نحن نخطط وننتج لكم اجمل لحظات العمر ",
     missionTitle: "المهمة",
     mission:
       "صناعة طلب واضح على الحفلات.",
@@ -120,7 +120,7 @@ export const ar = {
   },
   footer: {
     summary:
-      "مروّجو حفلات موسيقية بتذاكر في العالم العربي.",
+      "نحن نخطط وننتج لكم اجمل لحظات العمر ",
     socialTitle: "التواصل",
     socials: [
       { label: "إنستغرام", href: "#" },

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import type { Dictionary } from "@/lib/i18n";
 
 type FooterProps = {
@@ -40,17 +40,32 @@ export default function Footer({ dict }: FooterProps) {
         </div>
         <div className="space-y-3 text-sm text-[color:var(--text-soft)]">
           <p className="text-[color:var(--text)]">{dict.footer.socialTitle}</p>
-          <div className="flex flex-wrap gap-3">
-            {dict.footer.socials.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                className="rounded-full border border-[color:var(--border)] px-3 py-1 text-xs uppercase tracking-[0.2em] text-[color:var(--text-soft)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
-                aria-label={social.label}
-              >
-                {social.label}
-              </a>
-            ))}
+          <div className="flex flex-wrap items-center gap-4">
+            {dict.footer.socials.map((social, index) => {
+              const iconSrc =
+                index === 0
+                  ? "/brand/social/logo-ig-png-42760.png"
+                  : index === 1
+                    ? "/brand/social/youtube-logo-png-31792.png"
+                    : "/brand/social/tik-tok-logo-33079.png";
+
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  className="inline-flex items-center opacity-80 hover:opacity-100"
+                  aria-label={`${dict.siteName} ${social.label}`}
+                >
+                  <Image
+                    src={iconSrc}
+                    alt={social.label}
+                    width={24}
+                    height={24}
+                    className="h-5 w-auto sm:h-6"
+                  />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
