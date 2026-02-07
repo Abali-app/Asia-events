@@ -40,31 +40,15 @@ export default async function HomePage({ params }: PageProps) {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/45" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.35),_transparent_60%)]" />
+          <div className="absolute inset-0 bg-black/35" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Image
-            src="/brand/logo.png"
-            alt=""
-            fill
-            className="object-contain opacity-[0.035]"
-            priority
-          />
-        </div>
-        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-10 px-4 text-center text-white sm:gap-12 sm:px-6 lg:px-8">
-          <Image
-            src="/brand/logo.png"
-            alt={`${dict.siteName} logo`}
-            width={2400}
-            height={780}
-            className="h-40 w-auto sm:h-48 md:h-56"
-            priority
-          />
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-white/80">
+        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-10 px-4 pb-12 pt-8 text-center text-white sm:gap-12 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
+          <div className="absolute inset-0 mx-auto h-[70%] w-[88%] max-w-3xl rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.6)_0%,_rgba(0,0,0,0.35)_45%,_transparent_70%)] sm:h-[65%]" />
+          <p className="relative text-xs font-semibold uppercase tracking-[0.4em] text-white/80">
             {dict.home.hero.brandLine}
           </p>
-          <h1 className="text-balance text-4xl font-semibold leading-[1.1] text-white sm:text-5xl md:text-6xl">
+          <h1 className="relative max-w-[16ch] text-balance text-4xl font-semibold leading-[1.2] text-white sm:text-5xl md:text-6xl">
             {dict.home.hero.headline.includes("—") ? (
               <>
                 <span className="block">{dict.home.hero.headline.split("—")[0]?.trim()} —</span>
@@ -76,10 +60,10 @@ export default async function HomePage({ params }: PageProps) {
               <span className="block whitespace-pre-line">{dict.home.hero.headline}</span>
             )}
           </h1>
-          <p className="text-xl font-semibold leading-relaxed text-white/90 sm:text-2xl">
+          <p className="relative max-w-[36ch] text-xl font-semibold leading-relaxed text-white/90 sm:text-2xl">
             <span className="block whitespace-pre-line">{dict.home.hero.subheadline}</span>
           </p>
-          <p className="max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg">
+          <p className="relative max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg">
             {dict.home.hero.supporting}
           </p>
           <Link
@@ -201,3 +185,10 @@ export default async function HomePage({ params }: PageProps) {
     </div>
   );
 }
+
+
+
+
+
+
+
