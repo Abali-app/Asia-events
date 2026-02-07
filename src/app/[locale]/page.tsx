@@ -54,29 +54,35 @@ export default async function HomePage({ params }: PageProps) {
           <Image
             src="/brand/logo.png"
             alt={`${dict.siteName} logo`}
-            width={3040}
-            height={960}
-            className="h-96 w-auto sm:h-[28rem] md:h-[32rem]"
+            width={2600}
+            height={820}
+            className="h-[21rem] w-auto sm:h-[24rem] md:h-[28rem]"
             priority
           />
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[color:var(--text)]">
             {dict.home.hero.brandLine}
           </p>
-          <h1 className="text-balance text-4xl font-semibold leading-[1.05] text-[color:var(--text)] sm:text-5xl md:text-6xl">
-            <span className="block">{dict.home.hero.headline.split("—")[0]?.trim()} —</span>
-            <span className="block text-[color:var(--text)]/70">
-              {dict.home.hero.headline.split("—")[1]?.trim()}
-            </span>
+          <h1 className="text-balance text-4xl font-semibold leading-[1.15] text-[color:var(--text)] sm:text-5xl md:text-6xl">
+            {dict.home.hero.headline.includes("—") ? (
+              <>
+                <span className="block">{dict.home.hero.headline.split("—")[0]?.trim()} —</span>
+                <span className="block text-[color:var(--text)]/70">
+                  {dict.home.hero.headline.split("—")[1]?.trim()}
+                </span>
+              </>
+            ) : (
+              <span className="block whitespace-pre-line">{dict.home.hero.headline}</span>
+            )}
           </h1>
           <p className="text-xl font-semibold leading-relaxed text-[color:var(--text)] sm:text-2xl">
-            {dict.home.hero.subheadline}
+            <span className="block whitespace-pre-line">{dict.home.hero.subheadline}</span>
           </p>
           <p className="max-w-3xl text-base leading-relaxed text-[color:var(--text-soft)] sm:text-lg">
             {dict.home.hero.supporting}
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="rounded-md bg-[color:var(--accent)] px-12 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
+            className="rounded-sm bg-[color:var(--accent)] px-14 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
           >
             {dict.home.hero.primaryCta}
           </Link>
@@ -148,6 +154,12 @@ export default async function HomePage({ params }: PageProps) {
           ))}
         </div>
       </Section>
+
+      {dict.home.microTeaser ? (
+        <div className="py-6 text-center text-sm font-semibold text-[color:var(--text-soft)]">
+          {dict.home.microTeaser}
+        </div>
+      ) : null}
 
     </div>
   );

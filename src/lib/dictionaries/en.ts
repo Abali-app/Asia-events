@@ -60,6 +60,7 @@ export const en = {
       lines: ["Artist. Venue. Timing.", "We’ll announce it when it’s ready."],
       cta: "Stay Tuned",
     },
+    microTeaser: "",
     faq: {
       eyebrow: "FAQ",
       title: "Promoter model, clarified",
