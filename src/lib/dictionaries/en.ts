@@ -19,28 +19,28 @@ export const en = {
   home: {
     hero: {
       brandLine: "ASIA EVENTS GROUP",
-      headline: "We don’t organize events.",
-      subheadline: "We create demand.",
+      headline: "We don’t follow the market.",
+      subheadline: "We move it.",
       supporting:
-        "Concert promotion. Artist-led shows. Ticketed live experiences across the Arab world.",
-      primaryCta: "Contact Us",
+        "A live entertainment company focused on creating, promoting, and owning major ticketed music events across the Arab world.",
+      primaryCta: "Let’s talk business.",
     },
     servicesPreview: {
-      eyebrow: "Focus",
-      title: "Promoter-first work",
-      subtitle: "Built around artists, venues, and ticketed demand.",
+      eyebrow: "What We Do",
+      title: "Promoter-level control",
+      subtitle: "We build demand and own the full live cycle.",
       items: [
         {
-          title: "Artist Partnerships",
-          description: "Artists we believe in and audiences who show up.",
+          title: "Artist partnerships",
+          description: "Direct alignment with the artists that move the market.",
         },
         {
-          title: "Venue Booking",
-          description: "The right room for the right night.",
+          title: "Venue booking & scheduling",
+          description: "The right room, the right date, the right scale.",
         },
         {
-          title: "Event Promotion",
-          description: "Promotion that turns interest into sold-out rooms.",
+          title: "Event promotion & audience demand",
+          description: "Campaigns that convert attention into sold-out nights.",
         },
       ],
     },
@@ -51,58 +51,58 @@ export const en = {
     },
   },
   about: {
-    title: "About Asia Events Group",
+    title: "Who We Are",
     story:
-      "We are a concert promoter in the Arab world. We create, own, and market ticketed live music events.",
+      "Asia Events Group is a concert promoter and live entertainment platform. We work directly with artists and venues to create high-impact shows, control the full lifecycle of the event, and turn demand into sold-out nights.",
     missionTitle: "Mission",
     mission:
-      "Create live music moments people talk about the next day.",
+      "Control the demand and deliver major live music moments at scale.",
     valuesTitle: "Values",
     values: [
-      { title: "Artist First", description: "Creative intent comes first." },
-      { title: "Audience Trust", description: "Clear tickets. Smooth entry." },
-      { title: "Partner Ready", description: "Venue and sponsor alignment." },
+      { title: "Ownership", description: "We control every critical layer." },
+      { title: "Demand", description: "We build it, we convert it." },
+      { title: "Execution", description: "We deliver without compromise." },
     ],
     approachTitle: "Approach",
     approach: [
-      { title: "Curate", description: "Artists that fit the market." },
-      { title: "Promote", description: "Momentum before doors open." },
-      { title: "Deliver", description: "Night-of execution, no noise." },
+      { title: "Create", description: "Artist-led show concepts with market pull." },
+      { title: "Promote", description: "Demand-driven campaigns at scale." },
+      { title: "Own", description: "Full lifecycle control from idea to doors." },
     ],
   },
   servicesPage: {
     title: "What We Do",
-    subtitle: "The promoter’s core work.",
+    subtitle: "Direct control of every promoter function.",
     categories: [
       {
-        title: "Artist Partnerships",
-        description: "Tour routing, collaboration, and long-term relationships.",
+        title: "Artist partnerships",
+        description: "Direct relationships and tour routing.",
       },
       {
-        title: "Venue Booking",
-        description: "Venue sourcing, negotiation, and date strategy.",
+        title: "Venue booking & scheduling",
+        description: "Sourcing, negotiation, and calendar control.",
       },
       {
-        title: "Event Promotion",
-        description: "Branding, media planning, and campaigns.",
+        title: "Event promotion & audience demand",
+        description: "Campaigns built to convert demand.",
       },
       {
-        title: "Ticket Sales",
-        description: "Pricing strategy and sales channels.",
+        title: "Ticket sales & distribution",
+        description: "Pricing strategy, channels, and conversion.",
       },
       {
-        title: "Sponsorship Partnerships",
-        description: "Aligned sponsors that elevate the night.",
+        title: "Sponsorship integration",
+        description: "Brand integration that scales the show.",
       },
       {
-        title: "Show Operations",
-        description: "Show-day operations and guest flow.",
+        title: "Live execution",
+        description: "Show control and on-ground delivery.",
       },
     ],
   },
   contact: {
     title: "Contact",
-    subtitle: "For artist, venue, and sponsorship partnerships.",
+    subtitle: "Let’s talk business.",
     detailsTitle: "Contact Details",
     details: [
       { label: "Email", value: "hello@asiaeventsgroup.com" },
@@ -121,7 +121,7 @@ export const en = {
   },
   footer: {
     summary:
-      "Concert promoter behind ticketed live music events across the Arab world.",
+      "Concert promoter and live entertainment platform operating across the Arab world.",
     socialTitle: "Social",
     socials: [
       { label: "Instagram", href: "#" },
@@ -132,14 +132,14 @@ export const en = {
   },
   metadata: {
     home: {
-      title: "Asia Events Group | Live Music Events",
+      title: "Asia Events Group | Live Entertainment",
       description:
-        "We create and promote major live music events across the Arab world.",
+        "We create, promote, and own major ticketed music events across the Arab world.",
     },
     about: {
-      title: "About | Asia Events Group",
+      title: "Who We Are | Asia Events Group",
       description:
-        "Learn about Asia Events Group, an event organizer and concert promoter.",
+        "Asia Events Group is a concert promoter and live entertainment platform.",
     },
     services: {
       title: "What We Do | Asia Events Group",
@@ -148,7 +148,7 @@ export const en = {
     },
     contact: {
       title: "Contact | Asia Events Group",
-      description: "Get in touch for artist, venue, and sponsorship partnerships.",
+      description: "Let’s talk business.",
     },
   },
 } as const;
