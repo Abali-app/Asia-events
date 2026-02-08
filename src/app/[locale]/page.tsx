@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
+import HeroParallax from "@/components/HeroParallax";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
@@ -44,12 +45,12 @@ export default async function HomePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
       <section id="hero" className="relative min-h-[90vh] overflow-hidden">
-        <div className="absolute inset-0">
+        <div id="hero-bg" className="absolute inset-0">
           <Image
             src="/brand/hero/asia-redcarpet.jpg"
             alt=""
             fill
-            className="object-cover object-top sm:object-center"
+            className="hero-image object-cover object-top sm:object-center"
             priority
             sizes="100vw"
           />
@@ -58,6 +59,7 @@ export default async function HomePage({ params }: PageProps) {
           <div className="pointer-events-none absolute inset-0 hero-sweep" />
           <div className="pointer-events-none absolute inset-0 hero-noise" />
         </div>
+        <HeroParallax />
         <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-8 px-4 pb-12 pt-6 text-center text-white sm:gap-10 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
           <div className="absolute inset-0 mx-auto h-[68%] w-[90%] max-w-[42rem] rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.65)_0%,_rgba(0,0,0,0.4)_50%,_transparent_75%)] sm:h-[62%]" />
           <div className="relative flex w-full max-w-[36ch] flex-col items-center gap-4">
