@@ -3,6 +3,7 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import HeroParallax from "@/components/HeroParallax";
+import HeroBackgroundImage from "@/components/HeroBackgroundImage";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
@@ -46,14 +47,7 @@ export default async function HomePage({ params }: PageProps) {
       />
       <section id="hero" className="relative min-h-[90vh] overflow-hidden">
         <div id="hero-bg" className="absolute inset-0">
-          <Image
-            src="/brand/hero/asia-redcarpet.jpg"
-            alt=""
-            fill
-            className="hero-image object-cover object-top sm:object-center"
-            priority
-            sizes="100vw"
-          />
+          <HeroBackgroundImage />
           <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
           <div className="pointer-events-none absolute inset-0 hero-sweep" />
