@@ -11,7 +11,7 @@ export default function Footer({ dict }: FooterProps) {
 
   return (
     <footer className="border-t border-[color:var(--border)] bg-[color:var(--bg)]">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-3 lg:px-8">
+      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div className="space-y-4">
           <Link href={base} className="inline-flex items-center">
             <Image
@@ -24,19 +24,6 @@ export default function Footer({ dict }: FooterProps) {
             <span className="sr-only">{dict.siteName}</span>
           </Link>
           <p className="text-sm text-[color:var(--text-soft)]">{dict.footer.summary}</p>
-        </div>
-        <div className="space-y-3 text-sm text-[color:var(--text-soft)]">
-          <p className="text-[color:var(--text)]">{dict.contact.detailsTitle}</p>
-          <ul className="space-y-2">
-            {dict.contact.details.map((item) => (
-              <li key={item.label} className="flex flex-col">
-                <span className="text-xs uppercase tracking-[0.2em] text-[color:var(--text-soft)]">
-                  {item.label}
-                </span>
-                <span className="text-[color:var(--text)]">{item.value}</span>
-              </li>
-            ))}
-          </ul>
         </div>
         <div className="space-y-3 text-sm text-[color:var(--text-soft)]">
           <p className="text-[color:var(--text)]">{dict.footer.socialTitle}</p>
@@ -66,6 +53,12 @@ export default function Footer({ dict }: FooterProps) {
                 </a>
               );
             })}
+          </div>
+          <div className="pt-2 text-sm text-[color:var(--text)]">
+            <span className="text-xs uppercase tracking-[0.2em] text-[color:var(--text-soft)]">
+              {dict.footer.emailLabel}
+            </span>
+            <div className="mt-2">{dict.footer.emailValue}</div>
           </div>
         </div>
       </div>

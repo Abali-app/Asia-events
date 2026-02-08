@@ -161,13 +161,15 @@
     error: "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
   },
   footer: {
-    summary: "منصة ترفيه حي تتحكم بالطلب وتملك الحدث.",
+    summary: "مجموعة آسيا",
     socialTitle: "التواصل",
     socials: [
       { label: "إنستغرام", href: "https://www.instagram.com/asia_events_group?igsh=MTBzcHExNTUzcDI1YQ==" },
       { label: "يوتيوب", href: "#" },
       { label: "تيك توك", href: "#" },
     ],
+    emailLabel: "البريد الإلكتروني",
+    emailValue: "leads@asiaeventsgroup.live",
     copyright: "© مجموعة آسيا للفعاليات. جميع الحقوق محفوظة.",
   },
   metadata: {

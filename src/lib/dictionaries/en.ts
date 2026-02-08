@@ -163,14 +163,15 @@ export const en = {
     error: "Something went wrong. Please try again.",
   },
   footer: {
-    summary:
-      "Concert promoter and live entertainment platform operating across the Arab world.",
+    summary: "Asia Events Group",
     socialTitle: "Social",
     socials: [
       { label: "Instagram", href: "https://www.instagram.com/asia_events_group?igsh=MTBzcHExNTUzcDI1YQ==" },
       { label: "YouTube", href: "#" },
       { label: "TikTok", href: "#" },
     ],
+    emailLabel: "Email",
+    emailValue: "leads@asiaeventsgroup.live",
     copyright: "© Asia Events Group. All rights reserved.",
   },
   metadata: {
