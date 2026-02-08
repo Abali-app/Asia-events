@@ -144,9 +144,23 @@ export default async function HomePage({ params }: PageProps) {
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative flex h-full items-center justify-center px-4 text-center sm:px-6 lg:px-8">
           <Reveal>
-            <p className="text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
-              {dict.home.cinematic.line}
-            </p>
+            <div className="flex max-w-3xl flex-col items-center gap-4 text-white">
+              <p className="text-3xl font-semibold sm:text-4xl md:text-5xl">
+                {dict.home.cinematic.line}
+              </p>
+              {dict.home.cinematic.lines?.length ? (
+                <div className="text-base font-semibold text-white/90 sm:text-lg">
+                  {dict.home.cinematic.lines.map((line) => (
+                    <p key={line}>{line}</p>
+                  ))}
+                </div>
+              ) : null}
+              {dict.home.cinematic.cta ? (
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/80">
+                  {dict.home.cinematic.cta}
+                </p>
+              ) : null}
+            </div>
           </Reveal>
         </div>
       </section>
