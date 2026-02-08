@@ -6,6 +6,7 @@ import LocaleBodyAttributes from "@/components/LocaleBodyAttributes";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnnouncementBar from "@/components/AnnouncementBar";
+import PageTransition from "@/components/PageTransition";
 
 export const dynamicParams = false;
 
@@ -44,7 +45,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         ) : null}
         <Navbar locale={locale} dict={dict} />
       </div>
-      <main className="flex-1">{children}</main>
+      <main className="flex-1">
+        <PageTransition>{children}</PageTransition>
+      </main>
       <Footer dict={dict} />
     </div>
   );

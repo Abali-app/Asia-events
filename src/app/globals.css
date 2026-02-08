@@ -285,6 +285,18 @@ select:focus-visible {
   pointer-events: none;
 }
 
+.page-transition {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 220ms ease-out, transform 220ms ease-out;
+  will-change: opacity, transform;
+}
+
+.page-transition.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal.is-visible {
@@ -306,5 +318,11 @@ select:focus-visible {
   .hero-sweep {
     animation: none;
     opacity: 0;
+  }
+  .page-transition,
+  .page-transition.is-visible {
+    transition: none;
+    transform: none;
+    opacity: 1;
   }
 }
