@@ -41,14 +41,47 @@ body::before {
 }
 
 /* Arabic typography tuning */
-[dir="rtl"] .hero-title,
-[dir="rtl"] .section-title {
-  letter-spacing: 0;
-  line-height: 1.35;
-  max-width: 18ch;
+/* Type scale */
+.type-h1 {
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-[dir="rtl"] p {
+.type-h2 {
+  font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.type-subhead {
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.type-body {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.type-small {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.text-measure {
+  max-width: 56ch;
+}
+
+[dir="rtl"] .type-h1,
+[dir="rtl"] .type-h2 {
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+[dir="rtl"] .type-body,
+[dir="rtl"] .type-subhead {
   line-height: 1.8;
 }
 

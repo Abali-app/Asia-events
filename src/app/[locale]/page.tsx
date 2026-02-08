@@ -63,10 +63,10 @@ export default async function HomePage({ params }: PageProps) {
                 {dict.home.hero.brandLine}
               </p>
             ) : null}
-            <h1 className="hero-title text-balance text-5xl font-semibold leading-[1.25] text-white sm:text-6xl md:text-7xl">
+            <h1 className="hero-title type-h1 text-balance text-white">
               {dict.home.hero.headline}
             </h1>
-            <p className="max-w-[44ch] text-base font-medium leading-relaxed text-white/85 sm:text-lg">
+            <p className="type-subhead text-measure text-white/85">
               {dict.home.hero.subheadline}
             </p>
             <Link

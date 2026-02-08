@@ -31,11 +31,11 @@ export default function Section({
               {eyebrow}
             </span>
           ) : null}
-          <HeadingTag className="section-title text-3xl font-semibold text-[color:var(--text)] sm:text-4xl">
+          <HeadingTag className="section-title type-h2 text-[color:var(--text)]">
             {title}
           </HeadingTag>
           {subtitle ? (
-            <p className="max-w-3xl text-base text-[color:var(--text-soft)]">{subtitle}</p>
+            <p className="type-body text-measure text-[color:var(--text-soft)]">{subtitle}</p>
           ) : null}
         </div>
         {children}
