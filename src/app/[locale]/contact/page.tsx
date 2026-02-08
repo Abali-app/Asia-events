@@ -1,5 +1,6 @@
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
+import HeaderStrip from "@/components/HeaderStrip";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
@@ -30,6 +31,7 @@ export default async function ContactPage({ params }: PageProps) {
 
   return (
     <div>
+      <HeaderStrip src="/brand/hero/abstract-stage-light.jpg" />
       <Section
         id="contact"
         as="h1"

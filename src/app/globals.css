@@ -337,6 +337,15 @@ select:focus-visible {
   will-change: transform;
 }
 
+.hero-slide {
+  opacity: 0;
+  transition: opacity 1000ms ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal.is-visible {

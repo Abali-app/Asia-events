@@ -1,5 +1,6 @@
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
+import HeaderStrip from "@/components/HeaderStrip";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
@@ -31,6 +32,7 @@ export default async function PartnershipsPage({ params }: PageProps) {
 
   return (
     <div>
+      <HeaderStrip src="/brand/hero/crowd.jpg" />
       <Section
         as="h1"
         eyebrow={dict.nav.partnerships}

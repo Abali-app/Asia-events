@@ -1,4 +1,5 @@
 import Section from "@/components/Section";
+import HeaderStrip from "@/components/HeaderStrip";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
@@ -29,6 +30,7 @@ export default async function AboutPage({ params }: PageProps) {
 
   return (
     <div>
+      <HeaderStrip src="/brand/hero/pre-show-power.jpg" />
       <Section as="h1" eyebrow={dict.nav.about} title={dict.about.title} subtitle={dict.about.story}>
         <div className="grid gap-8 lg:grid-cols-3">
           <div className="divider-top pt-6">

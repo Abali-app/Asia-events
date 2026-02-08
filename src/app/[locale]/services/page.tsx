@@ -1,4 +1,5 @@
 import Section from "@/components/Section";
+import HeaderStrip from "@/components/HeaderStrip";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
@@ -29,6 +30,7 @@ export default async function ServicesPage({ params }: PageProps) {
 
   return (
     <div>
+      <HeaderStrip src="/brand/hero/stage-v2.jpg" />
       <Section
         as="h1"
         eyebrow={dict.nav.services}

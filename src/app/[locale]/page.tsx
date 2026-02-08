@@ -3,7 +3,7 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import HeroParallax from "@/components/HeroParallax";
-import HeroBackgroundImage from "@/components/HeroBackgroundImage";
+import HeroBackgroundSlider from "@/components/HeroBackgroundSlider";
 import SponsorWallVideo from "@/components/SponsorWallVideo";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
@@ -48,7 +48,7 @@ export default async function HomePage({ params }: PageProps) {
       />
       <section id="hero" className="relative min-h-[90vh] overflow-hidden">
         <div id="hero-bg" className="absolute inset-0">
-          <HeroBackgroundImage />
+          <HeroBackgroundSlider />
           <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
           <div className="pointer-events-none absolute inset-0 hero-sweep" />
@@ -63,7 +63,15 @@ export default async function HomePage({ params }: PageProps) {
                 <span className="hero-line delay-1">{dict.home.hero.brandLine}</span>
               </p>
             ) : null}
-            <h1 className="hero-title type-h1 text-balance text-white">
+            <Image
+              src="/brand/logo.png"
+              alt={`${dict.siteName} logo`}
+              width={260}
+              height={86}
+              className="h-16 w-auto sm:h-20"
+              sizes="(min-width: 1024px) 160px, 128px"
+            />
+            <h1 className="hero-title text-balance text-white text-[clamp(2.2rem,3.6vw,3.4rem)] font-semibold leading-tight">
               <span className="hero-line delay-2">{dict.home.hero.headline}</span>
             </h1>
             <p className="type-subhead text-measure text-white/85">
