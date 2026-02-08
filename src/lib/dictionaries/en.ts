@@ -175,23 +175,24 @@ export const en = {
   },
   metadata: {
     home: {
-      title: "Asia Events Group | Live Entertainment",
+      title: "Asia Events Group | Production & Promotion of Live Music Concerts",
       description:
-        "We create, promote, and own major ticketed music events across the Arab world.",
+        "Asia Events Group is a professional entertainment company specializing in the production and promotion of large-scale live music concerts across the Arab world.",
     },
     about: {
-      title: "Who We Are | Asia Events Group",
+      title: "About Asia Events Group | Live Music Concert Production",
       description:
-        "Asia Events Group is a concert promoter and live entertainment platform.",
+        "Learn about Asia Events Group, a professional organizer and promoter of large-scale live music concerts operating across the Arab world.",
     },
     services: {
-      title: "What We Do | Asia Events Group",
+      title: "What We Do | Concert Production & Promotion",
       description:
-        "Artist partnerships, venue booking, promotion, ticket sales, and sponsorships.",
+        "Asia Events Group manages the production, promotion, and execution of large-scale ticketed live music concerts.",
     },
     contact: {
-      title: "Contact | Asia Events Group",
-      description: "Let’s talk business.",
+      title: "Contact Asia Events Group | Partnerships & Inquiries",
+      description:
+        "Contact Asia Events Group for partnerships, sponsorship inquiries, and professional collaboration opportunities.",
     },
   },
 } as const;
