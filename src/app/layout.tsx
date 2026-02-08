@@ -7,9 +7,33 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Asia Events Group",
+    url: "https://asiaeventsgroup.live",
+    logo: "https://asiaeventsgroup.live/brand/logo.png",
+    description:
+      "Asia Events Group is a professional entertainment company specializing in the production and promotion of large-scale live music concerts across the Arab world.",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "partnerships",
+        email: "leads@asiaeventsgroup.live",
+      },
+    ],
+    inLanguage: ["en", "ar"],
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased ${fontArabic.variable} ${fontLatin.variable}`}>{children}</body>
+      <body className={`antialiased ${fontArabic.variable} ${fontLatin.variable}`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
