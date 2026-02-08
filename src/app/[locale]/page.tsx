@@ -116,6 +116,16 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </section>
 
+      <Section title={dict.home.standards.title}>
+        <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
+          {dict.home.standards.bullets.map((item) => (
+            <li key={item} className="border-t border-[color:var(--border)] pt-4">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </Section>
+
       <section className="relative h-[60vh] overflow-hidden sm:h-[70vh]">
         <Image
           src="/brand/hero/stage-v2.jpg"

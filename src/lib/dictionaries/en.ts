@@ -72,6 +72,14 @@ export const en = {
       title: "Due Diligence",
       tags: ["Licensing", "Compliance", "Partner Vetting"],
     },
+    standards: {
+      title: "Standards",
+      bullets: [
+        "Operational readiness and clear delivery framework",
+        "Sponsor integration planning and brand-safe execution",
+        "Post-event reporting structure (available upon request)",
+      ],
+    },
     sponsors: {
       eyebrow: "Built for Sponsors",
       title: "Sponsor-ready by default",
