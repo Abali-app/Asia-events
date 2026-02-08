@@ -42,11 +42,11 @@ export const en = {
   },
   home: {
     hero: {
-      brandLine: "",
+      brandLine: "LIVE ENTERTAINMENT",
       headline: "ASIA EVENTS GROUP",
       subheadline:
         "Production and promotion of large-scale live music concerts across the Arab world",
-      supporting: "End-to-end ownership of the live music experience",
+      supporting: "",
       primaryCta: "Partnerships & Inquiries",
     },
     ourModel: {

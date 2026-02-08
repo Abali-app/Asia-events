@@ -55,30 +55,27 @@ export default async function HomePage({ params }: PageProps) {
           <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
         </div>
-        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-10 px-4 pb-12 pt-6 text-center text-white sm:gap-12 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
-          <div className="absolute inset-0 mx-auto h-[70%] w-[88%] max-w-3xl rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.6)_0%,_rgba(0,0,0,0.35)_45%,_transparent_70%)] sm:h-[65%]" />
-          {dict.home.hero.brandLine ? (
-            <p className="relative text-xs font-semibold uppercase tracking-[0.4em] text-white/70">
-              {dict.home.hero.brandLine}
+        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-8 px-4 pb-12 pt-6 text-center text-white sm:gap-10 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
+          <div className="absolute inset-0 mx-auto h-[68%] w-[90%] max-w-[42rem] rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.65)_0%,_rgba(0,0,0,0.4)_50%,_transparent_75%)] sm:h-[62%]" />
+          <div className="relative flex w-full max-w-[36ch] flex-col items-center gap-4">
+            {dict.home.hero.brandLine ? (
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/80">
+                {dict.home.hero.brandLine}
+              </p>
+            ) : null}
+            <h1 className="hero-title text-balance text-5xl font-semibold leading-[1.25] text-white sm:text-6xl md:text-7xl">
+              {dict.home.hero.headline}
+            </h1>
+            <p className="max-w-[44ch] text-base font-medium leading-relaxed text-white/85 sm:text-lg">
+              {dict.home.hero.subheadline}
             </p>
-          ) : null}
-          <h1 className="hero-title relative max-w-[16ch] text-balance text-5xl font-semibold leading-[1.3] text-white sm:text-6xl md:text-7xl">
-            {dict.home.hero.headline}
-          </h1>
-          <p className="relative max-w-[44ch] text-lg font-medium leading-relaxed text-white/85 sm:text-xl">
-            {dict.home.hero.subheadline}
-          </p>
-          {dict.home.hero.supporting ? (
-            <p className="relative max-w-3xl text-sm leading-relaxed text-white/65 sm:text-base">
-              {dict.home.hero.supporting}
-            </p>
-          ) : null}
-          <Link
-            href={`/${locale}/partnerships`}
-            className="relative rounded-sm bg-[color:var(--accent)] px-16 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
-          >
-            {dict.home.hero.primaryCta}
-          </Link>
+            <Link
+              href={`/${locale}/partnerships`}
+              className="rounded-sm bg-[color:var(--accent)] px-12 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
+            >
+              {dict.home.hero.primaryCta}
+            </Link>
+          </div>
         </div>
       </section>
 
