@@ -42,7 +42,7 @@
   },
   home: {
     hero: {
-      brandLine: "الترفيه الحي",
+      brandLine: "الشراكات",
       headline: "ASIA EVENTS GROUP",
       subheadline: "إنتاج وتنظيم حفلات موسيقية جماهيرية في العالم العربي",
       supporting: "",

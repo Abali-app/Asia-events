@@ -42,7 +42,7 @@ export const en = {
   },
   home: {
     hero: {
-      brandLine: "LIVE ENTERTAINMENT",
+      brandLine: "PARTNERSHIPS",
       headline: "ASIA EVENTS GROUP",
       subheadline:
         "Production and promotion of large-scale live music concerts across the Arab world",
