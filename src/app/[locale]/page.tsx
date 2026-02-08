@@ -43,7 +43,7 @@ export default async function HomePage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
-      <section className="relative min-h-[90vh] overflow-hidden">
+      <section id="hero" className="relative min-h-[90vh] overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/brand/hero/asia-redcarpet.jpg"
@@ -118,7 +118,7 @@ export default async function HomePage({ params }: PageProps) {
         </Reveal>
       </section>
 
-      <Section title={dict.home.standards.title}>
+      <Section id="standards" title={dict.home.standards.title}>
         <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
           {dict.home.standards.bullets.map((item) => (
             <li key={item} className="divider-top pt-4">
@@ -147,7 +147,7 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       <Section
-        id="sponsors"
+        id="partnerships"
         eyebrow={dict.home.sponsors.eyebrow}
         title={dict.home.sponsors.title}
         subtitle={dict.home.sponsors.subtitle}

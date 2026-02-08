@@ -31,7 +31,7 @@ export default async function ContactPage({ params }: PageProps) {
   return (
     <div>
       <Section
-        id="contact-form"
+        id="contact"
         as="h1"
         eyebrow={dict.nav.contact}
         title={dict.contact.title}
