@@ -2,6 +2,7 @@ import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
+import Link from "next/link";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -43,6 +44,14 @@ export default async function PartnershipsPage({ params }: PageProps) {
             </li>
           ))}
         </ul>
+        <div className="pt-8">
+          <Link
+            href={`/${locale}/partnerships?context=company_profile#contact-form`}
+            className="rounded-sm border border-[color:var(--border)] px-6 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)] transition hover:border-[color:var(--accent)]"
+          >
+            {dict.partnerships.profileCta}
+          </Link>
+        </div>
       </Section>
 
       <Section title={dict.partnerships.frameworkTitle}>
