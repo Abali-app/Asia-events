@@ -49,7 +49,7 @@ export default async function HomePage({ params }: PageProps) {
             src="/brand/hero/asia-redcarpet.jpg"
             alt=""
             fill
-            className="object-cover"
+            className="object-cover object-top sm:object-center"
             priority
             sizes="100vw"
           />

@@ -52,6 +52,7 @@ export default function PortfolioGrid({ filters, items }: PortfolioGridProps) {
                 alt={item.title}
                 fill
                 className="object-cover transition duration-500 group-hover:scale-105"
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
               />
             </div>
             <div className="space-y-2 p-5">
