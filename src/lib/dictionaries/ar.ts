@@ -20,11 +20,10 @@
   home: {
     hero: {
       brandLine: "ASIA EVENTS GROUP",
-      headline: "نحن لا نتبع السوق.\nنحن من يحرّكه.",
-      subheadline:
-        "ننشئ ونروّج وندير إنتاج وتنظيم حفلات موسيقية جماهيرية\nبتذاكر نملكها من البداية حتى ليلة العرض.",
-      supporting: "ملكية كاملة لتجربة موسيقية حيّة.",
-      primaryCta: "ابدأ الحوار",
+      headline: "ASIA EVENTS GROUP",
+      subheadline: "إنتاج وتنظيم حفلات موسيقية جماهيرية في العالم العربي",
+      supporting: "تجارب موسيقية حيّة بمعايير عالية",
+      primaryCta: "الاستفسارات والشراكات",
     },
     ourModel: {
       eyebrow: "قيادة المشروع",
