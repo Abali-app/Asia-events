@@ -80,7 +80,7 @@
       ],
     },
     sponsorPresence: {
-      title: "حضورالرعاة",
+      title: "حضور الرعاة",
       description: "تختلف صيغ حضور الرعاة حسب كل حدث.",
     },
     sponsors: {
