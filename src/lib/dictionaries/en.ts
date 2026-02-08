@@ -199,6 +199,7 @@ export const en = {
     ],
     ctaTitle: "Partnerships & Inquiries",
     ctaSubtitle: "Share your goals and we will respond with the right path.",
+    profileCta: "Request Company Profile",
   },
   contact: {
     title: "Contact",
