@@ -15,7 +15,13 @@ export function buildMetadata({
   description: string;
 }): Metadata {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || defaultSiteUrl;
-  const canonical = `${siteUrl}${pathname}`;
+  const defaultLocale: Locale = "ar";
+  const pathWithoutLocale = pathname.replace(/^\/(en|ar)(?=\/|$)/, "");
+  const normalizedPath = pathWithoutLocale.startsWith("/") ? pathWithoutLocale : `/${pathWithoutLocale}`;
+  const canonicalPath = pathWithoutLocale ? `/${locale}${normalizedPath}` : `/${locale}`;
+  const canonical = `${siteUrl}${canonicalPath}`;
+  const buildLocaleUrl = (targetLocale: Locale) =>
+    `${siteUrl}${pathWithoutLocale ? `/${targetLocale}${normalizedPath}` : `/${targetLocale}`}`;
 
   return {
     title,
@@ -23,8 +29,9 @@ export function buildMetadata({
     alternates: {
       canonical,
       languages: {
-        en: `${siteUrl}${pathname.replace(`/${locale}`, "/en")}`,
-        ar: `${siteUrl}${pathname.replace(`/${locale}`, "/ar")}`,
+        en: buildLocaleUrl("en"),
+        ar: buildLocaleUrl("ar"),
+        "x-default": buildLocaleUrl(defaultLocale),
       },
     },
     openGraph: {
