@@ -9,6 +9,28 @@ export const en = {
     partnerships: "Partnerships",
     contact: "Contact",
   },
+  legal: {
+    privacy: {
+      title: "Privacy Policy",
+      subtitle: "A concise overview of how we handle contact data.",
+      body: [
+        "We collect the information you submit through our contact forms, including name, email, phone (if provided), and message.",
+        "We use this information only to respond to inquiries, evaluate partnership requests, and communicate about potential collaboration.",
+        "We do not sell your information. We do not share it with third parties except service providers needed to deliver communications.",
+        "If you want to update or remove your submitted information, contact us using the email listed on this site.",
+      ],
+    },
+    terms: {
+      title: "Terms",
+      subtitle: "Basic terms for using this website.",
+      body: [
+        "The information on this website is provided for general purposes and may change without notice.",
+        "Submitting a contact form does not create a contractual relationship.",
+        "You are responsible for the accuracy of the information you submit.",
+        "We may update these terms from time to time by revising this page.",
+      ],
+    },
+  },
   announcement: "The next show is already in motion. Announcement coming soon.",
   common: {
     ctaPrimary: "Contact Us",

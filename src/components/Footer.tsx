@@ -65,8 +65,16 @@ export default function Footer({ dict }: FooterProps) {
         </div>
       </div>
       <div className="border-t border-[color:var(--border)]">
-        <div className="mx-auto max-w-6xl px-4 py-6 text-xs text-[color:var(--text-soft)] sm:px-6 lg:px-8">
-          {dict.footer.copyright}
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-[color:var(--text-soft)] sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <div>{dict.footer.copyright}</div>
+          <div className="flex flex-wrap gap-4">
+            <Link href={`${base}/privacy`} className="hover:text-[color:var(--text)]">
+              {dict.legal.privacy.title}
+            </Link>
+            <Link href={`${base}/terms`} className="hover:text-[color:var(--text)]">
+              {dict.legal.terms.title}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
