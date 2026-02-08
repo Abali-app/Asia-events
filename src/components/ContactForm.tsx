@@ -9,6 +9,8 @@ type ContactFormProps = {
     phone: string;
     message: string;
     submit: string;
+    copyEmail: string;
+    copied: string;
     sending: string;
     success: string;
     error: string;
@@ -18,6 +20,18 @@ type ContactFormProps = {
 export default function ContactForm({ labels }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
+  const [copied, setCopied] = useState(false);
+  const emailAddress = "info@asiaeventsgroup.live";
+
+  async function onCopyEmail() {
+    try {
+      await navigator.clipboard.writeText(emailAddress);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      setCopied(false);
+    }
+  }
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -92,6 +106,21 @@ export default function ContactForm({ labels }: ContactFormProps) {
         >
           {status === "sending" ? labels.sending : labels.submit}
         </button>
+        <div className="flex flex-wrap items-center gap-3 text-xs text-[color:var(--text-soft)]">
+          <a
+            href={`mailto:${emailAddress}`}
+            className="rounded-full border border-[color:var(--border)] px-4 py-2 uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:border-[color:var(--accent)]"
+          >
+            {emailAddress}
+          </a>
+          <button
+            type="button"
+            onClick={onCopyEmail}
+            className="rounded-full border border-[color:var(--border)] px-4 py-2 uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:border-[color:var(--accent)]"
+          >
+            {copied ? labels.copied : labels.copyEmail}
+          </button>
+        </div>
         {status === "sent" ? <p className="text-sm text-[color:var(--accent)]">{labels.success}</p> : null}
         {status === "error" ? <p className="text-sm text-red-400">{error}</p> : null}
       </div>

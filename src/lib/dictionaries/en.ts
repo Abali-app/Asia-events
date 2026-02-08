@@ -176,6 +176,8 @@ export const en = {
     phone: "Phone (optional)",
     message: "Tell us how you want to partner",
     submit: "Send Request",
+    copyEmail: "Copy email",
+    copied: "Copied",
     sending: "Sending...",
     success: "Thank you. We will be in touch shortly.",
     error: "Something went wrong. Please try again.",
