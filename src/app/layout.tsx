@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { fontArabic, fontLatin } from "@/lib/fonts";
+import ScrollProgress from "@/components/ScrollProgress";
 import "./globals.css";
 
 export const metadata = {
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased ${fontArabic.variable} ${fontLatin.variable}`}>
+        <ScrollProgress />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

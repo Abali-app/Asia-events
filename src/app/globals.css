@@ -251,6 +251,23 @@ select:focus-visible {
   border-color: var(--accent);
 }
 
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(11, 27, 43, 0.9), rgba(200, 167, 106, 0.95));
+  transform-origin: left center;
+  z-index: 60;
+  transition: opacity 200ms ease;
+}
+
+[dir="rtl"] .scroll-progress {
+  transform-origin: right center;
+  background: linear-gradient(270deg, rgba(11, 27, 43, 0.9), rgba(200, 167, 106, 0.95));
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal.is-visible {
