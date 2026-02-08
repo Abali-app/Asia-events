@@ -21,7 +21,9 @@ export default function Section({ id, eyebrow, title, subtitle, align = "left", 
               {eyebrow}
             </span>
           ) : null}
-          <h2 className="text-3xl font-semibold text-[color:var(--text)] sm:text-4xl">{title}</h2>
+          <h2 className="section-title text-3xl font-semibold text-[color:var(--text)] sm:text-4xl">
+            {title}
+          </h2>
           {subtitle ? (
             <p className="max-w-3xl text-base text-[color:var(--text-soft)]">{subtitle}</p>
           ) : null}
