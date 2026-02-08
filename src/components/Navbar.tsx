@@ -30,6 +30,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
     { href: `${base}`, label: dict.nav.home },
     { href: `${base}/about`, label: dict.nav.about },
     { href: `${base}/services`, label: dict.nav.services },
+    { href: `${base}/partnerships`, label: dict.nav.partnerships },
     { href: `${base}/contact`, label: dict.nav.contact },
   ];
 

@@ -6,6 +6,7 @@ export const en = {
     home: "Home",
     about: "About",
     services: "What We Do",
+    partnerships: "Partnerships",
     contact: "Contact",
   },
   announcement: "The next show is already in motion. Announcement coming soon.",
@@ -142,6 +143,19 @@ export const en = {
         description: "Show control and on-ground delivery.",
       },
     ],
+  },
+  partnerships: {
+    title: "Partnerships",
+    subtitle: "Professional collaboration opportunities for sponsors and partners.",
+    bullets: [
+      "Brand integration across live touchpoints",
+      "Visibility assets across event environments",
+      "VIP hospitality and guest experience access",
+      "Content collaboration and media capture",
+      "PR alignment and announcements coordination",
+    ],
+    ctaTitle: "Partnerships & Inquiries",
+    ctaSubtitle: "Share your goals and we will respond with the right path.",
   },
   contact: {
     title: "Contact",
