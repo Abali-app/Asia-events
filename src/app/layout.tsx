@@ -20,9 +20,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         "@type": "ContactPoint",
         contactType: "partnerships",
         email: "leads@asiaeventsgroup.live",
+        availableLanguage: ["en", "ar"],
       },
     ],
     inLanguage: ["en", "ar"],
+    sameAs: ["https://www.instagram.com/asia_events_group?igsh=MTBzcHExNTUzcDI1YQ=="],
   };
 
   return (
