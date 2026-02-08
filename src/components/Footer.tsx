@@ -20,6 +20,7 @@ export default function Footer({ dict }: FooterProps) {
               width={300}
               height={88}
               className="h-16 w-auto"
+              sizes="(min-width: 1024px) 160px, 128px"
             />
             <span className="sr-only">{dict.siteName}</span>
           </Link>
@@ -49,6 +50,7 @@ export default function Footer({ dict }: FooterProps) {
                     width={24}
                     height={24}
                     className="h-5 w-auto sm:h-6"
+                    sizes="24px"
                   />
                 </a>
               );

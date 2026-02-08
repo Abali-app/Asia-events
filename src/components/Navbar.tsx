@@ -49,7 +49,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
             width={320}
             height={96}
             className="h-16 w-auto sm:h-20"
-            priority
+            sizes="(min-width: 1024px) 160px, 128px"
           />
           <span className="sr-only">{dict.siteName}</span>
         </Link>

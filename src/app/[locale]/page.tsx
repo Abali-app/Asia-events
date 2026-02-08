@@ -50,6 +50,7 @@ export default async function HomePage({ params }: PageProps) {
             fill
             className="object-cover"
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
@@ -98,7 +99,13 @@ export default async function HomePage({ params }: PageProps) {
       </Section>
 
       <section className="relative h-[60vh] overflow-hidden sm:h-[70vh]">
-        <Image src="/brand/hero/stage-v2.jpg" alt="" fill className="object-cover" />
+        <Image
+          src="/brand/hero/stage-v2.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative flex h-full items-center justify-center px-4 text-center sm:px-6 lg:px-8">
           <p className="text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
@@ -139,7 +146,13 @@ export default async function HomePage({ params }: PageProps) {
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="overflow-hidden rounded-3xl border border-[color:var(--border)]">
             <div className="relative aspect-[4/3]">
-              <Image src="/brand/hero/crowd.jpg" alt="" fill className="object-cover" />
+              <Image
+                src="/brand/hero/crowd.jpg"
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
             </div>
             <div className="px-5 py-4 text-sm text-[color:var(--text-soft)]">
               {dict.home.atmosphere.caption}
@@ -147,7 +160,13 @@ export default async function HomePage({ params }: PageProps) {
           </div>
           <div className="overflow-hidden rounded-3xl border border-[color:var(--border)]">
             <div className="relative aspect-[4/3]">
-              <Image src="/brand/hero/stage-v2.jpg" alt="" fill className="object-cover" />
+              <Image
+                src="/brand/hero/stage-v2.jpg"
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
             </div>
             <div className="px-5 py-4 text-sm text-[color:var(--text-soft)]">
               {dict.home.atmosphere.caption}
