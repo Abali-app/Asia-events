@@ -4,6 +4,7 @@ import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import HeroParallax from "@/components/HeroParallax";
 import HeroBackgroundImage from "@/components/HeroBackgroundImage";
+import SponsorWallVideo from "@/components/SponsorWallVideo";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
@@ -122,6 +123,14 @@ export default async function HomePage({ params }: PageProps) {
             </li>
           ))}
         </ul>
+      </Section>
+
+      <Section
+        id="sponsor-presence"
+        title={dict.home.sponsorPresence.title}
+        subtitle={dict.home.sponsorPresence.description}
+      >
+        <SponsorWallVideo poster="/brand/hero/abstract-stage-light.jpg" />
       </Section>
 
       <section className="relative h-[60vh] overflow-hidden sm:h-[70vh]">

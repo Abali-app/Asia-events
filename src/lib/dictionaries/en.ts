@@ -80,6 +80,10 @@ export const en = {
         "Post-event reporting structure (available upon request)",
       ],
     },
+    sponsorPresence: {
+      title: "Sponsor Presence",
+      description: "Sponsor visibility formats vary per event.",
+    },
     sponsors: {
       eyebrow: "Built for Sponsors",
       title: "Sponsor-ready by default",
