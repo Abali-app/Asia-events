@@ -11,7 +11,7 @@ export default function Footer({ dict }: FooterProps) {
 
   return (
     <footer className="divider-top bg-[color:var(--bg)]">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div className="container-shell grid w-full gap-8 py-12 lg:grid-cols-2">
         <div className="space-y-4">
           <Link href={base} className="inline-flex items-center">
             <Image
@@ -65,7 +65,7 @@ export default function Footer({ dict }: FooterProps) {
         </div>
       </div>
       <div className="divider-top">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-[color:var(--text-soft)] sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <div className="container-shell flex flex-col gap-3 py-6 text-xs text-[color:var(--text-soft)] sm:flex-row sm:items-center sm:justify-between">
           <div>{dict.footer.copyright}</div>
           <div className="flex flex-wrap gap-4">
             <Link href={`${base}/privacy`} className="hover:text-[color:var(--text)]">

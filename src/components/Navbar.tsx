@@ -42,7 +42,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
           : "border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <div className="container-shell flex w-full items-center justify-between py-4">
         <Link href={base} className="flex items-center gap-3">
           <Image
             src="/brand/logo.png"
@@ -78,7 +78,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
         </div>
       </div>
       <div className="divider-top lg:hidden">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 text-xs text-[color:var(--text-soft)] sm:px-6 lg:px-8">
+        <nav className="container-shell flex items-center justify-between gap-3 py-3 text-xs text-[color:var(--text-soft)]">
           {items.map((item) => {
             const active = pathname === item.href;
             return (

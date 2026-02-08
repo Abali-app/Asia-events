@@ -98,9 +98,9 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </Section>
 
-      <section className="py-10 sm:py-12">
+      <section className="section-shell">
         <Reveal>
-          <div className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-4 sm:px-6 lg:px-8">
+          <div className="container-shell flex w-full flex-col gap-5">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)]">
               {dict.home.dueDiligence.title}
             </p>
@@ -207,9 +207,9 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </Section>
 
-      <section className="py-16 sm:py-20">
+      <section className="section-shell">
         <Reveal>
-          <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-4 text-center sm:px-6 lg:px-8">
+          <div className="container-shell flex w-full max-w-4xl flex-col items-center gap-5 text-center">
             <p className="text-2xl font-semibold text-[color:var(--text)] sm:text-3xl">
               {dict.home.stayTuned.title}
             </p>

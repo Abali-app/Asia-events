@@ -24,9 +24,9 @@ export default function Section({
   const HeadingTag = as;
 
   return (
-    <section id={id} className="py-16 sm:py-20">
+    <section id={id} className="section-shell">
       <Reveal>
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 sm:px-6 lg:px-8">
+        <div className="container-shell flex w-full flex-col gap-6">
           <div className={`flex flex-col gap-3 ${alignClasses}`}>
             {eyebrow ? (
               <span className="text-xs uppercase tracking-[0.3em] text-[color:var(--accent)]">

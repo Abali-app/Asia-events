@@ -25,6 +25,41 @@ body {
   color: var(--text);
 }
 
+.container-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-shell {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-shell {
+    padding-inline: 2rem;
+  }
+}
+
+.section-shell {
+  padding-block: 4rem;
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-block: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding-block: 6rem;
+  }
+}
+
 body::before {
   content: "";
   position: fixed;

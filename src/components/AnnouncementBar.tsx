@@ -31,7 +31,7 @@ export default function AnnouncementBar({ message }: AnnouncementBarProps) {
 
   return (
     <div className={`announcement-bar ${hidden ? "is-hidden" : ""}`}>
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-center px-4 py-2 text-xs font-semibold text-[color:var(--text)] sm:py-2.5 sm:text-sm">
+      <div className="container-shell flex items-center justify-center py-2 text-xs font-semibold text-[color:var(--text)] sm:py-2.5 sm:text-sm">
         {message}
       </div>
     </div>
