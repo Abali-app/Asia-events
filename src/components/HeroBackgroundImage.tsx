@@ -24,7 +24,7 @@ export default function HeroBackgroundImage() {
   if (isMobile) {
     return (
       <Image
-        src="/brand/hero/Abstract Stage Light.jpg"
+        src="/brand/hero/abstract-stage-light.jpg"
         alt=""
         fill
         className="hero-image object-cover object-top"
@@ -36,7 +36,7 @@ export default function HeroBackgroundImage() {
 
   return (
     <Image
-      src="/brand/hero/Pre-Show Power.jpg"
+      src="/brand/hero/pre-show-power.jpg"
       alt=""
       fill
       className="hero-image object-cover object-center"
