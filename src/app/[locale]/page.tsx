@@ -87,7 +87,7 @@ export default async function HomePage({ params }: PageProps) {
       </Section>
 
       <section className="relative h-[60vh] overflow-hidden sm:h-[70vh]">
-        <Image src="/brand/hero/stage.jpg" alt="" fill className="object-cover" />
+        <Image src="/brand/hero/stage-v2.jpg" alt="" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative flex h-full items-center justify-center px-4 text-center sm:px-6 lg:px-8">
           <p className="text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
@@ -136,7 +136,7 @@ export default async function HomePage({ params }: PageProps) {
           </div>
           <div className="overflow-hidden rounded-3xl border border-[color:var(--border)]">
             <div className="relative aspect-[4/3]">
-              <Image src="/brand/hero/stage.jpg" alt="" fill className="object-cover" />
+              <Image src="/brand/hero/stage-v2.jpg" alt="" fill className="object-cover" />
             </div>
             <div className="px-5 py-4 text-sm text-[color:var(--text-soft)]">
               {dict.home.atmosphere.caption}
