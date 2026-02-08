@@ -46,7 +46,7 @@ export default async function PartnershipsPage({ params }: PageProps) {
 
       <Section id="contact-form" title={dict.partnerships.ctaTitle} subtitle={dict.partnerships.ctaSubtitle}>
         <div className="border-t border-[color:var(--border)] pt-6">
-          <ContactForm labels={dict.form} />
+          <ContactForm labels={dict.form} locale={locale} source="partnerships" />
         </div>
       </Section>
     </div>

@@ -15,9 +15,11 @@ type ContactFormProps = {
     success: string;
     error: string;
   };
+  locale: "en" | "ar";
+  source: "contact" | "partnerships";
 };
 
-export default function ContactForm({ labels }: ContactFormProps) {
+export default function ContactForm({ labels, locale, source }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
@@ -40,7 +42,11 @@ export default function ContactForm({ labels }: ContactFormProps) {
 
     const formEl = e.currentTarget;
     const form = new FormData(formEl);
-    const payload = Object.fromEntries(form.entries());
+    const payload = {
+      ...Object.fromEntries(form.entries()),
+      locale,
+      source,
+    };
 
     const res = await fetch("/api/lead", {
       method: "POST",
@@ -64,6 +70,10 @@ export default function ContactForm({ labels }: ContactFormProps) {
 
   return (
     <form onSubmit={onSubmit} className="space-y-5">
+      <label className="hidden">
+        <span>Company website</span>
+        <input name="company_website" tabIndex={-1} autoComplete="off" />
+      </label>
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="flex flex-col gap-2 text-sm text-[color:var(--text-soft)]">
           <span>{labels.name}</span>

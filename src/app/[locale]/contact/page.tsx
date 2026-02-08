@@ -38,7 +38,7 @@ export default async function ContactPage({ params }: PageProps) {
       >
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="border-t border-[color:var(--border)] pt-6">
-            <ContactForm labels={dict.form} />
+            <ContactForm labels={dict.form} locale={locale} source="contact" />
           </div>
           <aside className="border-t border-[color:var(--border)] pt-6">
             <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.contact.detailsTitle}</h3>
