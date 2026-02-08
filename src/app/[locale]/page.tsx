@@ -98,6 +98,24 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </Section>
 
+      <section className="py-10 sm:py-12">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)]">
+            {dict.home.dueDiligence.title}
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {dict.home.dueDiligence.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-[color:var(--border)] px-4 py-1 text-xs text-[color:var(--text-soft)]"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="relative h-[60vh] overflow-hidden sm:h-[70vh]">
         <Image
           src="/brand/hero/stage-v2.jpg"

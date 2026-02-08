@@ -46,6 +46,10 @@ export const en = {
         },
       ],
     },
+    dueDiligence: {
+      title: "Due Diligence",
+      tags: ["Licensing", "Compliance", "Partner Vetting"],
+    },
     sponsors: {
       eyebrow: "Built for Sponsors",
       title: "Sponsor-ready by default",
