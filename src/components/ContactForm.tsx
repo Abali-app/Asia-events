@@ -127,6 +127,7 @@ export default function ContactForm({ labels, locale, source }: ContactFormProps
             type="button"
             onClick={onCopyEmail}
             className="rounded-full border border-[color:var(--border)] px-4 py-2 uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:border-[color:var(--accent)]"
+            aria-label={labels.copyEmail}
           >
             {copied ? labels.copied : labels.copyEmail}
           </button>

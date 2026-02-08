@@ -29,7 +29,7 @@ export default async function PrivacyPage({ params }: PageProps) {
 
   return (
     <div>
-      <Section title={dict.legal.privacy.title} subtitle={dict.legal.privacy.subtitle}>
+      <Section as="h1" title={dict.legal.privacy.title} subtitle={dict.legal.privacy.subtitle}>
         <div className="grid gap-4 text-sm text-[color:var(--text-soft)]">
           {dict.legal.privacy.body.map((line) => (
             <p key={line}>{line}</p>

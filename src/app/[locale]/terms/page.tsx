@@ -29,7 +29,7 @@ export default async function TermsPage({ params }: PageProps) {
 
   return (
     <div>
-      <Section title={dict.legal.terms.title} subtitle={dict.legal.terms.subtitle}>
+      <Section as="h1" title={dict.legal.terms.title} subtitle={dict.legal.terms.subtitle}>
         <div className="grid gap-4 text-sm text-[color:var(--text-soft)]">
           {dict.legal.terms.body.map((line) => (
             <p key={line}>{line}</p>

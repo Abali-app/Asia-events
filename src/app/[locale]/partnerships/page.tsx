@@ -31,6 +31,7 @@ export default async function PartnershipsPage({ params }: PageProps) {
   return (
     <div>
       <Section
+        as="h1"
         eyebrow={dict.nav.partnerships}
         title={dict.partnerships.title}
         subtitle={dict.partnerships.subtitle}

@@ -30,6 +30,7 @@ export default async function ServicesPage({ params }: PageProps) {
   return (
     <div>
       <Section
+        as="h1"
         eyebrow={dict.nav.services}
         title={dict.servicesPage.title}
         subtitle={dict.servicesPage.subtitle}

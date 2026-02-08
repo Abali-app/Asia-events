@@ -32,6 +32,7 @@ export default async function ContactPage({ params }: PageProps) {
     <div>
       <Section
         id="contact-form"
+        as="h1"
         eyebrow={dict.nav.contact}
         title={dict.contact.title}
         subtitle={dict.contact.subtitle}

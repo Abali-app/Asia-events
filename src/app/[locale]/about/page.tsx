@@ -29,7 +29,7 @@ export default async function AboutPage({ params }: PageProps) {
 
   return (
     <div>
-      <Section eyebrow={dict.nav.about} title={dict.about.title} subtitle={dict.about.story}>
+      <Section as="h1" eyebrow={dict.nav.about} title={dict.about.title} subtitle={dict.about.story}>
         <div className="grid gap-8 lg:grid-cols-3">
           <div className="border-t border-[color:var(--border)] pt-6">
             <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.about.missionTitle}</h3>

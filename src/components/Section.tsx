@@ -6,11 +6,21 @@ type SectionProps = {
   title: string;
   subtitle?: string;
   align?: "left" | "center";
+  as?: "h1" | "h2";
   children?: ReactNode;
 };
 
-export default function Section({ id, eyebrow, title, subtitle, align = "left", children }: SectionProps) {
+export default function Section({
+  id,
+  eyebrow,
+  title,
+  subtitle,
+  align = "left",
+  as = "h2",
+  children,
+}: SectionProps) {
   const alignClasses = align === "center" ? "text-center items-center" : "text-start items-start";
+  const HeadingTag = as;
 
   return (
     <section id={id} className="py-16 sm:py-20">
@@ -21,9 +31,9 @@ export default function Section({ id, eyebrow, title, subtitle, align = "left", 
               {eyebrow}
             </span>
           ) : null}
-          <h2 className="section-title text-3xl font-semibold text-[color:var(--text)] sm:text-4xl">
+          <HeadingTag className="section-title text-3xl font-semibold text-[color:var(--text)] sm:text-4xl">
             {title}
-          </h2>
+          </HeadingTag>
           {subtitle ? (
             <p className="max-w-3xl text-base text-[color:var(--text-soft)]">{subtitle}</p>
           ) : null}
