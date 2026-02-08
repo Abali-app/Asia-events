@@ -215,7 +215,7 @@ export const en = {
       { label: "TikTok", href: "#" },
     ],
     emailLabel: "Email",
-    emailValue: "leads@asiaeventsgroup.live",
+    emailValue: "info@asiaeventsgroup.live",
     copyright: "© Asia Events Group. All rights reserved.",
   },
   metadata: {

@@ -213,7 +213,7 @@
       { label: "تيك توك", href: "#" },
     ],
     emailLabel: "البريد الإلكتروني",
-    emailValue: "leads@asiaeventsgroup.live",
+    emailValue: "info@asiaeventsgroup.live",
     copyright: "© مجموعة آسيا للفعاليات. جميع الحقوق محفوظة.",
   },
   metadata: {
