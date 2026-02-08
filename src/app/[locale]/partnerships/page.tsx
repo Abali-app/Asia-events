@@ -45,6 +45,29 @@ export default async function PartnershipsPage({ params }: PageProps) {
         </ul>
       </Section>
 
+      <Section title={dict.partnerships.frameworkTitle}>
+        <div className="flex flex-wrap gap-3 text-sm text-[color:var(--text-soft)]">
+          {dict.partnerships.frameworkSteps.map((step) => (
+            <span
+              key={step}
+              className="rounded-full border border-[color:var(--border)] px-4 py-1"
+            >
+              {step}
+            </span>
+          ))}
+        </div>
+      </Section>
+
+      <Section title={dict.partnerships.formatsTitle}>
+        <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
+          {dict.partnerships.formats.map((item) => (
+            <li key={item} className="border-t border-[color:var(--border)] pt-4">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </Section>
+
       <Section id="contact-form" title={dict.partnerships.ctaTitle} subtitle={dict.partnerships.ctaSubtitle}>
         <div className="border-t border-[color:var(--border)] pt-6">
           <ContactForm labels={dict.form} locale={locale} source="partnerships" />
