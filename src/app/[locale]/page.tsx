@@ -45,9 +45,11 @@ export default async function HomePage({ params }: PageProps) {
         </div>
         <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-10 px-4 pb-12 pt-6 text-center text-white sm:gap-12 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
           <div className="absolute inset-0 mx-auto h-[70%] w-[88%] max-w-3xl rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.6)_0%,_rgba(0,0,0,0.35)_45%,_transparent_70%)] sm:h-[65%]" />
-          <p className="relative text-xs font-semibold uppercase tracking-[0.4em] text-white/70">
-            {dict.home.hero.brandLine}
-          </p>
+          {dict.home.hero.brandLine ? (
+            <p className="relative text-xs font-semibold uppercase tracking-[0.4em] text-white/70">
+              {dict.home.hero.brandLine}
+            </p>
+          ) : null}
           <h1 className="relative max-w-[16ch] text-balance text-5xl font-semibold leading-[1.3] text-white sm:text-6xl md:text-7xl">
             {dict.home.hero.headline}
           </h1>

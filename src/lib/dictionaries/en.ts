@@ -19,11 +19,12 @@ export const en = {
   },
   home: {
     hero: {
-      brandLine: "ASIA EVENTS GROUP",
-      headline: "We don’t follow the market — we move it.",
-      subheadline: "Concert promotion with full ownership of ticketed live music events.",
-      supporting: "Live entertainment built on control, demand, and scale.",
-      primaryCta: "Start the conversation",
+      brandLine: "",
+      headline: "ASIA EVENTS GROUP",
+      subheadline:
+        "Production and promotion of large-scale live music concerts across the Arab world",
+      supporting: "End-to-end ownership of the live music experience",
+      primaryCta: "Partnerships & Inquiries",
     },
     ourModel: {
       eyebrow: "Our Model",
