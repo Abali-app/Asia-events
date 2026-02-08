@@ -167,7 +167,7 @@ export const en = {
       "Concert promoter and live entertainment platform operating across the Arab world.",
     socialTitle: "Social",
     socials: [
-      { label: "Instagram", href: "#" },
+      { label: "Instagram", href: "https://www.instagram.com/asia_events_group?igsh=MTBzcHExNTUzcDI1YQ==" },
       { label: "YouTube", href: "#" },
       { label: "TikTok", href: "#" },
     ],

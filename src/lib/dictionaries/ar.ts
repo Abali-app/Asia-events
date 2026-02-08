@@ -164,7 +164,7 @@
     summary: "منصة ترفيه حي تتحكم بالطلب وتملك الحدث.",
     socialTitle: "التواصل",
     socials: [
-      { label: "إنستغرام", href: "#" },
+      { label: "إنستغرام", href: "https://www.instagram.com/asia_events_group?igsh=MTBzcHExNTUzcDI1YQ==" },
       { label: "يوتيوب", href: "#" },
       { label: "تيك توك", href: "#" },
     ],
