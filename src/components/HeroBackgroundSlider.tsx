@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const images = [
   "/brand/hero/asia-redcarpet.jpg",
-  "/brand/hero/pre-show-power.jpg",
+  "/brand/hero/stage-v2.jpg",
 ];
 
 export default function HeroBackgroundSlider() {
