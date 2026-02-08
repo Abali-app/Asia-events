@@ -10,6 +10,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://asiaeventsgroup.live/#organization",
     name: "Asia Events Group",
     url: "https://asiaeventsgroup.live",
     logo: "https://asiaeventsgroup.live/brand/logo.png",
@@ -27,12 +28,25 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     sameAs: ["https://www.instagram.com/asia_events_group?igsh=MTBzcHExNTUzcDI1YQ=="],
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Asia Events Group",
+    url: "https://asiaeventsgroup.live",
+    inLanguage: ["en", "ar"],
+    publisher: { "@id": "https://asiaeventsgroup.live/#organization" },
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased ${fontArabic.variable} ${fontLatin.variable}`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         {children}
       </body>

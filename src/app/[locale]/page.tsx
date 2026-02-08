@@ -28,9 +28,20 @@ export default async function HomePage({ params }: PageProps) {
     return null;
   }
   const dict = getDictionary(locale);
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: dict.metadata.home.title,
+    url: `https://asiaeventsgroup.live/${locale}`,
+    inLanguage: locale,
+  };
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
       <section className="relative min-h-[90vh] overflow-hidden">
         <div className="absolute inset-0">
           <Image
