@@ -28,7 +28,8 @@ function isRateLimited(ip: string) {
 
 export async function POST(req: Request) {
   try {
-    const { name, email, phone, message, company_website, locale, source } = await req.json();
+    const { name, email, phone, message, company, role, company_website, locale, source } =
+      await req.json();
 
     if (!name || !email || !message) {
       return NextResponse.json({ ok: false, error: "Missing fields" }, { status: 400 });
@@ -61,18 +62,23 @@ export async function POST(req: Request) {
     const fromAddress = from as string;
     const localeValue = locale === "ar" || locale === "en" ? locale : "unknown";
     const sourceValue = source === "contact" || source === "partnerships" ? source : "unknown";
-    const subjectSuffix = `(${localeValue}/${sourceValue})`;
+    const subject =
+      sourceValue === "partnerships"
+        ? "Partnership Inquiry – Asia Events Group"
+        : "New Website Lead – Asia Events Group";
 
     try {
       await resend.emails.send({
         from: fromAddress,
         to: toAddress,
         replyTo: email,
-        subject: `New Website Lead – Asia Events Group ${subjectSuffix}`,
+        subject,
         text: [
           `Name: ${name}`,
           `Email: ${email}`,
           phone ? `Phone: ${phone}` : "",
+          company ? `Company: ${company}` : "",
+          role ? `Role: ${role}` : "",
           "",
           "Message:",
           message,

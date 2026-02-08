@@ -74,7 +74,7 @@ export default async function HomePage({ params }: PageProps) {
             </p>
           ) : null}
           <Link
-            href={`/${locale}/contact`}
+            href={`/${locale}/partnerships`}
             className="relative rounded-sm bg-[color:var(--accent)] px-16 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
           >
             {dict.home.hero.primaryCta}

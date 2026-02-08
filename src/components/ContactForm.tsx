@@ -5,6 +5,8 @@ import { useState } from "react";
 type ContactFormProps = {
   labels: {
     name: string;
+    company: string;
+    role: string;
     email: string;
     phone: string;
     message: string;
@@ -84,11 +86,25 @@ export default function ContactForm({ labels, locale, source }: ContactFormProps
           />
         </label>
         <label className="flex flex-col gap-2 text-sm text-[color:var(--text-soft)]">
+          <span>{labels.company}</span>
+          <input
+            name="company"
+            className="h-11 rounded-md border border-[color:var(--border)] bg-[color:var(--surface)] px-3 text-[color:var(--text)] outline-none transition focus:border-[color:var(--accent)]"
+          />
+        </label>
+        <label className="flex flex-col gap-2 text-sm text-[color:var(--text-soft)]">
           <span>{labels.email}</span>
           <input
             name="email"
             type="email"
             required
+            className="h-11 rounded-md border border-[color:var(--border)] bg-[color:var(--surface)] px-3 text-[color:var(--text)] outline-none transition focus:border-[color:var(--accent)]"
+          />
+        </label>
+        <label className="flex flex-col gap-2 text-sm text-[color:var(--text-soft)]">
+          <span>{labels.role}</span>
+          <input
+            name="role"
             className="h-11 rounded-md border border-[color:var(--border)] bg-[color:var(--surface)] px-3 text-[color:var(--text)] outline-none transition focus:border-[color:var(--accent)]"
           />
         </label>

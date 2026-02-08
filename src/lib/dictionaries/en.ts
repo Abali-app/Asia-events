@@ -194,6 +194,8 @@ export const en = {
   },
   form: {
     name: "Full Name",
+    company: "Company",
+    role: "Role",
     email: "Email Address",
     phone: "Phone (optional)",
     message: "Tell us how you want to partner",
