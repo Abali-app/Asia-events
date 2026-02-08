@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type ContactFormProps = {
   labels: {
@@ -19,14 +19,28 @@ type ContactFormProps = {
   };
   locale: "en" | "ar";
   source: "contact" | "partnerships";
+  context?: "company_profile" | "partnerships";
 };
 
-export default function ContactForm({ labels, locale, source }: ContactFormProps) {
+export default function ContactForm({ labels, locale, source, context }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
   const emailAddress = "info@asiaeventsgroup.live";
+  const [localContext, setLocalContext] = useState<ContactFormProps["context"]>(context);
 
+  useEffect(() => {
+    if (context) {
+      setLocalContext(context);
+      return;
+    }
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const queryContext = params.get("context");
+    if (queryContext === "company_profile") {
+      setLocalContext("company_profile");
+    }
+  }, [context]);
   async function onCopyEmail() {
     try {
       await navigator.clipboard.writeText(emailAddress);
@@ -48,6 +62,7 @@ export default function ContactForm({ labels, locale, source }: ContactFormProps
       ...Object.fromEntries(form.entries()),
       locale,
       source,
+      context: localContext,
     };
 
     const res = await fetch("/api/lead", {
@@ -128,21 +143,21 @@ export default function ContactForm({ labels, locale, source }: ContactFormProps
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <button
           disabled={status === "sending"}
-          className="h-11 rounded-full bg-[color:var(--accent)] px-6 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:bg-[color:var(--accent-strong)] disabled:opacity-60"
+          className="btn-primary h-11 rounded-full bg-[color:var(--accent)] px-6 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text)] disabled:opacity-60"
         >
           {status === "sending" ? labels.sending : labels.submit}
         </button>
         <div className="flex flex-wrap items-center gap-3 text-xs text-[color:var(--text-soft)]">
           <a
             href={`mailto:${emailAddress}`}
-            className="rounded-full border border-[color:var(--border)] px-4 py-2 uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:border-[color:var(--accent)]"
+            className="btn-outline rounded-full border border-[color:var(--border)] px-4 py-2 uppercase tracking-[0.2em] text-[color:var(--text)]"
           >
             {emailAddress}
           </a>
           <button
             type="button"
             onClick={onCopyEmail}
-            className="rounded-full border border-[color:var(--border)] px-4 py-2 uppercase tracking-[0.2em] text-[color:var(--text)] transition hover:border-[color:var(--accent)]"
+            className="btn-outline rounded-full border border-[color:var(--border)] px-4 py-2 uppercase tracking-[0.2em] text-[color:var(--text)]"
             aria-label={labels.copyEmail}
           >
             {copied ? labels.copied : labels.copyEmail}

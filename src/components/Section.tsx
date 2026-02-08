@@ -30,11 +30,11 @@ export default function Section({
           <div className={`flex flex-col gap-3 ${alignClasses}`}>
             {eyebrow ? (
               <span className="text-xs uppercase tracking-[0.3em] text-[color:var(--accent)]">
-                {eyebrow}
+                <span className="reveal-line">{eyebrow}</span>
               </span>
             ) : null}
             <HeadingTag className="section-title type-h2 text-[color:var(--text)]">
-              {title}
+              <span className="reveal-line">{title}</span>
             </HeadingTag>
             {subtitle ? (
               <p className="type-body text-measure text-[color:var(--text-soft)]">{subtitle}</p>

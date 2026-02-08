@@ -31,11 +31,11 @@ export default async function AboutPage({ params }: PageProps) {
     <div>
       <Section as="h1" eyebrow={dict.nav.about} title={dict.about.title} subtitle={dict.about.story}>
         <div className="grid gap-8 lg:grid-cols-3">
-          <div className="border-t border-[color:var(--border)] pt-6">
+          <div className="divider-top pt-6">
             <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.about.missionTitle}</h3>
             <p className="mt-3 text-sm text-[color:var(--text-soft)]">{dict.about.mission}</p>
           </div>
-          <div className="border-t border-[color:var(--border)] pt-6">
+          <div className="divider-top pt-6">
             <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.about.valuesTitle}</h3>
             <ul className="mt-4 space-y-3 text-sm text-[color:var(--text-soft)]">
               {dict.about.values.map((value) => (
@@ -45,7 +45,7 @@ export default async function AboutPage({ params }: PageProps) {
               ))}
             </ul>
           </div>
-          <div className="border-t border-[color:var(--border)] pt-6">
+          <div className="divider-top pt-6">
             <h3 className="text-lg font-semibold text-[color:var(--text)]">{dict.about.approachTitle}</h3>
             <ul className="mt-4 space-y-3 text-sm text-[color:var(--text-soft)]">
               {dict.about.approach.map((item) => (

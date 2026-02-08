@@ -64,8 +64,8 @@ export default function Navbar({ locale, dict }: NavbarProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`transition hover:text-[color:var(--text)] ${
-                  active ? "text-[color:var(--text)] underline underline-offset-8" : ""
+                className={`nav-link transition hover:text-[color:var(--text)] ${
+                  active ? "is-active text-[color:var(--text)]" : ""
                 }`}
               >
                 {item.label}
@@ -77,7 +77,7 @@ export default function Navbar({ locale, dict }: NavbarProps) {
           <LanguageSwitcher locale={locale} label={dict.common.languageSwitchLabel} />
         </div>
       </div>
-      <div className="border-t border-[color:var(--border)] lg:hidden">
+      <div className="divider-top lg:hidden">
         <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 text-xs text-[color:var(--text-soft)] sm:px-6 lg:px-8">
           {items.map((item) => {
             const active = pathname === item.href;
@@ -85,8 +85,8 @@ export default function Navbar({ locale, dict }: NavbarProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`transition hover:text-[color:var(--text)] ${
-                  active ? "text-[color:var(--text)]" : ""
+                className={`nav-link transition hover:text-[color:var(--text)] ${
+                  active ? "is-active text-[color:var(--text)]" : ""
                 }`}
               >
                 {item.label}

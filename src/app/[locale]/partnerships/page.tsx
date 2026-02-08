@@ -39,7 +39,7 @@ export default async function PartnershipsPage({ params }: PageProps) {
       >
         <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
           {dict.partnerships.bullets.map((item) => (
-            <li key={item} className="border-t border-[color:var(--border)] pt-4">
+            <li key={item} className="divider-top pt-4">
               {item}
             </li>
           ))}
@@ -47,7 +47,7 @@ export default async function PartnershipsPage({ params }: PageProps) {
         <div className="pt-8">
           <Link
             href={`/${locale}/partnerships?context=company_profile#contact-form`}
-            className="rounded-sm border border-[color:var(--border)] px-6 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)] transition hover:border-[color:var(--accent)]"
+            className="btn-outline rounded-sm border border-[color:var(--border)] px-6 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
           >
             {dict.partnerships.profileCta}
           </Link>
@@ -70,7 +70,7 @@ export default async function PartnershipsPage({ params }: PageProps) {
       <Section title={dict.partnerships.formatsTitle}>
         <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
           {dict.partnerships.formats.map((item) => (
-            <li key={item} className="border-t border-[color:var(--border)] pt-4">
+            <li key={item} className="divider-top pt-4">
               {item}
             </li>
           ))}
@@ -78,7 +78,7 @@ export default async function PartnershipsPage({ params }: PageProps) {
       </Section>
 
       <Section id="contact-form" title={dict.partnerships.ctaTitle} subtitle={dict.partnerships.ctaSubtitle}>
-        <div className="border-t border-[color:var(--border)] pt-6">
+        <div className="divider-top pt-6">
           <ContactForm labels={dict.form} locale={locale} source="partnerships" />
         </div>
       </Section>

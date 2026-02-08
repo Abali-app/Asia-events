@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
+import Reveal from "@/components/Reveal";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
@@ -54,24 +55,26 @@ export default async function HomePage({ params }: PageProps) {
           />
           <div className="absolute inset-0 bg-black/35" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
+          <div className="pointer-events-none absolute inset-0 hero-sweep" />
+          <div className="pointer-events-none absolute inset-0 hero-noise" />
         </div>
         <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-8 px-4 pb-12 pt-6 text-center text-white sm:gap-10 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
           <div className="absolute inset-0 mx-auto h-[68%] w-[90%] max-w-[42rem] rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.65)_0%,_rgba(0,0,0,0.4)_50%,_transparent_75%)] sm:h-[62%]" />
           <div className="relative flex w-full max-w-[36ch] flex-col items-center gap-4">
             {dict.home.hero.brandLine ? (
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/80">
-                {dict.home.hero.brandLine}
+                <span className="hero-line delay-1">{dict.home.hero.brandLine}</span>
               </p>
             ) : null}
             <h1 className="hero-title type-h1 text-balance text-white">
-              {dict.home.hero.headline}
+              <span className="hero-line delay-2">{dict.home.hero.headline}</span>
             </h1>
             <p className="type-subhead text-measure text-white/85">
-              {dict.home.hero.subheadline}
+              <span className="hero-line delay-3">{dict.home.hero.subheadline}</span>
             </p>
             <Link
               href={`/${locale}/partnerships`}
-              className="rounded-sm bg-[color:var(--accent)] px-12 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
+              className="btn-primary rounded-sm bg-[color:var(--accent)] px-12 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
             >
               {dict.home.hero.primaryCta}
             </Link>
@@ -87,7 +90,7 @@ export default async function HomePage({ params }: PageProps) {
       >
         <div className="grid gap-10 lg:grid-cols-3">
           {dict.home.ourModel.items.map((item) => (
-            <article key={item.title} className="border-t border-[color:var(--border)] pt-6">
+            <article key={item.title} className="divider-top pt-6">
               <h3 className="text-lg font-semibold text-[color:var(--text)]">{item.title}</h3>
               <p className="mt-3 text-sm text-[color:var(--text-soft)]">{item.description}</p>
             </article>
@@ -96,27 +99,29 @@ export default async function HomePage({ params }: PageProps) {
       </Section>
 
       <section className="py-10 sm:py-12">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)]">
-            {dict.home.dueDiligence.title}
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {dict.home.dueDiligence.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-[color:var(--border)] px-4 py-1 text-xs text-[color:var(--text-soft)]"
-              >
-                {tag}
-              </span>
-            ))}
+        <Reveal>
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-4 sm:px-6 lg:px-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)]">
+              {dict.home.dueDiligence.title}
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {dict.home.dueDiligence.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-[color:var(--border)] px-4 py-1 text-xs text-[color:var(--text-soft)]"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <Section title={dict.home.standards.title}>
         <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
           {dict.home.standards.bullets.map((item) => (
-            <li key={item} className="border-t border-[color:var(--border)] pt-4">
+            <li key={item} className="divider-top pt-4">
               {item}
             </li>
           ))}
@@ -133,9 +138,11 @@ export default async function HomePage({ params }: PageProps) {
         />
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative flex h-full items-center justify-center px-4 text-center sm:px-6 lg:px-8">
-          <p className="text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
-            {dict.home.cinematic.line}
-          </p>
+          <Reveal>
+            <p className="text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
+              {dict.home.cinematic.line}
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -147,7 +154,7 @@ export default async function HomePage({ params }: PageProps) {
       >
         <div className="grid gap-10 lg:grid-cols-3">
           {dict.home.sponsors.items.map((item) => (
-            <article key={item.title} className="border-t border-[color:var(--border)] pt-6">
+            <article key={item.title} className="divider-top pt-6">
               <h3 className="text-lg font-semibold text-[color:var(--text)]">{item.title}</h3>
               <p className="mt-3 text-sm text-[color:var(--text-soft)]">{item.description}</p>
             </article>
@@ -156,7 +163,7 @@ export default async function HomePage({ params }: PageProps) {
         <div className="pt-8">
           <Link
             href={`/${locale}/contact#contact-form`}
-            className="rounded-md bg-[color:var(--accent)] px-10 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)] transition hover:bg-[color:var(--accent)]/90"
+            className="btn-primary rounded-md bg-[color:var(--accent)] px-10 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)]"
           >
             {dict.home.sponsors.cta}
           </Link>
@@ -201,24 +208,26 @@ export default async function HomePage({ params }: PageProps) {
       </Section>
 
       <section className="py-16 sm:py-20">
-        <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-4 text-center sm:px-6 lg:px-8">
-          <p className="text-2xl font-semibold text-[color:var(--text)] sm:text-3xl">
-            {dict.home.stayTuned.title}
-          </p>
-          <div className="text-base font-semibold text-[color:var(--text)] sm:text-lg">
-            <p>{dict.home.stayTuned.lines[0]}</p>
-            <p>{dict.home.stayTuned.lines[1]}</p>
+        <Reveal>
+          <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-4 text-center sm:px-6 lg:px-8">
+            <p className="text-2xl font-semibold text-[color:var(--text)] sm:text-3xl">
+              {dict.home.stayTuned.title}
+            </p>
+            <div className="text-base font-semibold text-[color:var(--text)] sm:text-lg">
+              <p>{dict.home.stayTuned.lines[0]}</p>
+              <p>{dict.home.stayTuned.lines[1]}</p>
+            </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--accent)]">
+              {dict.home.stayTuned.cta}
+            </p>
           </div>
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--accent)]">
-            {dict.home.stayTuned.cta}
-          </p>
-        </div>
+        </Reveal>
       </section>
 
       <Section eyebrow={dict.home.faq.eyebrow} title={dict.home.faq.title} subtitle={dict.home.faq.subtitle}>
         <div className="grid gap-8 lg:grid-cols-2">
           {dict.home.faq.items.map((item) => (
-            <div key={item.q} className="border-t border-[color:var(--border)] pt-6">
+            <div key={item.q} className="divider-top pt-6">
               <p className="text-base font-semibold text-[color:var(--text)]">{item.q}</p>
               <p className="mt-3 text-sm text-[color:var(--text-soft)]">{item.a}</p>
             </div>
