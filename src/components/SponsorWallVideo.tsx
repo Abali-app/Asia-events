@@ -1,13 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-
-type SponsorWallVideoProps = {
-  poster: string;
-};
-
-export default function SponsorWallVideo({ poster }: SponsorWallVideoProps) {
+export default function SponsorWallVideo() {
   const ref = useRef<HTMLDivElement | null>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
@@ -37,11 +31,10 @@ export default function SponsorWallVideo({ poster }: SponsorWallVideoProps) {
 
   return (
     <div ref={ref} className="overflow-hidden rounded-3xl border border-[color:var(--border)]">
-      <div className="relative aspect-[4/5] w-full bg-[color:var(--surface)]/80 sm:aspect-video">
+      <div className="relative aspect-[4/5] w-full bg-[color:var(--surface)]/80 bg-[url('/brand/hero/abstract-stage-light.jpg')] bg-cover bg-center sm:aspect-video">
         {shouldLoad && !reduceMotion ? (
           <video
             className="absolute inset-0 h-full w-full object-cover object-center"
-            poster={poster}
             muted
             loop
             playsInline
@@ -53,15 +46,6 @@ export default function SponsorWallVideo({ poster }: SponsorWallVideoProps) {
           >
             <source src="/brand/video/sponsor-wall.mp4" type="video/mp4" />
           </video>
-        ) : null}
-        {!shouldLoad || reduceMotion || !isReady ? (
-          <Image
-            src={poster}
-            alt=""
-            fill
-            className="object-cover object-center"
-            sizes="(min-width: 768px) 100vw, 100vw"
-          />
         ) : null}
       </div>
     </div>

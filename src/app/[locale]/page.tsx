@@ -162,7 +162,7 @@ export default async function HomePage({ params }: PageProps) {
         title={dict.home.sponsorPresence.title}
         subtitle={dict.home.sponsorPresence.description}
       >
-        <SponsorWallVideo poster="/brand/hero/abstract-stage-light.jpg" />
+        <SponsorWallVideo />
       </Section>
 
       <Section
