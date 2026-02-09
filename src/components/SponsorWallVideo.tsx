@@ -31,10 +31,18 @@ export default function SponsorWallVideo() {
 
   return (
     <div ref={ref} className="overflow-hidden rounded-3xl border border-[color:var(--border)]">
-      <div className="relative aspect-[4/5] w-full bg-[color:var(--surface)]/80 bg-[url('/brand/hero/abstract-stage-light.jpg')] bg-cover bg-center sm:aspect-video">
+      <div
+        className={`relative aspect-[4/5] w-full bg-[color:var(--surface)]/80 sm:aspect-video ${
+          reduceMotion
+            ? "bg-[url('/brand/hero/abstract-stage-light.jpg')] bg-cover bg-center"
+            : ""
+        }`}
+      >
         {shouldLoad && !reduceMotion ? (
           <video
-            className="absolute inset-0 h-full w-full object-cover object-center"
+            className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-300 ${
+              isReady ? "opacity-100" : "opacity-0"
+            }`}
             muted
             loop
             playsInline
