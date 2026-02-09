@@ -19,8 +19,8 @@ export default function Footer({ dict }: FooterProps) {
               alt={`${dict.siteName} logo`}
               width={300}
               height={88}
-              className="h-16 w-auto"
-              sizes="(min-width: 1024px) 160px, 128px"
+              className="h-24 w-auto"
+              sizes="(min-width: 1024px) 256px, 192px"
             />
             <span className="sr-only">{dict.siteName}</span>
           </Link>

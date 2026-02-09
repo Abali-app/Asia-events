@@ -49,8 +49,8 @@ export default function Navbar({ locale, dict }: NavbarProps) {
             alt={`${dict.siteName} logo`}
             width={320}
             height={96}
-            className="h-16 w-auto sm:h-20"
-            sizes="(min-width: 1024px) 160px, 128px"
+            className="h-24 w-auto sm:h-32"
+            sizes="(min-width: 1024px) 256px, 192px"
           />
           <span className="sr-only">{dict.siteName}</span>
         </Link>
