@@ -125,14 +125,6 @@ export default async function HomePage({ params }: PageProps) {
         </ul>
       </Section>
 
-      <Section
-        id="sponsor-presence"
-        title={dict.home.sponsorPresence.title}
-        subtitle={dict.home.sponsorPresence.description}
-      >
-        <SponsorWallVideo poster="/brand/hero/abstract-stage-light.jpg" />
-      </Section>
-
       <section className="relative h-[60vh] overflow-hidden sm:h-[70vh]">
         <Image
           src="/brand/hero/stage-v2.jpg"
@@ -164,6 +156,14 @@ export default async function HomePage({ params }: PageProps) {
           </Reveal>
         </div>
       </section>
+
+      <Section
+        id="sponsor-presence"
+        title={dict.home.sponsorPresence.title}
+        subtitle={dict.home.sponsorPresence.description}
+      >
+        <SponsorWallVideo poster="/brand/hero/abstract-stage-light.jpg" />
+      </Section>
 
       <Section
         id="partnerships"
