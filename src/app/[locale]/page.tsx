@@ -63,14 +63,6 @@ export default async function HomePage({ params }: PageProps) {
                 <span className="hero-line delay-1">{dict.home.hero.brandLine}</span>
               </p>
             ) : null}
-            <Image
-              src="/brand/logo.png"
-              alt={`${dict.siteName} logo`}
-              width={260}
-              height={86}
-              className="relative z-10 h-[200px] w-auto sm:h-[280px] md:h-[320px]"
-              sizes="(min-width: 1024px) 360px, 240px"
-            />
             <h1 className="hero-title text-balance text-white text-[clamp(2.2rem,3.6vw,3.4rem)] font-semibold leading-tight">
               <span className="hero-line delay-2">{dict.home.hero.headline}</span>
             </h1>
