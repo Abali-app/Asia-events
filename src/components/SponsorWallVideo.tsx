@@ -11,6 +11,7 @@ export default function SponsorWallVideo({ poster }: SponsorWallVideoProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -39,7 +40,7 @@ export default function SponsorWallVideo({ poster }: SponsorWallVideoProps) {
       <div className="relative aspect-[4/5] w-full bg-[color:var(--surface)]/80 sm:aspect-video">
         {shouldLoad && !reduceMotion ? (
           <video
-            className="h-full w-full object-cover object-center"
+            className="absolute inset-0 h-full w-full object-cover object-center"
             poster={poster}
             muted
             loop
@@ -47,10 +48,13 @@ export default function SponsorWallVideo({ poster }: SponsorWallVideoProps) {
             autoPlay
             preload="none"
             aria-label="Sponsor wall"
+            onCanPlay={() => setIsReady(true)}
+            onPlaying={() => setIsReady(true)}
           >
             <source src="/brand/video/sponsor-wall.mp4" type="video/mp4" />
           </video>
-        ) : (
+        ) : null}
+        {!shouldLoad || reduceMotion || !isReady ? (
           <Image
             src={poster}
             alt=""
@@ -58,7 +62,7 @@ export default function SponsorWallVideo({ poster }: SponsorWallVideoProps) {
             className="object-cover object-center"
             sizes="(min-width: 768px) 100vw, 100vw"
           />
-        )}
+        ) : null}
       </div>
     </div>
   );
