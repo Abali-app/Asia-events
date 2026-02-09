@@ -337,10 +337,6 @@ select:focus-visible {
   will-change: transform;
 }
 
-.hero-image.zoom-out {
-  transform: translate3d(0, var(--hero-parallax-y, 0px), 0) scale(0.92);
-}
-
 .hero-slide {
   opacity: 0;
   transition: opacity 1000ms ease;
