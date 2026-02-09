@@ -32,7 +32,7 @@ export default function HeroBackgroundSlider() {
         src={images[0]}
         alt=""
         fill
-        className={`hero-image hero-slide object-cover object-center ${index === 0 ? "is-active" : ""}`}
+        className={`hero-image zoom-out hero-slide object-cover object-center ${index === 0 ? "is-active" : ""}`}
         priority
         sizes="100vw"
         onLoadingComplete={() => setReadyForSecond(true)}
@@ -42,7 +42,7 @@ export default function HeroBackgroundSlider() {
           src={images[1]}
           alt=""
           fill
-          className={`hero-image hero-slide object-cover object-center ${index === 1 ? "is-active" : ""}`}
+          className={`hero-image zoom-out hero-slide object-cover object-center ${index === 1 ? "is-active" : ""}`}
           loading="lazy"
           sizes="100vw"
         />
