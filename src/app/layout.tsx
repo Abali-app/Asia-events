@@ -4,24 +4,24 @@ import ScrollProgress from "@/components/ScrollProgress";
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://asiaeventsgroup.live"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://azia.events"),
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://asiaeventsgroup.live/#organization",
+    "@id": "https://azia.events/#organization",
     name: "Asia Events Group",
-    url: "https://asiaeventsgroup.live",
-    logo: "https://asiaeventsgroup.live/brand/logo.png",
+    url: "https://azia.events",
+    logo: "https://azia.events/brand/logo.png",
     description:
       "Asia Events Group is a professional entertainment company specializing in the production and promotion of large-scale live music concerts across the Arab world.",
     contactPoint: [
       {
         "@type": "ContactPoint",
         contactType: "partnerships",
-        email: "leads@asiaeventsgroup.live",
+        email: "leads@azia.events",
         availableLanguage: ["en", "ar"],
       },
     ],
@@ -33,9 +33,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Asia Events Group",
-    url: "https://asiaeventsgroup.live",
+    url: "https://azia.events",
     inLanguage: ["en", "ar"],
-    publisher: { "@id": "https://asiaeventsgroup.live/#organization" },
+    publisher: { "@id": "https://azia.events/#organization" },
   };
 
   return (

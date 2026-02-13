@@ -212,7 +212,7 @@ export const en = {
     subtitle: "Let’s talk business.",
     detailsTitle: "Contact Details",
     details: [
-      { label: "Email", value: "info@asiaeventsgroup.live" },
+      { label: "Email", value: "info@azia.events" },
       { label: "Office", value: "By appointment" },
     ],
   },
@@ -239,7 +239,7 @@ export const en = {
       { label: "TikTok", href: "#" },
     ],
     emailLabel: "Email",
-    emailValue: "info@asiaeventsgroup.live",
+    emailValue: "info@azia.events",
     copyright: "© Asia Events Group. All rights reserved.",
   },
   metadata: {

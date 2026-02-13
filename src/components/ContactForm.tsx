@@ -26,7 +26,7 @@ export default function ContactForm({ labels, locale, source, context }: Contact
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
-  const emailAddress = "info@asiaeventsgroup.live";
+  const emailAddress = "info@azia.events";
   const [localContext, setLocalContext] = useState<ContactFormProps["context"]>(context);
 
   useEffect(() => {

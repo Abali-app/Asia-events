@@ -36,7 +36,7 @@ export default async function HomePage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: dict.metadata.home.title,
-    url: `https://asiaeventsgroup.live/${locale}`,
+    url: `https://azia.events/${locale}`,
     inLanguage: locale,
   };
 

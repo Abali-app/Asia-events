@@ -210,7 +210,7 @@
     subtitle: "لنتحدث بجدية.",
     detailsTitle: "بيانات التواصل",
     details: [
-      { label: "البريد الإلكتروني", value: "info@asiaeventsgroup.live" },
+      { label: "البريد الإلكتروني", value: "info@azia.events" },
       { label: "المكتب", value: "حسب الموعد" },
     ],
   },
@@ -237,7 +237,7 @@
       { label: "تيك توك", href: "#" },
     ],
     emailLabel: "البريد الإلكتروني",
-    emailValue: "info@asiaeventsgroup.live",
+    emailValue: "info@azia.events",
     copyright: "© مجموعة آسيا للفعاليات. جميع الحقوق محفوظة.",
   },
   metadata: {

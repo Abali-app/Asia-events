@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Locale } from "./i18n";
 
-const defaultSiteUrl = "https://asiaeventsgroup.live";
+const defaultSiteUrl = "https://azia.events";
 
 export function buildMetadata({
   locale,
