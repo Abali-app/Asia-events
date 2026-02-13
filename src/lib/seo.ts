@@ -38,7 +38,7 @@ export function buildMetadata({
       title,
       description,
       url: canonical,
-      siteName: "Asia Events Group",
+      siteName: "Azia Events",
       locale: locale === "ar" ? "ar_AR" : "en_US",
       type: "website",
       images: [
@@ -46,7 +46,7 @@ export function buildMetadata({
           url: "/og/og.jpg",
           width: 1200,
           height: 630,
-          alt: "Asia Events Group",
+          alt: "Azia Events",
         },
       ],
     },

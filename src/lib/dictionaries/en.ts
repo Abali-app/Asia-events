@@ -1,7 +1,7 @@
 export const en = {
   locale: "en",
   direction: "ltr",
-  siteName: "Asia Events Group",
+  siteName: "Azia Events",
   nav: {
     home: "Home",
     about: "About",
@@ -43,7 +43,7 @@ export const en = {
   home: {
     hero: {
       brandLine: "PARTNERSHIPS",
-      headline: "ASIA EVENTS GROUP",
+      headline: "Azia Events",
       subheadline:
         "Production and promotion of large-scale live music concerts across the Arab world",
       supporting: "",
@@ -137,7 +137,7 @@ export const en = {
   about: {
     title: "Who We Are",
     story:
-      "Asia Events Group is a concert promoter and live entertainment platform. We work directly with artists and venues to create high-impact shows, control the full lifecycle of the event, and turn demand into sold-out nights.",
+      "Azia Events is a concert promoter and live entertainment platform. We work directly with artists and venues to create high-impact shows, control the full lifecycle of the event, and turn demand into sold-out nights.",
     missionTitle: "Mission",
     mission:
       "Control the demand and deliver major live music moments at scale.",
@@ -231,7 +231,7 @@ export const en = {
     error: "Something went wrong. Please try again.",
   },
   footer: {
-    summary: "Asia Events Group",
+    summary: "Azia Events",
     socialTitle: "Social",
     socials: [
       { label: "Instagram", href: "https://www.instagram.com/asia_events_group?igsh=MTBzcHExNTUzcDI1YQ==" },
@@ -240,28 +240,28 @@ export const en = {
     ],
     emailLabel: "Email",
     emailValue: "info@azia.events",
-    copyright: "© Asia Events Group. All rights reserved.",
+    copyright: "© Azia Events. All rights reserved.",
   },
   metadata: {
     home: {
-      title: "Asia Events Group | Production & Promotion of Live Music Concerts",
+      title: "Azia Events | Production & Promotion of Live Music Concerts",
       description:
-        "Asia Events Group is a professional entertainment company specializing in the production and promotion of large-scale live music concerts across the Arab world.",
+        "Azia Events is a professional entertainment company specializing in the production and promotion of large-scale live music concerts across the Arab world.",
     },
     about: {
-      title: "About Asia Events Group | Live Music Concert Production",
+      title: "About Azia Events | Live Music Concert Production",
       description:
-        "Learn about Asia Events Group, a professional organizer and promoter of large-scale live music concerts operating across the Arab world.",
+        "Learn about Azia Events, a professional organizer and promoter of large-scale live music concerts operating across the Arab world.",
     },
     services: {
       title: "What We Do | Concert Production & Promotion",
       description:
-        "Asia Events Group manages the production, promotion, and execution of large-scale ticketed live music concerts.",
+        "Azia Events manages the production, promotion, and execution of large-scale ticketed live music concerts.",
     },
     contact: {
-      title: "Contact Asia Events Group | Partnerships & Inquiries",
+      title: "Contact Azia Events | Partnerships & Inquiries",
       description:
-        "Contact Asia Events Group for partnerships, sponsorship inquiries, and professional collaboration opportunities.",
+        "Contact Azia Events for partnerships, sponsorship inquiries, and professional collaboration opportunities.",
     },
   },
 } as const;

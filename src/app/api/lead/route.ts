@@ -90,8 +90,8 @@ export async function POST(req: Request) {
     const sourceValue = source === "contact" || source === "partnerships" ? source : "unknown";
     const subject =
       sourceValue === "partnerships"
-        ? "Partnership Inquiry - Asia Events Group"
-        : "New Website Lead - Asia Events Group";
+        ? "Partnership Inquiry - Azia Events"
+        : "New Website Lead - Azia Events";
 
     console.log("lead_resend_debug", {
       runtime,

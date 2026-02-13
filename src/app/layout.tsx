@@ -12,11 +12,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://azia.events/#organization",
-    name: "Asia Events Group",
+    name: "Azia Events",
     url: "https://azia.events",
     logo: "https://azia.events/brand/logo.png",
     description:
-      "Asia Events Group is a professional entertainment company specializing in the production and promotion of large-scale live music concerts across the Arab world.",
+      "Azia Events is a professional entertainment company specializing in the production and promotion of large-scale live music concerts across the Arab world.",
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Asia Events Group",
+    name: "Azia Events",
     url: "https://azia.events",
     inLanguage: ["en", "ar"],
     publisher: { "@id": "https://azia.events/#organization" },
