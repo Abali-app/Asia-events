@@ -28,7 +28,7 @@ function isRateLimited(ip: string) {
 
 export async function POST(req: Request) {
   try {
-    const { name, email, phone, message, company, role, company_website, locale, source, context } =
+    const { name, email, phone, message, company, role, company_website, locale, source } =
       await req.json();
 
     if (!name || !email || !message) {
@@ -63,11 +63,9 @@ export async function POST(req: Request) {
     const localeValue = locale === "ar" || locale === "en" ? locale : "unknown";
     const sourceValue = source === "contact" || source === "partnerships" ? source : "unknown";
     const subject =
-      context === "company_profile"
-        ? "Company Profile Request – Asia Events Group"
-        : sourceValue === "partnerships"
-          ? "Partnership Inquiry – Asia Events Group"
-          : "New Website Lead – Asia Events Group";
+      sourceValue === "partnerships"
+        ? "Partnership Inquiry – Asia Events Group"
+        : "New Website Lead – Asia Events Group";
 
     try {
       await resend.emails.send({
@@ -87,7 +85,6 @@ export async function POST(req: Request) {
           "",
           `Locale: ${localeValue}`,
           `Source: ${sourceValue}`,
-          context ? `Context: ${context}` : "",
           "",
           "Source: Website contact form",
         ]
