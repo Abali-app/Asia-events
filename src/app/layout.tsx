@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       {
         "@type": "ContactPoint",
         contactType: "partnerships",
-        email: "leads@azia.events",
+        email: "partnerships@azia.events",
         availableLanguage: ["en", "ar"],
       },
     ],

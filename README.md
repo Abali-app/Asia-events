@@ -16,7 +16,7 @@ Open `http://localhost:3000/en` or `http://localhost:3000/ar`.
 Copy `.env.example` into `.env.local` and fill in values:
 
 - `RESEND_API_KEY`
-- `LEADS_TO_EMAIL` (currently `aisar.daghash@gmail.com`)
+- `LEADS_TO_EMAIL` (currently `partnerships@azia.events`)
 - `LEADS_FROM_EMAIL`
 - `NEXT_PUBLIC_SITE_URL` (set to `https://azia.events`)
 

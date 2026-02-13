@@ -212,7 +212,7 @@ export const en = {
     subtitle: "Let’s talk business.",
     detailsTitle: "Contact Details",
     details: [
-      { label: "Email", value: "info@azia.events" },
+      { label: "Email", value: "partnerships@azia.events" },
       { label: "Office", value: "By appointment" },
     ],
   },
@@ -239,7 +239,7 @@ export const en = {
       { label: "TikTok", href: "#" },
     ],
     emailLabel: "Email",
-    emailValue: "info@azia.events",
+    emailValue: "partnerships@azia.events",
     copyright: "© Azia Events. All rights reserved.",
   },
   metadata: {
