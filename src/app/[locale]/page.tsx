@@ -32,6 +32,28 @@ export default async function HomePage({ params }: PageProps) {
     return null;
   }
   const dict = getDictionary(locale);
+  const commercialBlock =
+    locale === "ar"
+      ? {
+          title: "منصة تجارية استراتيجية",
+          body:
+            "تقوم أزيا بتطوير مشاريع حفلات موسيقية واسعة النطاق مصممة لدمج العلامات التجارية وتحقيق عائد تجاري حقيقي. النقاشات مفتوحة حالياً حول الشراكات للإنتاجات القادمة.",
+          cta: "اطلب ملف الرعاية",
+          scaleTitle: "مصممة للنطاق الواسع",
+          scaleBullets: ["بيئات قاعات كبرى", "أصول تجارية منظمة", "حضور متكامل للعلامة التجارية"],
+        }
+      : {
+          title: "Strategic Commercial Platform",
+          body:
+            "Azia Live Entertainment develops large-scale live music properties structured for brand integration, audience engagement, and commercial return. Partnership discussions are currently open for upcoming productions.",
+          cta: "Request Sponsorship Brief",
+          scaleTitle: "Built for Scale",
+          scaleBullets: [
+            "Major venue environments",
+            "Structured commercial assets",
+            "Integrated brand presence",
+          ],
+        };
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -78,6 +100,27 @@ export default async function HomePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <Section id="commercial-platform" title={commercialBlock.title} subtitle={commercialBlock.body}>
+        <div className="pt-2">
+          <Link
+            href={`/${locale}/partnerships`}
+            className="btn-primary rounded-sm bg-[color:var(--accent)] px-10 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
+          >
+            {commercialBlock.cta}
+          </Link>
+        </div>
+      </Section>
+
+      <Section id="scale" title={commercialBlock.scaleTitle}>
+        <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
+          {commercialBlock.scaleBullets.map((item) => (
+            <li key={item} className="divider-top pt-4">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </Section>
 
       <Section
         id="model"

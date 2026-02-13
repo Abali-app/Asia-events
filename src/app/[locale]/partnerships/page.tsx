@@ -28,6 +28,16 @@ export default async function PartnershipsPage({ params }: PageProps) {
     return null;
   }
   const dict = getDictionary(locale);
+  const introBlock =
+    locale === "ar"
+      ? {
+          title: "إطار الدمج التجاري",
+          text: "تقوم أزيا ببناء نماذج شراكة متوافقة مع نطاق القاعة، تموضع الجمهور، واستراتيجية العلامة التجارية.",
+        }
+      : {
+          title: "Commercial Integration Overview",
+          text: "Azia Live Entertainment structures partnership models aligned with venue scale, audience positioning, and brand strategy.",
+        };
 
   return (
     <div>
@@ -53,6 +63,8 @@ export default async function PartnershipsPage({ params }: PageProps) {
           </Link>
         </div>
       </Section>
+
+      <Section title={introBlock.title} subtitle={introBlock.text} />
 
       <Section title={dict.partnerships.frameworkTitle}>
         <div className="flex flex-wrap gap-3 text-sm text-[color:var(--text-soft)]">
