@@ -6,6 +6,7 @@ export const runtime = "nodejs";
 const rateLimitWindowMs = 60_000;
 const rateLimitMax = 3;
 const rateMap = new Map<string, { count: number; ts: number }>();
+const expectedMailDomain = "azia.events";
 
 function getClientIp(req: Request) {
   const forwarded = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
@@ -24,6 +25,29 @@ function isRateLimited(ip: string) {
     return true;
   }
   return false;
+}
+
+function getEmailDomain(value: string) {
+  const parts = value.split("@");
+  return parts.length === 2 ? parts[1].toLowerCase() : "";
+}
+
+function getErrorDetails(error: unknown) {
+  if (error instanceof Error) {
+    const asAny = error as Error & {
+      statusCode?: number;
+      code?: string;
+      response?: unknown;
+    };
+    return {
+      name: asAny.name,
+      message: asAny.message,
+      code: asAny.code,
+      statusCode: asAny.statusCode,
+      response: asAny.response,
+    };
+  }
+  return { unknown: error };
 }
 
 export async function POST(req: Request) {
@@ -60,15 +84,28 @@ export async function POST(req: Request) {
     const resend = new Resend(resendKey);
     const toAddress = to as string;
     const fromAddress = from as string;
+    const toDomain = getEmailDomain(toAddress);
+    const fromDomain = getEmailDomain(fromAddress);
     const localeValue = locale === "ar" || locale === "en" ? locale : "unknown";
     const sourceValue = source === "contact" || source === "partnerships" ? source : "unknown";
     const subject =
       sourceValue === "partnerships"
-        ? "Partnership Inquiry – Asia Events Group"
-        : "New Website Lead – Asia Events Group";
+        ? "Partnership Inquiry - Asia Events Group"
+        : "New Website Lead - Asia Events Group";
+
+    console.log("lead_resend_debug", {
+      runtime,
+      expectedMailDomain,
+      fromAddress,
+      toAddress,
+      fromDomain,
+      toDomain,
+      fromUsesExpectedDomain: fromDomain === expectedMailDomain,
+      toUsesExpectedDomain: toDomain === expectedMailDomain,
+    });
 
     try {
-      await resend.emails.send({
+      const resendResponse = await resend.emails.send({
         from: fromAddress,
         to: toAddress,
         replyTo: email,
@@ -91,12 +128,23 @@ export async function POST(req: Request) {
           .filter(Boolean)
           .join("\n"),
       });
-    } catch {
+
+      console.log("lead_resend_send_ok", {
+        data: resendResponse?.data,
+        error: resendResponse?.error,
+      });
+      if (resendResponse?.error) {
+        console.error("lead_resend_send_failed", resendResponse.error);
+        return NextResponse.json({ ok: false, error: "resend_failed" }, { status: 502 });
+      }
+    } catch (error) {
+      console.error("lead_resend_send_failed", getErrorDetails(error));
       return NextResponse.json({ ok: false, error: "resend_failed" }, { status: 502 });
     }
 
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error("lead_route_unhandled_error", getErrorDetails(error));
     return NextResponse.json({ ok: false, error: "resend_failed" }, { status: 502 });
   }
 }
