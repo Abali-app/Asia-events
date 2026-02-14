@@ -33,34 +33,36 @@ export default async function HomePage({ params }: PageProps) {
   }
   const dict = getDictionary(locale);
 
-  const commercialBlock =
+  const heroSupporting =
+    locale === "ar"
+      ? "إنتاج حفلات موسيقية جماهيرية مختارة بعناية في العالم العربي."
+      : "Curated large-scale live music productions across the Arab world.";
+  const platformBlock =
     locale === "ar"
       ? {
           title: "منصة حفلات موسيقية مستمرة",
           body:
             "تقوم أزيا بتطوير وإدارة محفظة مستمرة من الإنتاجات الموسيقية واسعة النطاق في العالم العربي. يتم بناء نماذج الشراكة على أساس تعاون تجاري طويل المدى.",
-          cta: "استكشف فرص الشراكة",
-          operatingTitle: "نموذج التشغيل",
-          operatingBullets: [
-            "جدول إنتاج متعدد الفعاليات",
-            "شراكات استراتيجية مع القاعات",
-            "أطر متكاملة لدمج الرعاة",
-            "التوافق طويل الأمد للعلامة التجارية",
-          ],
         }
       : {
           title: "Live Concert Platform",
           body:
             "Azia Live Entertainment develops and operates a continuous portfolio of large-scale live music productions across the Arab world. Partnership models are structured around long-term commercial collaboration.",
-          cta: "Explore Partnership Opportunities",
-          operatingTitle: "Operating Model",
-          operatingBullets: [
-            "Multi-production calendar",
-            "Strategic venue partnerships",
-            "Integrated sponsor frameworks",
-            "Long-term brand alignment",
-          ],
         };
+  const scarcityBlock =
+    locale === "ar"
+      ? {
+          title: "إنتاجات مختارة",
+          text: "تقدم أزيا عدداً محدوداً من الحفلات الموسيقية الرئيسية سنوياً، يتم اختيارها وتطويرها بعناية.",
+        }
+      : {
+          title: "Select Productions",
+          text: "Azia presents a limited number of flagship live music events each year, carefully selected and strategically developed.",
+        };
+  const anticipationText =
+    locale === "ar"
+      ? "الإنتاج القادم قيد التطوير حالياً. سيتم الإعلان عن التفاصيل بشكل حصري."
+      : "The next production is currently in development. Details will be released exclusively.";
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -96,7 +98,7 @@ export default async function HomePage({ params }: PageProps) {
               <span className="hero-line delay-2">{dict.home.hero.headline}</span>
             </h1>
             <p className="type-subhead text-measure text-white/85">
-              <span className="hero-line delay-3">{dict.home.hero.subheadline}</span>
+              <span className="hero-line delay-3">{heroSupporting}</span>
             </p>
             <Link
               href={`/${locale}/partnerships`}
@@ -108,26 +110,21 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </section>
 
-      <Section id="commercial-platform" title={commercialBlock.title} subtitle={commercialBlock.body}>
-        <div className="pt-2">
-          <Link
-            href={`/${locale}/partnerships`}
-            className="btn-primary rounded-sm bg-[color:var(--accent)] px-10 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
-          >
-            {commercialBlock.cta}
-          </Link>
-        </div>
+      <Section id="commercial-platform" title={platformBlock.title} subtitle={platformBlock.body}>
+        <div />
       </Section>
 
-      <Section id="operating-model" title={commercialBlock.operatingTitle}>
-        <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
-          {commercialBlock.operatingBullets.map((item) => (
-            <li key={item} className="divider-top pt-4">
-              {item}
-            </li>
-          ))}
-        </ul>
+      <Section id="select-productions" title={scarcityBlock.title} subtitle={scarcityBlock.text}>
+        <div />
       </Section>
+
+      <section className="section-shell">
+        <Reveal>
+          <div className="container-shell text-center text-sm text-[color:var(--text-soft)]">
+            {anticipationText}
+          </div>
+        </Reveal>
+      </section>
 
       <Section
         id="model"
@@ -313,12 +310,3 @@ export default async function HomePage({ params }: PageProps) {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
