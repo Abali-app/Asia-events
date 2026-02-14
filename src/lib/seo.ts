@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { Locale } from "./i18n";
 
 const defaultSiteUrl = "https://azia.events";
-const ogImageUrl = "https://azia.events/og/og-v3.jpg";
+const ogImageUrl = "https://azia.events/og/og-v4.jpg";
 
 export function buildMetadata({
   locale,
