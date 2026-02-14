@@ -206,7 +206,7 @@ export default async function HomePage({ params }: PageProps) {
               {brandHero.city ? <p className="text-sm text-white/75 sm:text-base">{brandHero.city}</p> : null}
               <Link
                 href={`/${locale}/partnerships`}
-                className="btn-primary mt-3 rounded-sm bg-[color:var(--accent)] px-14 py-4 text-base font-semibold uppercase tracking-[0.26em] text-[color:var(--text)]"
+                className="btn-primary mt-3 rounded-sm bg-[color:var(--accent)] px-12 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-[color:var(--text)]"
               >
                 {brandHero.cta}
               </Link>
@@ -359,7 +359,7 @@ export default async function HomePage({ params }: PageProps) {
               <p>{dict.home.stayTuned.lines[0]}</p>
               <p>{dict.home.stayTuned.lines[1]}</p>
             </div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--accent)]">
+            <p className="text-lg font-semibold uppercase tracking-[0.25em] text-[color:var(--accent)]">
               {dict.home.stayTuned.cta}
             </p>
           </div>
