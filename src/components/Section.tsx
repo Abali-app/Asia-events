@@ -26,8 +26,8 @@ export default function Section({
   return (
     <section id={id} className="section-shell">
       <Reveal>
-        <div className="container-shell flex w-full flex-col gap-6">
-          <div className={`flex flex-col gap-3 ${alignClasses}`}>
+        <div className="container-shell flex w-full flex-col gap-8">
+          <div className={`flex flex-col gap-4 ${alignClasses}`}>
             {eyebrow ? (
               <span className="text-xs uppercase tracking-[0.3em] text-[color:var(--accent)]">
                 <span className="reveal-line">{eyebrow}</span>
@@ -37,7 +37,7 @@ export default function Section({
               <span className="reveal-line">{title}</span>
             </HeadingTag>
             {subtitle ? (
-              <p className="type-body text-measure text-[color:var(--text-soft)]">{subtitle}</p>
+              <p className="section-copy type-body text-measure text-[color:var(--text-soft)]">{subtitle}</p>
             ) : null}
           </div>
           {children}
