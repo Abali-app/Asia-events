@@ -136,7 +136,7 @@ export default async function HomePage({ params }: PageProps) {
       ? {
           title: "حالة الإنتاج",
           lines: [
-            "اتفاق الفنان في مراحله النهائية.",
+            "التعاقد مع الفنان في مراحله النهائية.",
             "تم تأمين موقع الحفل.",
             "الهيكلة التجارية قيد التنفيذ.",
           ],
@@ -206,7 +206,7 @@ export default async function HomePage({ params }: PageProps) {
               {brandHero.city ? <p className="text-sm text-white/75 sm:text-base">{brandHero.city}</p> : null}
               <Link
                 href={`/${locale}/partnerships`}
-                className="btn-primary mt-3 rounded-sm bg-[color:var(--accent)] px-12 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-[color:var(--text)]"
+                className="btn-primary mt-3 rounded-sm bg-[color:var(--accent)] px-14 py-4 text-base font-semibold uppercase tracking-[0.26em] text-[color:var(--text)]"
               >
                 {brandHero.cta}
               </Link>
