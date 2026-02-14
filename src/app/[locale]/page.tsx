@@ -41,16 +41,16 @@ export default async function HomePage({ params }: PageProps) {
       ? {
           title: "AZIA",
           subtitle: "Live Events",
-          line1: "إنتاجات موسيقية كبرى بمشاركة فنانين بارزين من المنطقة والعالم.",
-          line2: "فرص الشراكة الاستراتيجية متاحة حالياً.",
+          line1: "إنتاج وإدارة الحفلات الموسيقية الكبرى",
+          line2: "برؤية واضحة وتنفيذ يرتقي للتوقعات.",
           city: "",
           cta: "الشراكات",
         }
       : {
           title: "AZIA",
           subtitle: "Live Events",
-          line1: "High-impact live music productions featuring leading regional and international artists.",
-          line2: "Strategic partnership opportunities currently open.",
+          line1: "Large-Scale Live Music Production & Management",
+          line2: "Driven by clear vision and elevated execution.",
           city: "",
           cta: "Partnerships",
         };
