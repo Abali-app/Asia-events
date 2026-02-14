@@ -32,26 +32,33 @@ export default async function HomePage({ params }: PageProps) {
     return null;
   }
   const dict = getDictionary(locale);
+
   const commercialBlock =
     locale === "ar"
       ? {
-          title: "منصة تجارية استراتيجية",
+          title: "منصة حفلات موسيقية مستمرة",
           body:
-            "تقوم أزيا بتطوير مشاريع حفلات موسيقية واسعة النطاق مصممة لدمج العلامات التجارية وتحقيق عائد تجاري حقيقي. النقاشات مفتوحة حالياً حول الشراكات للإنتاجات القادمة.",
-          cta: "اطلب ملف الرعاية",
-          scaleTitle: "مصممة للنطاق الواسع",
-          scaleBullets: ["بيئات قاعات كبرى", "أصول تجارية منظمة", "حضور متكامل للعلامة التجارية"],
+            "تقوم أزيا بتطوير وإدارة محفظة مستمرة من الإنتاجات الموسيقية واسعة النطاق في العالم العربي. يتم بناء نماذج الشراكة على أساس تعاون تجاري طويل المدى.",
+          cta: "استكشف فرص الشراكة",
+          operatingTitle: "نموذج التشغيل",
+          operatingBullets: [
+            "جدول إنتاج متعدد الفعاليات",
+            "شراكات استراتيجية مع القاعات",
+            "أطر متكاملة لدمج الرعاة",
+            "التوافق طويل الأمد للعلامة التجارية",
+          ],
         }
       : {
-          title: "Strategic Commercial Platform",
+          title: "Live Concert Platform",
           body:
-            "Azia Live Entertainment develops large-scale live music properties structured for brand integration, audience engagement, and commercial return. Partnership discussions are currently open for upcoming productions.",
-          cta: "Request Sponsorship Brief",
-          scaleTitle: "Built for Scale",
-          scaleBullets: [
-            "Major venue environments",
-            "Structured commercial assets",
-            "Integrated brand presence",
+            "Azia Live Entertainment develops and operates a continuous portfolio of large-scale live music productions across the Arab world. Partnership models are structured around long-term commercial collaboration.",
+          cta: "Explore Partnership Opportunities",
+          operatingTitle: "Operating Model",
+          operatingBullets: [
+            "Multi-production calendar",
+            "Strategic venue partnerships",
+            "Integrated sponsor frameworks",
+            "Long-term brand alignment",
           ],
         };
   const pageSchema = {
@@ -112,9 +119,9 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </Section>
 
-      <Section id="scale" title={commercialBlock.scaleTitle}>
+      <Section id="operating-model" title={commercialBlock.operatingTitle}>
         <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
-          {commercialBlock.scaleBullets.map((item) => (
+          {commercialBlock.operatingBullets.map((item) => (
             <li key={item} className="divider-top pt-4">
               {item}
             </li>

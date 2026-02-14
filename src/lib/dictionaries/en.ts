@@ -47,7 +47,7 @@ export const en = {
       subheadline:
         "Production and promotion of large-scale live music concerts across the Arab world",
       supporting: "",
-      primaryCta: "Request Sponsorship Brief",
+      primaryCta: "Explore Partnership Opportunities",
     },
     ourModel: {
       eyebrow: "Our Model",
@@ -93,7 +93,7 @@ export const en = {
         { title: "Clear deliverables", description: "Defined assets and approvals." },
         { title: "Reporting framework", description: "Post-event reporting with clean structure." },
       ],
-      cta: "Request Sponsorship Brief",
+      cta: "Explore Partnership Opportunities",
     },
     stayTuned: {
       title: "The next show is already in motion.",
@@ -203,7 +203,7 @@ export const en = {
       "Hospitality access and hosting",
       "PR alignment and announcements",
     ],
-    ctaTitle: "Request Sponsorship Brief",
+    ctaTitle: "Explore Partnership Opportunities",
     ctaSubtitle: "Share your goals and we will respond with the right path.",
     profileCta: "Request Company Profile",
   },

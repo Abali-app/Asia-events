@@ -46,7 +46,7 @@ export const ar = {
       headline: "Azia Events",
       subheadline: "إنتاج وتنظيم حفلات موسيقية جماهيرية في العالم العربي",
       supporting: "",
-      primaryCta: "اطلب ملف الرعاية",
+      primaryCta: "استكشف فرص الشراكة",
     },
     ourModel: {
       eyebrow: "قيادة المشروع",
@@ -92,7 +92,7 @@ export const ar = {
         { title: "تسليم واضح", description: "أصول وموافقات محددة." },
         { title: "إطار تقارير", description: "تقارير بعد الحدث بهيكل واضح." },
       ],
-      cta: "اطلب ملف الرعاية",
+      cta: "استكشف فرص الشراكة",
     },
     stayTuned: {
       title: "الحدث القادم قيد التنفيذ.",
@@ -201,7 +201,7 @@ export const ar = {
       "ضيافة واستضافة",
       "ملائمة علاقات عامة وإعلانات",
     ],
-    ctaTitle: "اطلب ملف الرعاية",
+    ctaTitle: "استكشف فرص الشراكة",
     ctaSubtitle: "شارك أهدافك وسنعود بالمسار المناسب.",
     profileCta: "اطلب الملف التعريفي",
   },

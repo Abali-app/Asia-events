@@ -32,11 +32,11 @@ export default async function PartnershipsPage({ params }: PageProps) {
     locale === "ar"
       ? {
           title: "إطار الدمج التجاري",
-          text: "تقوم أزيا ببناء نماذج شراكة متوافقة مع نطاق القاعة، تموضع الجمهور، واستراتيجية العلامة التجارية.",
+          text: "تقوم أزيا بهيكلة اتفاقيات الشراكة عبر جدول إنتاجها السنوي.",
         }
       : {
           title: "Commercial Integration Overview",
-          text: "Azia Live Entertainment structures partnership models aligned with venue scale, audience positioning, and brand strategy.",
+          text: "Azia structures partnership agreements across its annual production calendar.",
         };
 
   return (
