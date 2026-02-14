@@ -348,8 +348,15 @@ select:focus-visible {
 }
 
 .hero-slide {
-  opacity: 0;
+  opacity: 1;
+}
+
+.hero-slide.is-mounted {
   transition: opacity 1000ms ease;
+}
+
+.hero-slide:not(.is-active) {
+  opacity: 0;
 }
 
 .hero-slide.is-active {

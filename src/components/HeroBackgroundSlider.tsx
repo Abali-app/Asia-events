@@ -12,6 +12,11 @@ export default function HeroBackgroundSlider() {
   const [index, setIndex] = useState(0);
   const [readyForSecond, setReadyForSecond] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -32,7 +37,7 @@ export default function HeroBackgroundSlider() {
         src={images[0]}
         alt=""
         fill
-        className={`hero-image hero-slide object-cover object-center ${index === 0 ? "is-active" : ""}`}
+        className={`hero-image hero-slide object-cover object-center ${index === 0 ? "is-active" : ""} ${mounted ? "is-mounted" : ""}`}
         priority
         sizes="100vw"
         onLoadingComplete={() => setReadyForSecond(true)}
@@ -42,7 +47,7 @@ export default function HeroBackgroundSlider() {
           src={images[1]}
           alt=""
           fill
-          className={`hero-image hero-slide object-cover object-center ${index === 1 ? "is-active" : ""}`}
+          className={`hero-image hero-slide object-cover object-center ${index === 1 ? "is-active" : ""} ${mounted ? "is-mounted" : ""}`}
           loading="lazy"
           sizes="100vw"
         />
