@@ -40,19 +40,19 @@ export default async function HomePage({ params }: PageProps) {
     locale === "ar"
       ? {
           title: "AZIA",
-          subtitle: "عروض ترفيهية حية",
-          line1: "إنتاج موسيقي ضخم يضم فنانين على مستوى العالم العربي.",
-          line2: "فرص الشراكة الاستراتيجية متاحة حالياً.",
-          supportLine: "إنتاجات موسيقية كبرى مختارة بعناية على مستوى العالم العربي.",
-          cta: "استكشف فرص الشراكة",
+          subtitle: "Live Events",
+          line1: "عروض ترفيهية حية",
+          line2: "إنتاجات موسيقية كبرى",
+          city: "دبي",
+          cta: "الشراكات",
         }
       : {
           title: "AZIA",
-          subtitle: "Live Entertainment",
-          line1: "A major live music production featuring artists from across the Arab world.",
-          line2: "Strategic partnership opportunities now open.",
-          supportLine: "Curated large-scale live productions across the Arab world.",
-          cta: "Explore Partnership Opportunities",
+          subtitle: "LIVE ENTERTAINMENT",
+          line1: "Large-scale live music productions.",
+          line2: "Dubai.",
+          city: "",
+          cta: "Partnerships",
         };
 
   const eventContent =
@@ -157,6 +157,7 @@ export default async function HomePage({ params }: PageProps) {
     url: `https://azia.events/${locale}`,
     inLanguage: locale,
   };
+  const heroSupportLine = locale === "ar" ? "قيد الإنتاج" : "In production.";
 
   return (
     <div>
@@ -188,25 +189,23 @@ export default async function HomePage({ params }: PageProps) {
           <HeroParallax />
           <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-6 px-4 pb-12 pt-6 text-center text-white sm:gap-8 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
             <div className="absolute inset-0 mx-auto h-[68%] w-[90%] max-w-[42rem] rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.65)_0%,_rgba(0,0,0,0.4)_50%,_transparent_75%)] sm:h-[62%]" />
-            <div className="relative flex w-full max-w-[44ch] flex-col items-center gap-3">
-              <h1 className="hero-title text-balance text-white text-[clamp(2.4rem,4.2vw,4rem)] font-semibold leading-tight">
+            <div className="relative flex w-full max-w-[48ch] flex-col items-center gap-5 sm:gap-6">
+              <h1 className="hero-title text-balance text-white text-[clamp(2.9rem,5.2vw,5rem)] font-semibold leading-[0.95] tracking-[0.12em]">
                 <span className="hero-line delay-1">{brandHero.title}</span>
               </h1>
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/80">
+              <p className="text-xs font-semibold uppercase tracking-[0.36em] text-white/75 sm:text-sm">
                 <span className="hero-line delay-2">{brandHero.subtitle}</span>
               </p>
               <p className="type-subhead text-measure text-white/90">
                 <span className="hero-line delay-3">{brandHero.line1}</span>
               </p>
-              <p className="text-sm text-white/80">
+              <p className="text-sm text-white/80 sm:text-base">
                 <span className="hero-line delay-3">{brandHero.line2}</span>
               </p>
-              <p className="text-xs text-white/70">
-                <span className="hero-line delay-3">{brandHero.supportLine}</span>
-              </p>
+              {brandHero.city ? <p className="text-sm text-white/75 sm:text-base">{brandHero.city}</p> : null}
               <Link
                 href={`/${locale}/partnerships`}
-                className="btn-primary mt-2 rounded-sm bg-[color:var(--accent)] px-12 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
+                className="btn-primary mt-3 rounded-sm bg-[color:var(--accent)] px-12 py-3 text-xs font-semibold uppercase tracking-[0.26em] text-[color:var(--text)]"
               >
                 {brandHero.cta}
               </Link>
@@ -214,6 +213,12 @@ export default async function HomePage({ params }: PageProps) {
           </div>
         </section>
       )}
+
+      {!isEventMode ? (
+        <section className="pb-8 pt-2 text-center">
+          <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--text-soft)]">{heroSupportLine}</p>
+        </section>
+      ) : null}
 
       {isEventMode ? (
         <>
