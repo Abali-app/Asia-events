@@ -240,6 +240,7 @@ export const en = {
     ],
     emailLabel: "Email",
     emailValue: "partnerships@azia.events",
+    privateAccess: "Private Access",
     copyright: "© Azia Events. All rights reserved.",
   },
   metadata: {

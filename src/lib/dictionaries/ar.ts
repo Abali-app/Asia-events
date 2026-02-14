@@ -238,6 +238,7 @@ export const ar = {
     ],
     emailLabel: "البريد الإلكتروني",
     emailValue: "partnerships@azia.events",
+    privateAccess: "دخول خاص",
     copyright: "© مجموعة آزيا للفعاليات. جميع الحقوق محفوظة.",
   },
   metadata: {
