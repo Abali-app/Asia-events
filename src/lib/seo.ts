@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { Locale } from "./i18n";
 
 const defaultSiteUrl = "https://azia.events";
+const ogImageUrl = "https://azia.events/og/og-v2.jpg";
 
 export function buildMetadata({
   locale,
@@ -37,13 +38,13 @@ export function buildMetadata({
     openGraph: {
       title,
       description,
-      url: canonical,
+      url: defaultSiteUrl,
       siteName: "Azia Events",
       locale: locale === "ar" ? "ar_AR" : "en_US",
       type: "website",
       images: [
         {
-          url: "/og/og.jpg",
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: "Azia Events",
@@ -54,7 +55,7 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/og/og.jpg"],
+      images: [ogImageUrl],
     },
   };
 }
