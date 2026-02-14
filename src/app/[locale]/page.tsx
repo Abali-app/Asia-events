@@ -35,51 +35,57 @@ export default async function HomePage({ params }: PageProps) {
   const dict = getDictionary(locale);
   const isEventMode = process.env.NEXT_PUBLIC_EVENT_MODE === "true";
 
+
   if (isEventMode) {
     const eventContent =
       locale === "ar"
         ? {
-            eventName: "أزيا لايف: الإنتاج الرئيسي",
+            eventName: "أزيا لايف: الحفل الرئيسي",
             venue: "القاعة الرئيسية",
             city: "الرياض",
             date: "قريباً",
-            heroImage: "/brand/hero/stage-v2.jpg",
+            heroImage: "/brand/hero/crowd.jpg",
             ticketUrl: `/${locale}/contact#contact-form`,
             ticketLabel: "احجز التذاكر",
-            overviewTitle: "نظرة عامة على الحدث",
+            overviewTitle: "تفاصيل الحدث",
             overviewText:
-              "إنتاج موسيقي رئيسي ضمن نموذج أزيا القائم على فعاليات منتقاة بعناية وتأثير جماهيري واسع.",
+              "إنتاج رئيسي ضمن برنامج أزيا المنتقى بعناية على مدار العام. يركز الحدث على تقديم تجربة موسيقية جماهيرية عالية المستوى مع إطار تجاري منظم.",
+            eventMeta: "التاريخ: قريباً · المكان: القاعة الرئيسية",
+            secondaryCtaLabel: "عرض تفاصيل الحدث",
             ticketsTitle: "التذاكر",
-            ticketsText: "الحجز متاح حالياً بكميات محدودة.",
+            ticketsText: "الحجز متاح حالياً ضمن دفعات محدودة.",
+            ticketsCtaLabel: "احجز التذاكر",
             sponsorTitle: "حضور الرعاة",
-            sponsorText: "فرص دمج تجاري داخل بيئة الحدث بشكل منظم ومتدرج.",
+            sponsorText: "يبقى حضور الرعاة جزءاً أساسياً من تصميم التجربة داخل الحدث.",
             aboutTitle: "عن أزيا",
-            aboutText:
-              "أزيا منصة إنتاج موسيقي تعمل على تطوير فعاليات رئيسية محدودة سنوياً بشراكات استراتيجية طويلة المدى.",
+            aboutText: "أزيا منصة إنتاج حفلات رئيسية تعمل عبر نموذج موسمي منتقى بعناية.",
           }
         : {
-            eventName: "Azia Live: Flagship Production",
+            eventName: "Azia Live: Flagship Arena Night",
             venue: "Flagship Arena",
             city: "Riyadh",
             date: "Coming Soon",
-            heroImage: "/brand/hero/stage-v2.jpg",
+            heroImage: "/brand/hero/crowd.jpg",
             ticketUrl: `/${locale}/contact#contact-form`,
-            ticketLabel: "Get Tickets",
-            overviewTitle: "Event Overview",
+            ticketLabel: "GET TICKETS",
+            overviewTitle: "Event Details",
             overviewText:
-              "A flagship live music production within Azia's curated model, built for scale and focused audience impact.",
+              "A flagship arena production within Azia's curated annual slate. The event is structured for premium audience experience and disciplined commercial integration.",
+            eventMeta: "Date: Coming Soon · Venue: Flagship Arena",
+            secondaryCtaLabel: "View Event Details",
             ticketsTitle: "Tickets",
-            ticketsText: "Booking is currently open in limited availability.",
+            ticketsText: "Ticketing is now open in limited release batches.",
+            ticketsCtaLabel: "GET TICKETS",
             sponsorTitle: "Sponsor Presence",
-            sponsorText: "Commercial integration opportunities are structured across key event touchpoints.",
+            sponsorText: "Sponsor presence remains integrated as a core layer of the live event experience.",
             aboutTitle: "About Azia",
-            aboutText:
-              "Azia is a live production platform operating a curated slate of flagship events each year with long-term strategic partners.",
+            aboutText: "Azia is a curated flagship live production platform operating a focused annual calendar.",
           };
 
     return (
       <div>
         <EventHero
+          locale={locale}
           eventName={eventContent.eventName}
           venue={eventContent.venue}
           city={eventContent.city}
@@ -90,7 +96,17 @@ export default async function HomePage({ params }: PageProps) {
         />
 
         <Section id="event-overview" title={eventContent.overviewTitle} subtitle={eventContent.overviewText}>
-          <div />
+          <div className="divider-top flex flex-col gap-4 pt-6 text-sm text-[color:var(--text-soft)]">
+            <p>{eventContent.eventMeta}</p>
+            <div>
+              <Link
+                href={eventContent.ticketUrl}
+                className="btn-outline rounded-sm border border-[color:var(--border)] px-6 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
+              >
+                {eventContent.secondaryCtaLabel}
+              </Link>
+            </div>
+          </div>
         </Section>
 
         <Section id="tickets" title={eventContent.ticketsTitle} subtitle={eventContent.ticketsText}>
@@ -99,7 +115,7 @@ export default async function HomePage({ params }: PageProps) {
               href={eventContent.ticketUrl}
               className="btn-primary rounded-sm bg-[color:var(--accent)] px-10 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
             >
-              {eventContent.ticketLabel}
+              {eventContent.ticketsCtaLabel}
             </Link>
           </div>
         </Section>
@@ -114,7 +130,6 @@ export default async function HomePage({ params }: PageProps) {
       </div>
     );
   }
-
   const heroSupporting =
     locale === "ar"
       ? "إنتاج حفلات موسيقية جماهيرية مختارة بعناية في العالم العربي."
