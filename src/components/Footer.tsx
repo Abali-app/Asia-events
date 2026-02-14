@@ -40,7 +40,7 @@ export default function Footer({ dict }: FooterProps) {
                 index === 0
                   ? "/brand/social/logo-ig-png-42760.png"
                   : index === 1
-                    ? "/brand/social/youtube-logo-png-31792.png"
+                    ? "/brand/social/youtube-logo-png-31792-v2.png"
                     : "/brand/social/tik-tok-logo-33079.png";
 
               return (
