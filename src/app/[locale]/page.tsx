@@ -35,131 +35,98 @@ export default async function HomePage({ params }: PageProps) {
   const dict = getDictionary(locale);
   const isEventMode = process.env.NEXT_PUBLIC_EVENT_MODE === "true";
 
-
-  if (isEventMode) {
-    const eventContent =
-      locale === "ar"
-        ? {
-            eventName: "أزيا لايف: الحفل الرئيسي",
-            venue: "القاعة الرئيسية",
-            city: "الرياض",
-            date: "قريباً",
-            heroImage: "/brand/hero/crowd.jpg",
-            ticketUrl: `/${locale}/contact#contact-form`,
-            ticketLabel: "احجز التذاكر",
-            overviewTitle: "تفاصيل الحدث",
-            overviewText:
-              "إنتاج رئيسي ضمن برنامج أزيا المنتقى بعناية على مدار العام. يركز الحدث على تقديم تجربة موسيقية جماهيرية عالية المستوى مع إطار تجاري منظم.",
-            eventMeta: "التاريخ: قريباً · المكان: القاعة الرئيسية",
-            secondaryCtaLabel: "عرض تفاصيل الحدث",
-            ticketsTitle: "التذاكر",
-            ticketsText: "الحجز متاح حالياً ضمن دفعات محدودة.",
-            ticketsCtaLabel: "احجز التذاكر",
-            sponsorTitle: "حضور الرعاة",
-            sponsorText: "يبقى حضور الرعاة جزءاً أساسياً من تصميم التجربة داخل الحدث.",
-            aboutTitle: "عن أزيا",
-            aboutText: "أزيا منصة إنتاج حفلات رئيسية تعمل عبر نموذج موسمي منتقى بعناية.",
-          }
-        : {
-            eventName: "Azia Live: Flagship Arena Night",
-            venue: "Flagship Arena",
-            city: "Riyadh",
-            date: "Coming Soon",
-            heroImage: "/brand/hero/crowd.jpg",
-            ticketUrl: `/${locale}/contact#contact-form`,
-            ticketLabel: "GET TICKETS",
-            overviewTitle: "Event Details",
-            overviewText:
-              "A flagship arena production within Azia's curated annual slate. The event is structured for premium audience experience and disciplined commercial integration.",
-            eventMeta: "Date: Coming Soon · Venue: Flagship Arena",
-            secondaryCtaLabel: "View Event Details",
-            ticketsTitle: "Tickets",
-            ticketsText: "Ticketing is now open in limited release batches.",
-            ticketsCtaLabel: "GET TICKETS",
-            sponsorTitle: "Sponsor Presence",
-            sponsorText: "Sponsor presence remains integrated as a core layer of the live event experience.",
-            aboutTitle: "About Azia",
-            aboutText: "Azia is a curated flagship live production platform operating a focused annual calendar.",
-          };
-
-    return (
-      <div>
-        <EventHero
-          locale={locale}
-          eventName={eventContent.eventName}
-          venue={eventContent.venue}
-          city={eventContent.city}
-          date={eventContent.date}
-          heroImage={eventContent.heroImage}
-          ticketUrl={eventContent.ticketUrl}
-          ticketLabel={eventContent.ticketLabel}
-        />
-
-        <Section id="event-overview" title={eventContent.overviewTitle} subtitle={eventContent.overviewText}>
-          <div className="divider-top flex flex-col gap-4 pt-6 text-sm text-[color:var(--text-soft)]">
-            <p>{eventContent.eventMeta}</p>
-            <div>
-              <Link
-                href={eventContent.ticketUrl}
-                className="btn-outline rounded-sm border border-[color:var(--border)] px-6 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
-              >
-                {eventContent.secondaryCtaLabel}
-              </Link>
-            </div>
-          </div>
-        </Section>
-
-        <Section id="tickets" title={eventContent.ticketsTitle} subtitle={eventContent.ticketsText}>
-          <div className="pt-2">
-            <Link
-              href={eventContent.ticketUrl}
-              className="btn-primary rounded-sm bg-[color:var(--accent)] px-10 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
-            >
-              {eventContent.ticketsCtaLabel}
-            </Link>
-          </div>
-        </Section>
-
-        <Section id="sponsor-presence" title={eventContent.sponsorTitle} subtitle={eventContent.sponsorText}>
-          <SponsorWallVideo />
-        </Section>
-
-        <Section id="about-azia" title={eventContent.aboutTitle} subtitle={eventContent.aboutText}>
-          <div />
-        </Section>
-      </div>
-    );
-  }
-  const heroSupporting =
-    locale === "ar"
-      ? "إنتاج حفلات موسيقية جماهيرية مختارة بعناية في العالم العربي."
-      : "Curated large-scale live music productions across the Arab world.";
-  const platformBlock =
+  const brandHero =
     locale === "ar"
       ? {
-          title: "منصة حفلات موسيقية مستمرة",
-          body:
-            "تقوم أزيا بتطوير وإدارة محفظة مستمرة من الإنتاجات الموسيقية واسعة النطاق في العالم العربي. يتم بناء نماذج الشراكة على أساس تعاون تجاري طويل المدى.",
+          title: "أزيا",
+          subtitle: "للترفيه الحي",
+          line1: "إنتاج حفلات موسيقية جماهيرية مختارة بعناية في العالم العربي.",
+          line2: "النقاشات مفتوحة حالياً للشراكات الاستراتيجية.",
+          cta: "استكشف فرص الشراكة",
         }
       : {
-          title: "Live Concert Platform",
-          body:
-            "Azia Live Entertainment develops and operates a continuous portfolio of large-scale live music productions across the Arab world. Partnership models are structured around long-term commercial collaboration.",
+          title: "AZIA",
+          subtitle: "Live Entertainment",
+          line1: "Curated large-scale live music productions across the Arab world.",
+          line2: "Strategic partnership discussions currently open.",
+          cta: "Explore Partnership Opportunities",
         };
-  const scarcityBlock =
+
+  const eventContent =
     locale === "ar"
       ? {
-          title: "إنتاجات مختارة",
-          text: "تقدم أزيا عدداً محدوداً من الحفلات الموسيقية الرئيسية سنوياً، يتم اختيارها وتطويرها بعناية.",
+          eventName: "أزيا لايف: الحفل الرئيسي",
+          venue: "القاعة الرئيسية",
+          city: "الرياض",
+          date: "قريباً",
+          heroImage: "/brand/hero/crowd.jpg",
+          ticketUrl: `/${locale}/contact#contact-form`,
+          ticketLabel: "احجز التذاكر",
+          overviewTitle: "تفاصيل الحدث",
+          overviewText:
+            "إنتاج رئيسي ضمن برنامج أزيا المنتقى بعناية على مدار العام. يركز الحدث على تقديم تجربة موسيقية جماهيرية عالية المستوى مع إطار تجاري منظم.",
+          eventMeta: "التاريخ: قريباً · المكان: القاعة الرئيسية",
+          secondaryCtaLabel: "عرض تفاصيل الحدث",
+          ticketsTitle: "التذاكر",
+          ticketsText: "الحجز متاح حالياً ضمن دفعات محدودة.",
+          ticketsCtaLabel: "احجز التذاكر",
         }
       : {
-          title: "Select Productions",
-          text: "Azia presents a limited number of flagship live music events each year, carefully selected and strategically developed.",
+          eventName: "Azia Live: Flagship Arena Night",
+          venue: "Flagship Arena",
+          city: "Riyadh",
+          date: "Coming Soon",
+          heroImage: "/brand/hero/crowd.jpg",
+          ticketUrl: `/${locale}/contact#contact-form`,
+          ticketLabel: "GET TICKETS",
+          overviewTitle: "Event Details",
+          overviewText:
+            "A flagship arena production within Azia's curated annual slate. The event is structured for premium audience experience and disciplined commercial integration.",
+          eventMeta: "Date: Coming Soon · Venue: Flagship Arena",
+          secondaryCtaLabel: "View Event Details",
+          ticketsTitle: "Tickets",
+          ticketsText: "Ticketing is now open in limited release batches.",
+          ticketsCtaLabel: "GET TICKETS",
         };
-  const anticipationText =
+
+  const operatingModel =
     locale === "ar"
-      ? "الإنتاج القادم قيد التطوير حالياً. سيتم الإعلان عن التفاصيل بشكل حصري."
-      : "The next production is currently in development. Details will be released exclusively.";
+      ? {
+          title: "نموذج التشغيل",
+          bullets: [
+            "برنامج إنتاج سنوي منتقى",
+            "تخطيط نطاق واضح لكل إنتاج رئيسي",
+            "تنسيق تشغيلي متكامل مع القاعات",
+            "تسليم تنفيذي منضبط لكل حدث",
+          ],
+        }
+      : {
+          title: "Operating Model",
+          bullets: [
+            "Curated annual production calendar",
+            "Defined scale framework per flagship production",
+            "Integrated operational alignment with venues",
+            "Disciplined execution delivery across each event",
+          ],
+        };
+
+  const commercialIntegration =
+    locale === "ar"
+      ? {
+          title: "الدمج التجاري",
+          text: "تبني أزيا إطار شراكة واضح يربط بين نطاق الحدث، تموضع الجمهور، ومتطلبات العلامة التجارية ضمن نموذج تسليم قابل للقياس.",
+          bullets: ["هيكلة حقوق واضحة", "نقاط ظهور متدرجة", "تنسيق تشغيلي وتجاري متكامل"],
+        }
+      : {
+          title: "Commercial Integration",
+          text: "Azia structures partnership frameworks around event scale, audience positioning, and brand requirements within a measurable delivery model.",
+          bullets: [
+            "Defined rights architecture",
+            "Tiered visibility touchpoints",
+            "Integrated operational and commercial delivery",
+          ],
+        };
+
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -174,94 +141,86 @@ export default async function HomePage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
-      <section id="hero" className="relative min-h-[90vh] overflow-hidden">
-        <div id="hero-bg" className="absolute inset-0">
-          <HeroBackgroundSlider />
-          <div className="absolute inset-0 bg-black/35" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
-          <div className="pointer-events-none absolute inset-0 hero-sweep" />
-          <div className="pointer-events-none absolute inset-0 hero-noise" />
-        </div>
-        <HeroParallax />
-        <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-8 px-4 pb-12 pt-6 text-center text-white sm:gap-10 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
-          <div className="absolute inset-0 mx-auto h-[68%] w-[90%] max-w-[42rem] rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.65)_0%,_rgba(0,0,0,0.4)_50%,_transparent_75%)] sm:h-[62%]" />
-          <div className="relative flex w-full max-w-[36ch] flex-col items-center gap-4">
-            {dict.home.hero.brandLine ? (
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/80">
-                <span className="hero-line delay-1">{dict.home.hero.brandLine}</span>
+
+      {isEventMode ? (
+        <EventHero
+          locale={locale}
+          eventName={eventContent.eventName}
+          venue={eventContent.venue}
+          city={eventContent.city}
+          date={eventContent.date}
+          heroImage={eventContent.heroImage}
+          ticketUrl={eventContent.ticketUrl}
+          ticketLabel={eventContent.ticketLabel}
+        />
+      ) : (
+        <section id="hero" className="relative min-h-[90vh] overflow-hidden">
+          <div id="hero-bg" className="absolute inset-0">
+            <HeroBackgroundSlider />
+            <div className="absolute inset-0 bg-black/35" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
+            <div className="pointer-events-none absolute inset-0 hero-sweep" />
+            <div className="pointer-events-none absolute inset-0 hero-noise" />
+          </div>
+          <HeroParallax />
+          <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-6 px-4 pb-12 pt-6 text-center text-white sm:gap-8 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
+            <div className="absolute inset-0 mx-auto h-[68%] w-[90%] max-w-[42rem] rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.65)_0%,_rgba(0,0,0,0.4)_50%,_transparent_75%)] sm:h-[62%]" />
+            <div className="relative flex w-full max-w-[44ch] flex-col items-center gap-3">
+              <h1 className="hero-title text-balance text-white text-[clamp(2.4rem,4.2vw,4rem)] font-semibold leading-tight">
+                <span className="hero-line delay-1">{brandHero.title}</span>
+              </h1>
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/80">
+                <span className="hero-line delay-2">{brandHero.subtitle}</span>
               </p>
-            ) : null}
-            <h1 className="hero-title text-balance text-white text-[clamp(2.2rem,3.6vw,3.4rem)] font-semibold leading-tight">
-              <span className="hero-line delay-2">{dict.home.hero.headline}</span>
-            </h1>
-            <p className="type-subhead text-measure text-white/85">
-              <span className="hero-line delay-3">{heroSupporting}</span>
-            </p>
-            <Link
-              href={`/${locale}/partnerships`}
-              className="btn-primary rounded-sm bg-[color:var(--accent)] px-12 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
-            >
-              {dict.home.hero.primaryCta}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <Section id="commercial-platform" title={platformBlock.title} subtitle={platformBlock.body}>
-        <div />
-      </Section>
-
-      <Section id="select-productions" title={scarcityBlock.title} subtitle={scarcityBlock.text}>
-        <div />
-      </Section>
-
-      <section className="section-shell">
-        <Reveal>
-          <div className="container-shell text-center text-sm text-[color:var(--text-soft)]">
-            {anticipationText}
-          </div>
-        </Reveal>
-      </section>
-
-      <Section
-        id="model"
-        eyebrow={dict.home.ourModel.eyebrow}
-        title={dict.home.ourModel.title}
-        subtitle={dict.home.ourModel.subtitle}
-      >
-        <div className="grid gap-10 lg:grid-cols-3">
-          {dict.home.ourModel.items.map((item) => (
-            <article key={item.title} className="divider-top pt-6">
-              <h3 className="text-lg font-semibold text-[color:var(--text)]">{item.title}</h3>
-              <p className="mt-3 text-sm text-[color:var(--text-soft)]">{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <section className="section-shell">
-        <Reveal>
-          <div className="container-shell flex w-full flex-col gap-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[color:var(--text)]">
-              {dict.home.dueDiligence.title}
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {dict.home.dueDiligence.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-[color:var(--border)] px-4 py-1 text-xs text-[color:var(--text-soft)]"
-                >
-                  {tag}
-                </span>
-              ))}
+              <p className="type-subhead text-measure text-white/90">
+                <span className="hero-line delay-3">{brandHero.line1}</span>
+              </p>
+              <p className="text-sm text-white/80">
+                <span className="hero-line delay-3">{brandHero.line2}</span>
+              </p>
+              <Link
+                href={`/${locale}/partnerships`}
+                className="btn-primary mt-2 rounded-sm bg-[color:var(--accent)] px-12 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
+              >
+                {brandHero.cta}
+              </Link>
             </div>
           </div>
-        </Reveal>
-      </section>
+        </section>
+      )}
 
-      <Section id="standards" title={dict.home.standards.title}>
+      {isEventMode ? (
+        <>
+          <Section id="event-overview" title={eventContent.overviewTitle} subtitle={eventContent.overviewText}>
+            <div className="divider-top flex flex-col gap-4 pt-6 text-sm text-[color:var(--text-soft)]">
+              <p>{eventContent.eventMeta}</p>
+              <div>
+                <Link
+                  href={eventContent.ticketUrl}
+                  className="btn-outline rounded-sm border border-[color:var(--border)] px-6 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
+                >
+                  {eventContent.secondaryCtaLabel}
+                </Link>
+              </div>
+            </div>
+          </Section>
+
+          <Section id="tickets" title={eventContent.ticketsTitle} subtitle={eventContent.ticketsText}>
+            <div className="pt-2">
+              <Link
+                href={eventContent.ticketUrl}
+                className="btn-primary rounded-sm bg-[color:var(--accent)] px-10 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
+              >
+                {eventContent.ticketsCtaLabel}
+              </Link>
+            </div>
+          </Section>
+        </>
+      ) : null}
+
+      <Section id="operating-model" title={operatingModel.title}>
         <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
-          {dict.home.standards.bullets.map((item) => (
+          {operatingModel.bullets.map((item) => (
             <li key={item} className="divider-top pt-4">
               {item}
             </li>
@@ -269,37 +228,15 @@ export default async function HomePage({ params }: PageProps) {
         </ul>
       </Section>
 
-      <section className="relative h-[60vh] overflow-hidden sm:h-[70vh]">
-        <Image
-          src="/brand/hero/stage-v2.jpg"
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/35" />
-        <div className="relative flex h-full items-center justify-center px-4 text-center sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="flex max-w-3xl flex-col items-center gap-4 text-white">
-              <p className="text-3xl font-semibold sm:text-4xl md:text-5xl">
-                {dict.home.cinematic.line}
-              </p>
-              {dict.home.cinematic.lines?.length ? (
-                <div className="text-base font-semibold text-white/90 sm:text-lg">
-                  {dict.home.cinematic.lines.map((line) => (
-                    <p key={line}>{line}</p>
-                  ))}
-                </div>
-              ) : null}
-              {dict.home.cinematic.cta ? (
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/80">
-                  {dict.home.cinematic.cta}
-                </p>
-              ) : null}
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <Section id="commercial-integration" title={commercialIntegration.title} subtitle={commercialIntegration.text}>
+        <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
+          {commercialIntegration.bullets.map((item) => (
+            <li key={item} className="divider-top pt-4">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </Section>
 
       <Section
         id="sponsor-presence"
