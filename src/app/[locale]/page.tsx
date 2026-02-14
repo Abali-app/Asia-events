@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import HeroParallax from "@/components/HeroParallax";
 import HeroBackgroundSlider from "@/components/HeroBackgroundSlider";
 import SponsorWallVideo from "@/components/SponsorWallVideo";
+import EventHero from "@/components/EventHero";
 import { getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
@@ -32,6 +33,87 @@ export default async function HomePage({ params }: PageProps) {
     return null;
   }
   const dict = getDictionary(locale);
+  const isEventMode = process.env.NEXT_PUBLIC_EVENT_MODE === "true";
+
+  if (isEventMode) {
+    const eventContent =
+      locale === "ar"
+        ? {
+            eventName: "أزيا لايف: الإنتاج الرئيسي",
+            venue: "القاعة الرئيسية",
+            city: "الرياض",
+            date: "قريباً",
+            heroImage: "/brand/hero/stage-v2.jpg",
+            ticketUrl: `/${locale}/contact#contact-form`,
+            ticketLabel: "احجز التذاكر",
+            overviewTitle: "نظرة عامة على الحدث",
+            overviewText:
+              "إنتاج موسيقي رئيسي ضمن نموذج أزيا القائم على فعاليات منتقاة بعناية وتأثير جماهيري واسع.",
+            ticketsTitle: "التذاكر",
+            ticketsText: "الحجز متاح حالياً بكميات محدودة.",
+            sponsorTitle: "حضور الرعاة",
+            sponsorText: "فرص دمج تجاري داخل بيئة الحدث بشكل منظم ومتدرج.",
+            aboutTitle: "عن أزيا",
+            aboutText:
+              "أزيا منصة إنتاج موسيقي تعمل على تطوير فعاليات رئيسية محدودة سنوياً بشراكات استراتيجية طويلة المدى.",
+          }
+        : {
+            eventName: "Azia Live: Flagship Production",
+            venue: "Flagship Arena",
+            city: "Riyadh",
+            date: "Coming Soon",
+            heroImage: "/brand/hero/stage-v2.jpg",
+            ticketUrl: `/${locale}/contact#contact-form`,
+            ticketLabel: "Get Tickets",
+            overviewTitle: "Event Overview",
+            overviewText:
+              "A flagship live music production within Azia's curated model, built for scale and focused audience impact.",
+            ticketsTitle: "Tickets",
+            ticketsText: "Booking is currently open in limited availability.",
+            sponsorTitle: "Sponsor Presence",
+            sponsorText: "Commercial integration opportunities are structured across key event touchpoints.",
+            aboutTitle: "About Azia",
+            aboutText:
+              "Azia is a live production platform operating a curated slate of flagship events each year with long-term strategic partners.",
+          };
+
+    return (
+      <div>
+        <EventHero
+          eventName={eventContent.eventName}
+          venue={eventContent.venue}
+          city={eventContent.city}
+          date={eventContent.date}
+          heroImage={eventContent.heroImage}
+          ticketUrl={eventContent.ticketUrl}
+          ticketLabel={eventContent.ticketLabel}
+        />
+
+        <Section id="event-overview" title={eventContent.overviewTitle} subtitle={eventContent.overviewText}>
+          <div />
+        </Section>
+
+        <Section id="tickets" title={eventContent.ticketsTitle} subtitle={eventContent.ticketsText}>
+          <div className="pt-2">
+            <Link
+              href={eventContent.ticketUrl}
+              className="btn-primary rounded-sm bg-[color:var(--accent)] px-10 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--text)]"
+            >
+              {eventContent.ticketLabel}
+            </Link>
+          </div>
+        </Section>
+
+        <Section id="sponsor-presence" title={eventContent.sponsorTitle} subtitle={eventContent.sponsorText}>
+          <SponsorWallVideo />
+        </Section>
+
+        <Section id="about-azia" title={eventContent.aboutTitle} subtitle={eventContent.aboutText}>
+          <div />
+        </Section>
+      </div>
+    );
+  }
 
   const heroSupporting =
     locale === "ar"
@@ -306,7 +388,6 @@ export default async function HomePage({ params }: PageProps) {
           {dict.home.microTeaser}
         </div>
       ) : null}
-
     </div>
   );
 }
