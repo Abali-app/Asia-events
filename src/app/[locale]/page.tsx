@@ -35,20 +35,21 @@ export default async function HomePage({ params }: PageProps) {
   const dict = getDictionary(locale);
   const isEventMode = process.env.NEXT_PUBLIC_EVENT_MODE === "true";
 
+
   const brandHero =
     locale === "ar"
       ? {
           title: "أزيا",
           subtitle: "للترفيه الحي",
-          line1: "إنتاج حفلات موسيقية جماهيرية مختارة بعناية في العالم العربي.",
-          line2: "النقاشات مفتوحة حالياً للشراكات الاستراتيجية.",
+          line1: "إنتاج موسيقي ضخم قيد الإعداد حالياً،",
+          line2: "وفرص الشراكة الاستراتيجية متاحة الآن.",
           cta: "استكشف فرص الشراكة",
         }
       : {
           title: "AZIA",
           subtitle: "Live Entertainment",
-          line1: "Curated large-scale live music productions across the Arab world.",
-          line2: "Strategic partnership discussions currently open.",
+          line1: "A major live music production currently in development.",
+          line2: "Strategic partnership opportunities now open.",
           cta: "Explore Partnership Opportunities",
         };
 
@@ -124,6 +125,26 @@ export default async function HomePage({ params }: PageProps) {
             "Defined rights architecture",
             "Tiered visibility touchpoints",
             "Integrated operational and commercial delivery",
+          ],
+        };
+
+
+  const productionStatus =
+    locale === "ar"
+      ? {
+          title: "حالة الإنتاج",
+          lines: [
+            "تأكيد الفنان في مراحله النهائية.",
+            "تم تأمين موقع الحفل.",
+            "الإطار التجاري قيد التنفيذ.",
+          ],
+        }
+      : {
+          title: "Production Status",
+          lines: [
+            "Artist confirmation in final stage.",
+            "Venue secured.",
+            "Commercial framework in place.",
           ],
         };
 
@@ -218,6 +239,16 @@ export default async function HomePage({ params }: PageProps) {
         </>
       ) : null}
 
+
+      <Section id="production-status" title={productionStatus.title}>
+        <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
+          {productionStatus.lines.map((line) => (
+            <li key={line} className="divider-top pt-4">
+              {line}
+            </li>
+          ))}
+        </ul>
+      </Section>
       <Section id="operating-model" title={operatingModel.title}>
         <ul className="grid gap-4 text-sm text-[color:var(--text-soft)]">
           {operatingModel.bullets.map((item) => (
