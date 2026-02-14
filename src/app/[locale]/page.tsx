@@ -183,6 +183,7 @@ export default async function HomePage({ params }: PageProps) {
             <HeroBackgroundSlider />
             <div className="absolute inset-0 bg-black/35" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
+            <div className="pointer-events-none absolute inset-0 hero-vignette" />
             <div className="pointer-events-none absolute inset-0 hero-sweep" />
             <div className="pointer-events-none absolute inset-0 hero-noise" />
           </div>

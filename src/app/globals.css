@@ -223,7 +223,19 @@ select:focus-visible {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
   background-size: 120px 120px;
   mix-blend-mode: soft-light;
-  opacity: 0.15;
+  opacity: 0.08;
+}
+
+.hero-vignette {
+  background:
+    radial-gradient(circle at center, transparent 52%, rgba(0, 0, 0, 0.34) 100%),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.22) 0%,
+      rgba(0, 0, 0, 0.06) 38%,
+      rgba(0, 0, 0, 0.1) 68%,
+      rgba(0, 0, 0, 0.24) 100%
+    );
 }
 
 .divider-top {

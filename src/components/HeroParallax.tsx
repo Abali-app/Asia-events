@@ -15,8 +15,8 @@ export default function HeroParallax() {
     }
 
     let ticking = false;
-    const maxShift = 18;
-    const factor = 0.08;
+    const maxShift = 12;
+    const factor = 0.05;
 
     const update = () => {
       const shift = Math.min(window.scrollY * factor, maxShift);
