@@ -39,17 +39,19 @@ export default async function HomePage({ params }: PageProps) {
   const brandHero =
     locale === "ar"
       ? {
-          title: "أزيا",
-          subtitle: "للترفيه الحي",
-          line1: "إنتاج موسيقي ضخم قيد الإعداد حالياً،",
-          line2: "وفرص الشراكة الاستراتيجية متاحة الآن.",
+          title: "AZIA",
+          subtitle: "عروض ترفيهية حية",
+          line1: "إنتاج موسيقي ضخم يضم فنانين على مستوى العالم العربي.",
+          line2: "فرص الشراكة الاستراتيجية متاحة حالياً.",
+          supportLine: "إنتاجات موسيقية كبرى مختارة بعناية على مستوى العالم العربي.",
           cta: "استكشف فرص الشراكة",
         }
       : {
           title: "AZIA",
           subtitle: "Live Entertainment",
-          line1: "A major live music production currently in development.",
+          line1: "A major live music production featuring artists from across the Arab world.",
           line2: "Strategic partnership opportunities now open.",
+          supportLine: "Curated large-scale live productions across the Arab world.",
           cta: "Explore Partnership Opportunities",
         };
 
@@ -134,17 +136,17 @@ export default async function HomePage({ params }: PageProps) {
       ? {
           title: "حالة الإنتاج",
           lines: [
-            "تأكيد الفنان في مراحله النهائية.",
+            "اتفاق الفنان في مراحله النهائية.",
             "تم تأمين موقع الحفل.",
-            "الإطار التجاري قيد التنفيذ.",
+            "الهيكلة التجارية قيد التنفيذ.",
           ],
         }
       : {
           title: "Production Status",
           lines: [
-            "Artist confirmation in final stage.",
+            "Artist agreement in final stage.",
             "Venue secured.",
-            "Commercial framework in place.",
+            "Commercial structuring underway.",
           ],
         };
 
@@ -198,6 +200,9 @@ export default async function HomePage({ params }: PageProps) {
               </p>
               <p className="text-sm text-white/80">
                 <span className="hero-line delay-3">{brandHero.line2}</span>
+              </p>
+              <p className="text-xs text-white/70">
+                <span className="hero-line delay-3">{brandHero.supportLine}</span>
               </p>
               <Link
                 href={`/${locale}/partnerships`}
