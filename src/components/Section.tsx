@@ -22,17 +22,16 @@ export default function Section({
 }: SectionProps) {
   const alignClasses = align === "center" ? "text-center items-center" : "text-start items-start";
   const HeadingTag = as;
+  const editorialLabel = eyebrow ?? title;
 
   return (
     <section id={id} className="section-shell">
       <Reveal>
         <div className="container-shell flex w-full flex-col gap-8">
           <div className={`flex flex-col gap-4 ${alignClasses}`}>
-            {eyebrow ? (
-              <span className="text-xs uppercase tracking-[0.3em] text-[color:var(--accent)]">
-                <span className="reveal-line">{eyebrow}</span>
-              </span>
-            ) : null}
+            <span className="text-[0.65rem] uppercase tracking-[0.28em] text-[color:var(--accent)]/85">
+              <span className="reveal-line">{`— ${editorialLabel}`}</span>
+            </span>
             <HeadingTag className="section-title type-h2 text-[color:var(--text)]">
               <span className="reveal-line">{title}</span>
             </HeadingTag>

@@ -182,7 +182,7 @@ export default async function HomePage({ params }: PageProps) {
         <section id="hero" className="relative min-h-[90vh] overflow-hidden">
           <div id="hero-bg" className="absolute inset-0">
             <HeroBackgroundSlider />
-            <div className="absolute inset-0 bg-black/35" />
+            <div className="absolute inset-0 bg-black/45" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
             <div className="pointer-events-none absolute inset-0 hero-focus-glow" />
             <div className="pointer-events-none absolute inset-0 hero-vignette" />
@@ -196,6 +196,7 @@ export default async function HomePage({ params }: PageProps) {
               <h1 className="hero-title text-balance text-white text-[clamp(2.9rem,5.2vw,5rem)] font-semibold leading-[0.95] tracking-[0.12em]">
                 <span className="hero-line delay-1">{brandHero.title}</span>
               </h1>
+              <div className="h-px w-[52px] bg-[color:var(--accent)]/85" />
               <p className="text-xs font-semibold uppercase tracking-[0.36em] text-white/75 sm:text-sm">
                 <span className="hero-line delay-2">{brandHero.subtitle}</span>
               </p>

@@ -18,7 +18,7 @@ export default function Footer({ dict }: FooterProps) {
   return (
     <footer className="divider-top bg-[color:var(--bg)]">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-6 py-12 text-start md:grid-cols-3 md:gap-8">
+        <div className="grid gap-7 py-12 text-start md:grid-cols-3 md:gap-10">
           <div className="space-y-4">
             <Link href={base} className="inline-flex items-center">
               <Image
