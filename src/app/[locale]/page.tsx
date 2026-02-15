@@ -158,6 +158,7 @@ export default async function HomePage({ params }: PageProps) {
     inLanguage: locale,
   };
   const heroSupportLine = locale === "ar" ? "قيد الإنتاج" : "In production.";
+  const heroEstLine = locale === "ar" ? "تأسست في دبي" : "Est. Dubai";
 
   return (
     <div>
@@ -183,6 +184,7 @@ export default async function HomePage({ params }: PageProps) {
             <HeroBackgroundSlider />
             <div className="absolute inset-0 bg-black/35" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
+            <div className="pointer-events-none absolute inset-0 hero-focus-glow" />
             <div className="pointer-events-none absolute inset-0 hero-vignette" />
             <div className="pointer-events-none absolute inset-0 hero-sweep" />
             <div className="pointer-events-none absolute inset-0 hero-noise" />
@@ -218,6 +220,7 @@ export default async function HomePage({ params }: PageProps) {
       {!isEventMode ? (
         <section className="pb-8 pt-2 text-center">
           <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--text-soft)]">{heroSupportLine}</p>
+          <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-[color:var(--text-soft)]/80">{heroEstLine}</p>
         </section>
       ) : null}
 

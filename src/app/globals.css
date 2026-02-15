@@ -12,8 +12,8 @@ html {
   --text: #0b1b2b;
   --text-soft: #596474;
   --border: #e7dcc8;
-  --accent: #c8a76a;
-  --accent-strong: #d8bb7d;
+  --accent: #c3ab7a;
+  --accent-strong: #d2bc92;
   --ink: var(--text);
   --ink-soft: var(--text);
   --muted: var(--text-soft);
@@ -85,7 +85,7 @@ body::before {
 
 .type-subhead {
   font-size: clamp(1rem, 1.4vw, 1.25rem);
-  line-height: 1.6;
+  line-height: 1.68;
   font-weight: 500;
 }
 
@@ -100,7 +100,7 @@ body::before {
 }
 
 .text-measure {
-  max-width: 56ch;
+  max-width: 54ch;
 }
 
 .section-copy {
@@ -115,7 +115,7 @@ body::before {
 
 [dir="rtl"] .type-body,
 [dir="rtl"] .type-subhead {
-  line-height: 1.95;
+  line-height: 2.02;
 }
 
 [dir="rtl"] .section-copy {
@@ -189,6 +189,14 @@ select:focus-visible {
   animation-delay: 320ms;
 }
 
+[dir="ltr"] .hero-title {
+  letter-spacing: 0.14em;
+}
+
+[dir="rtl"] .hero-title {
+  letter-spacing: 0.04em;
+}
+
 .hero-sweep {
   background: linear-gradient(
     120deg,
@@ -221,19 +229,25 @@ select:focus-visible {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
   background-size: 120px 120px;
   mix-blend-mode: soft-light;
-  opacity: 0.08;
+  opacity: 0.06;
 }
 
 .hero-vignette {
   background:
-    radial-gradient(circle at center, transparent 52%, rgba(0, 0, 0, 0.34) 100%),
+    radial-gradient(circle at center, transparent 50%, rgba(0, 0, 0, 0.36) 100%),
     linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.22) 0%,
+      rgba(0, 0, 0, 0.24) 0%,
       rgba(0, 0, 0, 0.06) 38%,
       rgba(0, 0, 0, 0.1) 68%,
       rgba(0, 0, 0, 0.24) 100%
     );
+}
+
+.hero-focus-glow {
+  background:
+    radial-gradient(ellipse at center, rgba(195, 171, 122, 0.18) 0%, rgba(195, 171, 122, 0.08) 32%, transparent 68%),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.36) 0%, transparent 72%);
 }
 
 .divider-top {
