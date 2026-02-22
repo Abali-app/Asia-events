@@ -35,6 +35,7 @@ export default function EventHero({
         priority
       />
       <div className="absolute inset-0 bg-black/50" />
+      <div className="pointer-events-none absolute inset-0 hero-bottom-fade" />
       <div className="pointer-events-none absolute inset-0 hero-vignette" />
       <div className="pointer-events-none absolute inset-0 hero-film-grain" />
       <div className="pointer-events-none absolute inset-0 hero-noise" />

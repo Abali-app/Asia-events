@@ -184,6 +184,7 @@ export default async function HomePage({ params }: PageProps) {
             <HeroBackgroundSlider />
             <div className="absolute inset-0 bg-black/45" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
+            <div className="pointer-events-none absolute inset-0 hero-bottom-fade" />
             <div className="pointer-events-none absolute inset-0 hero-vignette" />
             <div className="pointer-events-none absolute inset-0 hero-sweep" />
             <div className="pointer-events-none absolute inset-0 hero-film-grain" />
@@ -219,7 +220,7 @@ export default async function HomePage({ params }: PageProps) {
       )}
 
       {!isEventMode ? (
-        <section className="pt-10 pb-12 text-center">
+        <section className="pb-16 pt-14 text-center">
           <Reveal>
             <div>
               <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--text-soft)]">{heroSupportLine}</p>
@@ -326,7 +327,7 @@ export default async function HomePage({ params }: PageProps) {
         title={dict.home.atmosphere.title}
       >
         <div className="grid gap-6 lg:grid-cols-2">
-          <div className="overflow-hidden rounded-3xl border border-[color:var(--border)]">
+          <div className="surface-depth overflow-hidden rounded-3xl border border-[color:var(--border)]">
             <div className="relative aspect-[4/3]">
               <Image
                 src="/brand/hero/crowd.jpg"
@@ -340,7 +341,7 @@ export default async function HomePage({ params }: PageProps) {
               {dict.home.atmosphere.caption}
             </div>
           </div>
-          <div className="overflow-hidden rounded-3xl border border-[color:var(--border)]">
+          <div className="surface-depth overflow-hidden rounded-3xl border border-[color:var(--border)]">
             <div className="relative aspect-[4/3]">
               <Image
                 src="/brand/hero/stage-v2.jpg"

@@ -21,7 +21,7 @@ export default function Section({
   children,
 }: SectionProps) {
   const alignClasses = align === "center" ? "text-center items-center" : "text-start items-start";
-  const titleClass = align === "center" ? "section-title type-h2 is-centered text-[color:var(--text)]" : "section-title type-h2 text-[color:var(--text)]";
+  const titleClass = align === "center" ? "section-title type-h2 is-centered" : "section-title type-h2";
   const HeadingTag = as;
   const editorialLabel = eyebrow ?? title;
 
