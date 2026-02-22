@@ -35,7 +35,11 @@ export default function EventHero({
         priority
       />
       <div className="absolute inset-0 bg-black/50" />
-      <div className="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center gap-4 px-4 py-20 text-center text-white sm:px-6 lg:px-8">
+      <div className="pointer-events-none absolute inset-0 hero-vignette" />
+      <div className="pointer-events-none absolute inset-0 hero-film-grain" />
+      <div className="pointer-events-none absolute inset-0 hero-noise" />
+      <div className="container-shell relative flex min-h-screen w-full flex-col items-center justify-center gap-4 py-20 text-center text-white">
+        <div className="pointer-events-none absolute inset-0 mx-auto h-[64%] w-[90%] max-w-[42rem] hero-text-focus" />
         <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/80">{presenterLabel}</p>
         <h1 className="text-balance text-[clamp(2.4rem,6vw,5.6rem)] font-semibold leading-[1.02]">
           {eventName}

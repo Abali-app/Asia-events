@@ -21,6 +21,7 @@ export default function Section({
   children,
 }: SectionProps) {
   const alignClasses = align === "center" ? "text-center items-center" : "text-start items-start";
+  const titleClass = align === "center" ? "section-title type-h2 is-centered text-[color:var(--text)]" : "section-title type-h2 text-[color:var(--text)]";
   const HeadingTag = as;
   const editorialLabel = eyebrow ?? title;
 
@@ -32,7 +33,7 @@ export default function Section({
             <span className="text-[0.65rem] uppercase tracking-[0.28em] text-[color:var(--accent)]/85">
               <span className="reveal-line">{`— ${editorialLabel}`}</span>
             </span>
-            <HeadingTag className="section-title type-h2 text-[color:var(--text)]">
+            <HeadingTag className={titleClass}>
               <span className="reveal-line">{title}</span>
             </HeadingTag>
             {subtitle ? (

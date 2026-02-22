@@ -6,7 +6,7 @@ html {
 
 :root {
   --container-max: 72rem;
-  --section-space: clamp(4.75rem, 7vw, 6.75rem);
+  --section-space: clamp(5.25rem, 7.5vw, 7.25rem);
   --bg: #fdfbf7;
   --surface: #ffffff;
   --text: #0b1b2b;
@@ -67,7 +67,7 @@ body::after {
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
   background-size: 160px 160px;
-  opacity: 0.03;
+  opacity: 0.018;
   pointer-events: none;
   z-index: -1;
 }
@@ -92,6 +92,11 @@ body::after {
   font-size: clamp(1.8rem, 2.6vw, 2.6rem);
   line-height: 1.22;
   font-weight: 600;
+}
+
+[dir="ltr"] .type-h1,
+[dir="ltr"] .type-h2 {
+  letter-spacing: 0.012em;
 }
 
 .type-subhead {
@@ -122,12 +127,12 @@ body::after {
 [dir="rtl"] .type-h1,
 [dir="rtl"] .type-h2 {
   letter-spacing: 0;
-  line-height: 1.42;
+  line-height: 1.48;
 }
 
 [dir="rtl"] .type-body,
 [dir="rtl"] .type-subhead {
-  line-height: 2.02;
+  line-height: 2.08;
 }
 
 [dir="rtl"] .section-copy {
@@ -149,8 +154,8 @@ select:focus-visible {
 /* Subtle reveal */
 .reveal {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 700ms cubic-bezier(0.22, 0.61, 0.36, 1), transform 700ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  transform: translateY(10px);
+  transition: opacity 760ms cubic-bezier(0.22, 0.61, 0.36, 1), transform 760ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .reveal.is-visible {
@@ -202,7 +207,7 @@ select:focus-visible {
 }
 
 [dir="ltr"] .hero-title {
-  letter-spacing: 0.14em;
+  letter-spacing: 0.13em;
 }
 
 [dir="rtl"] .hero-title {
@@ -241,25 +246,51 @@ select:focus-visible {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
   background-size: 120px 120px;
   mix-blend-mode: soft-light;
-  opacity: 0.06;
+  opacity: 0.032;
+}
+
+.hero-film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23g)' opacity='0.1'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+  mix-blend-mode: overlay;
+  opacity: 0.026;
 }
 
 .hero-vignette {
   background:
-    radial-gradient(circle at center, transparent 50%, rgba(0, 0, 0, 0.36) 100%),
+    radial-gradient(circle at center, transparent 52%, rgba(0, 0, 0, 0.24) 100%),
     linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.24) 0%,
-      rgba(0, 0, 0, 0.06) 38%,
-      rgba(0, 0, 0, 0.1) 68%,
-      rgba(0, 0, 0, 0.24) 100%
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.05) 38%,
+      rgba(0, 0, 0, 0.08) 68%,
+      rgba(0, 0, 0, 0.2) 100%
     );
 }
 
 .hero-focus-glow {
   background:
-    radial-gradient(ellipse at center, rgba(195, 171, 122, 0.18) 0%, rgba(195, 171, 122, 0.08) 32%, transparent 68%),
-    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.36) 0%, transparent 72%);
+    radial-gradient(ellipse at center, rgba(195, 171, 122, 0.14) 0%, rgba(195, 171, 122, 0.06) 34%, transparent 70%),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.26) 0%, transparent 72%);
+}
+
+.hero-text-focus {
+  background:
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.34) 44%, transparent 76%),
+    radial-gradient(ellipse at center, rgba(195, 171, 122, 0.12) 0%, transparent 66%);
+}
+
+.section-title {
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+[dir="rtl"] .section-title {
+  max-width: 18ch;
+}
+
+.section-title.is-centered {
+  margin-inline: auto;
 }
 
 .divider-top {
@@ -362,8 +393,8 @@ select:focus-visible {
 
 .page-transition {
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 220ms ease-out, transform 220ms ease-out;
+  transform: translateY(6px);
+  transition: opacity 260ms ease-out, transform 260ms ease-out;
   will-change: opacity, transform;
 }
 

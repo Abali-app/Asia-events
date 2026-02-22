@@ -184,14 +184,14 @@ export default async function HomePage({ params }: PageProps) {
             <HeroBackgroundSlider />
             <div className="absolute inset-0 bg-black/45" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(200,167,106,0.22),_transparent_60%)]" />
-            <div className="pointer-events-none absolute inset-0 hero-focus-glow" />
             <div className="pointer-events-none absolute inset-0 hero-vignette" />
             <div className="pointer-events-none absolute inset-0 hero-sweep" />
+            <div className="pointer-events-none absolute inset-0 hero-film-grain" />
             <div className="pointer-events-none absolute inset-0 hero-noise" />
           </div>
           <HeroParallax />
-          <div className="relative mx-auto flex min-h-[90vh] w-full max-w-5xl flex-col items-center justify-center gap-6 px-4 pb-12 pt-6 text-center text-white sm:gap-8 sm:px-6 sm:pb-0 sm:pt-0 lg:px-8">
-            <div className="absolute inset-0 mx-auto h-[68%] w-[90%] max-w-[42rem] rounded-[48px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.65)_0%,_rgba(0,0,0,0.4)_50%,_transparent_75%)] sm:h-[62%]" />
+          <div className="container-shell relative flex min-h-[90vh] w-full flex-col items-center justify-center gap-6 pb-12 pt-6 text-center text-white sm:gap-8 sm:pb-0 sm:pt-0">
+            <div className="pointer-events-none absolute inset-0 mx-auto h-[68%] w-[90%] max-w-[42rem] rounded-[48px] hero-text-focus sm:h-[62%]" />
             <div className="relative flex w-full max-w-[48ch] flex-col items-center gap-5 sm:gap-6">
               <h1 className="hero-title text-balance text-white text-[clamp(2.9rem,5.2vw,5rem)] font-semibold leading-[0.95] tracking-[0.12em]">
                 <span className="hero-line delay-1">{brandHero.title}</span>
@@ -219,9 +219,13 @@ export default async function HomePage({ params }: PageProps) {
       )}
 
       {!isEventMode ? (
-        <section className="pb-8 pt-2 text-center">
-          <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--text-soft)]">{heroSupportLine}</p>
-          <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-[color:var(--text-soft)]/80">{heroEstLine}</p>
+        <section className="pt-10 pb-12 text-center">
+          <Reveal>
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--text-soft)]">{heroSupportLine}</p>
+              <p className="mt-2 text-[10px] uppercase tracking-[0.2em] text-[color:var(--text-soft)]/80">{heroEstLine}</p>
+            </div>
+          </Reveal>
         </section>
       ) : null}
 
@@ -382,9 +386,11 @@ export default async function HomePage({ params }: PageProps) {
       </Section>
 
       {dict.home.microTeaser ? (
-        <div className="py-6 text-center text-sm font-semibold text-[color:var(--text-soft)]">
-          {dict.home.microTeaser}
-        </div>
+        <Reveal>
+          <div className="py-8 text-center text-sm font-semibold text-[color:var(--text-soft)]">
+            {dict.home.microTeaser}
+          </div>
+        </Reveal>
       ) : null}
     </div>
   );
